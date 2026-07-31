@@ -1,0 +1,260 @@
+---
+lang: pt-BR
+title: "Preparação do ambiente computacional"
+subtitle: "Windows: contas, instalação, configuração e validação antes da primeira aula"
+---
+
+## Roteiro de preparação {#sec-preparacao}
+
+Conclua este roteiro de instalação e configuração. Ele prepara o computador 
+para as atividades da disciplina.
+
+::: {.callout-note icon="false"}
+## Plataforma adotada
+
+As etapas detalhadas desta página foram preparadas para **Windows**.
+Usuários de macOS ou Linux devem utilizar os instaladores disponíveis nas
+páginas oficiais indicadas nas seções de [R](#sec-r),
+[RStudio](#sec-rstudio), [Quarto](#sec-quarto) e [Git](#sec-git).
+Nesses sistemas, use o terminal padrão em vez do Git Bash. Se não conseguir
+concluir a verificação do ambiente, procure orientação antes da primeira aula.
+:::
+
+::: {.callout-important icon="false"}
+## Já tem os programas instalados?
+
+Se você usa R 4.5.1 ou 4.5.2, instale o **R 4.6.1** indicado nesta página.
+Atualize também RStudio, Quarto e Git para a versão estável mais recente
+disponível nas páginas oficiais. Faça isso com antecedência: a atualização pode
+exigir reiniciar o computador ou verificar novamente o terminal do RStudio.
+
+Os pacotes instalados no R 4.5 não estarão disponíveis automaticamente no R
+4.6. Não é necessário reinstalá-los agora: a disciplina indicará os pacotes a
+instalar quando eles forem usados.
+:::
+
+1. Caso não tenha, crie uma conta gratuita no [GitHub](#sec-github).
+
+2. Instale [R 4.6.1](#sec-r) e atualize [RStudio](#sec-rstudio), [Quarto](#sec-quarto)
+   e [Git](#sec-git).
+
+3. Verifique a identidade configurada no [Git](#sec-configurar-git) e o
+   [Git Bash como terminal do RStudio](#sec-git-bash). Ajuste apenas o que for
+   necessário.
+
+4. Após concluir a instalação e a configuração, siga os [tutoriais básicos da
+   disciplina](tutorials/index.qmd), começando por **R e tidyverse**.
+
+5. Depois de concluir o tutorial de Git e GitHub, retorne a esta página e faça
+   a [verificação final do ambiente](#sec-validacao).
+
+::: {.callout-important icon="false"}
+## Antes da primeira aula
+
+Após concluir a instalação e a configuração, siga os [tutoriais básicos da
+disciplina](tutorials/index.qmd) na ordem indicada: comece por R e tidyverse e,
+em seguida, conclua o [tutorial prático de Git e GitHub](tutorials/git-github.qmd).
+Git e GitHub serão usados desde a primeira aula; guarde a URL do seu
+repositório individual público.
+:::
+
+::: {.callout-note icon="false"}
+## Repositório público
+
+Não envie senhas, chaves de acesso, dados pessoais de terceiros ou dados
+restritos ao repositório. Use apenas materiais autorizados para a disciplina.
+:::
+
+Para revisar conceitos, consulte o [tutorial de Git e GitHub do professor](https://washingtonsilva.github.io/tutorials/git/){target="_blank"}. O [*Happy Git and GitHub for the useR*](https://happygitwithr.com/){target="_blank"} é um aprofundamento opcional.
+
+
+
+
+## Instalação dos programas
+
+### Linguagem R {#sec-r}
+
+::: {.callout-tip icon="false"}
+## Instalar R 4.6.1
+
+1. Acesse [CRAN](https://cloud.r-project.org/){target="_blank"}.
+2. Clique em **Download R for Windows** e, na página seguinte, em **base**.
+3. Clique em **Download R-4.6.1 for Windows**.
+4. Após o download, execute o instalador e aceite as opções padrão até a
+   instalação ser concluída. Mesmo que você já use uma versão anterior de R,
+   instale o R 4.6.1.
+:::
+
+
+
+### RStudio {#sec-rstudio}
+
+::: {.callout-tip icon="false"}
+## Instalar ou atualizar o RStudio Desktop
+
+1. Acesse a [página de download do RStudio](https://posit.co/download/rstudio-desktop/){target="_blank"}.
+2. Na seção `2: Install RStudio`, clique em **Download RStudio Desktop for
+   Windows**.
+3. Após o download, execute o instalador e avance até a instalação ser
+   concluída. Se o RStudio já estiver instalado, esse procedimento o
+   atualizará.
+:::
+
+
+
+### Sistema Quarto {#sec-quarto}
+
+::: {.callout-tip icon="false"}
+## Instalar ou atualizar o Quarto CLI
+
+1. Acesse a [página de download do Quarto](https://quarto.org/docs/download/){target="_blank"}.
+2. Baixe o instalador de **Quarto CLI** para Windows.
+3. Execute o instalador e avance até a instalação ser concluída. Se o Quarto
+   já estiver instalado, esse procedimento o atualizará.
+:::
+
+
+
+### TinyTeX {#sec-tinytex}
+
+::: {.callout-important icon="false"}
+## Instalar o TinyTeX quando uma atividade exigir PDF
+
+[TinyTeX](https://quarto.org/docs/output-formats/pdf-engine.html){target="_blank"}
+é a distribuição LaTeX recomendada para gerar PDF a partir de documentos
+Quarto. Ele só é necessário para gerar PDF localmente.
+
+A disciplina avisará antes da primeira atividade que exigir PDF. Instale-o
+depois de instalar o Quarto, com antecedência em relação a essa atividade.
+
+Se ainda não tiver o TinyTeX, abra a aba **Terminal** do RStudio e execute:
+
+```bash
+quarto install tinytex
+```
+
+Se já tiver o TinyTeX, atualize a distribuição com:
+
+```bash
+quarto update tinytex
+```
+:::
+
+
+
+### Git {#sec-git}
+
+::: {.callout-tip icon="false"}
+## Já tem Git for Windows?
+
+Abra o **Git Bash** e execute:
+
+```bash
+git update-git-for-windows
+```
+
+Siga as instruções exibidas. Ao terminar, abra um novo terminal e confirme a
+atualização com:
+
+```bash
+git --version
+```
+
+Se o comando não funcionar, baixe e execute o instalador da seção seguinte.
+Isso pode ocorrer em instalações portáteis ou personalizadas.
+:::
+
+::: {.callout-tip icon="false"}
+## Instalar o Git for Windows
+
+1. Acesse [git-scm.com](https://git-scm.com){target="_blank"} e clique em
+   **Download for Windows**.
+2. Após o download, execute o instalador.
+3. Mantenha as configurações padrão sugeridas. Na janela **Adjusting the
+   name of the initial branch**, marque **Override the default branch name
+   for new repositories** e informe **main**.
+4. Clique em **Next** nas janelas restantes e conclua a instalação. Este
+   instalador também pode ser usado para atualizar o Git quando o comando da
+   seção anterior não funcionar.
+:::
+
+
+
+## Conta GitHub {#sec-github}
+
+Caso ainda não tenha uma conta, acesse [github.com](https://github.com){target="_blank"},
+clique em **Sign up**, conclua o cadastro e confirme seu e-mail. Use uma conta
+individual que você possa manter durante toda a disciplina.
+
+
+
+## Verificar e configurar o Git {#sec-configurar-git}
+
+Abra o **Git Bash**, disponível no menu Iniciar após a instalação do Git, e
+verifique o nome e o e-mail que o Git usará no histórico de seus *commits*:
+
+```bash
+git config --global --get user.name
+git config --global --get user.email
+```
+
+::: {.callout-tip icon="false"}
+## Já há uma identidade configurada?
+
+Se os dois comandos exibirem seu nome e um e-mail associado à conta do GitHub
+que você usará na disciplina, não altere nada. Continue para a seção
+[Git Bash como terminal do RStudio](#sec-git-bash).
+:::
+
+Se algum comando não exibir um valor, ou se precisar usar outra identidade,
+configure o nome e o e-mail:
+
+```bash
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@exemplo.com"
+```
+
+Use um e-mail associado à conta do GitHub que você utilizará na disciplina.
+
+
+
+## Git Bash como terminal do RStudio {#sec-git-bash}
+
+Os comandos Git desta disciplina serão executados no **Terminal** do RStudio
+usando **Git Bash**. Depois de instalar o Git for Windows, o Git Bash pode já
+estar selecionado no RStudio, mas isso depende das configurações do seu
+computador. Verifique antes de alterar qualquer opção:
+
+1. Abra **RStudio** → **Tools** → **Global Options** → **Terminal**.
+2. Em **New terminals open with**, verifique a opção exibida.
+3. Se já estiver selecionado **Git Bash**, não altere nada. Caso esteja
+   selecionado PowerShell ou outra opção, escolha **Git Bash**.
+4. Confirme a configuração e abra um **novo** terminal no RStudio.
+
+Se Git Bash não aparecer na lista, reinstale o Git for Windows mantendo as
+opções padrão e tente novamente. O Git Bash padroniza os comandos com macOS e
+Linux. Ele oferece comandos no estilo Unix, mas não transforma o Windows em
+outro sistema operacional.
+
+
+
+## Verificação do ambiente {#sec-validacao}
+
+Antes da primeira aula, confirme que você consegue:
+
+1. Abrir R e RStudio.
+2. Abrir o terminal do RStudio e executar:
+
+   ```bash
+   quarto --version
+   git --version
+   ```
+
+3. Confirmar que seu nome e e-mail do Git estão configurados conforme a
+   seção anterior.
+4. Após concluir o tutorial de Git e GitHub, criar seu repositório individual
+   público, abri-lo como Projeto RStudio, confirmar que o Terminal usa Git
+   Bash, editar arquivos e usar `git status`, `git add`, `git commit` e
+   `git push` para enviá-los ao GitHub.
+5. Registrar a URL do seu repositório no cadastro da disciplina quando o
+   formulário for publicado.

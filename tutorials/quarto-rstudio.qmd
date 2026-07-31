@@ -1,0 +1,218 @@
+---
+lang: pt-BR
+title: "Quarto e RStudio: primeiro documento"
+subtitle: "Crie um arquivo .qmd, inclua código R e renderize-o em HTML"
+---
+
+Neste tutorial, você criará seu primeiro documento Quarto dentro do seu
+**Projeto RStudio**, configurará seu cabeçalho YAML, escreverá um texto curto,
+inserirá uma célula de código R e produzirá uma página HTML:
+
+```text
+arquivo .qmd → Render → documento HTML
+```
+
+::: {.callout-important icon="false"}
+## Resultado esperado
+
+Ao final, o arquivo `primeiro-documento.qmd` estará salvo no seu Projeto
+RStudio e o RStudio terá gerado e aberto `primeiro-documento.html`, com texto,
+código R e seu resultado.
+:::
+
+## Antes de começar
+
+Conclua o tutorial [Git e GitHub](git-github.qmd) e abra no RStudio o Projeto
+RStudio criado a partir do repositório individual. O nome desse projeto deve
+aparecer no canto superior direito da janela.
+
+Não é necessário instalar nada novo: a instalação e a verificação do Quarto
+já fazem parte da [Preparação do ambiente computacional](../ambiente_computacional.qmd).
+
+## 1. Criar um documento Quarto
+
+1. No RStudio, escolha **File** → **New File** → **Quarto Document**.
+2. Na janela de criação, preencha:
+   - **Title**: `Primeiro documento`;
+   - **Author**: seu nome completo;
+   - **Format**: **HTML**.
+3. Clique em **Create**.
+
+<!--
+IMAGEM PENDENTE 1 — nome sugerido: novo-documento-quarto.png
+Captura de tela do Windows, somente da janela “New Quarto Document” do RStudio.
+Usar valores ilustrativos nos campos Title e Author; manter HTML selecionado.
+Destacar discretamente, por uma moldura ou numeração, os campos Title, Author,
+a opção HTML e o botão Create. Não incluir dados pessoais, outras janelas ou a
+área de trabalho. Esta imagem deve ser inserida logo após esta lista.
+-->
+
+O RStudio abrirá um novo arquivo com extensão `.qmd` no painel **Source**.
+Esse arquivo reúne o texto do documento e as opções de geração do resultado.
+
+## 2. Configurar o cabeçalho YAML
+
+O cabeçalho YAML fica no início do arquivo, entre duas linhas de três hífens
+(`---`). Ele informa ao Quarto **o que é o documento** e **como ele deve ser
+produzido**. Substitua o cabeçalho criado pelo RStudio pelo bloco abaixo:
+
+```yaml
+---
+title: "Primeiro documento"
+author: "Seu nome completo"
+lang: pt-BR
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+```
+
+Faça três verificações antes de continuar:
+
+- substitua `Seu nome completo` pelo seu nome;
+- mantenha as duas linhas `---`, uma no começo e outra no fim do cabeçalho;
+- use espaços, e nunca a tecla Tab, antes de `html:` e `toc:`.
+
+As linhas `title`, `author` e `lang` definem propriedades diretas do
+documento. Já `html` está dentro de `format`, e `toc: true` está dentro de
+`html`; por isso essas linhas são recuadas. Essa estrutura gera um documento
+HTML com sumário automático e autocontido: `embed-resources: true` incorpora
+os recursos necessários ao próprio arquivo HTML. A chave `execute` vale para
+todas as células de código: `echo: true` mantém o código visível, enquanto
+`warning: false` e `message: false` impedem que avisos e mensagens apareçam no
+documento renderizado.
+
+::: {.callout-tip icon="false"}
+## YAML exige atenção à estrutura
+
+Um cabeçalho sem a linha final `---`, com uma indentação incorreta ou com Tab
+no lugar de espaços pode impedir a renderização. Quando isso acontecer,
+verifique primeiro o YAML antes de alterar o restante do texto.
+:::
+
+## 3. Escrever o primeiro conteúdo
+
+Deixe uma linha em branco após a linha final `---` do YAML e substitua todo o
+conteúdo abaixo dela pelo trecho a seguir.
+
+```markdown
+## Objetivo
+
+Este documento reúne texto, código R e resultados produzidos de forma
+reproduzível.
+
+## Resultados
+
+Os resultados das análises aparecerão abaixo das células de código R.
+```
+
+## 4. Inserir e executar uma célula de código R
+
+Posicione o cursor depois do texto anterior. Na barra do editor, escolha
+**Insert** → **R**, ou use `Ctrl + Alt + I`. O RStudio criará uma célula de
+código R. Substitua seu conteúdo pelo bloco abaixo:
+
+```{{r}}
+retornos <- c(0.012, -0.004, 0.009, 0.006)
+mean(retornos)
+```
+
+Clique no botão verde de execução da célula ou use `Ctrl + Alt + C` para
+executar a célula atual. O resultado aparecerá abaixo dela no editor. Ao renderizar o
+documento, o Quarto executará novamente o código e incluirá o resultado no
+HTML.
+
+::: {.callout-important icon="false"}
+## Células de código nas atividades da disciplina
+
+Modelos, testes, gráficos e tabelas serão produzidos em células de código R.
+Escreva o texto para apresentar e interpretar os resultados; não construa
+manualmente tabelas ou figuras em Markdown.
+:::
+
+## 5. Opções de execução
+
+A opção global `execute: echo: true` do YAML mantém o código visível em todas
+as células. Quando uma única célula precisar de comportamento diferente, use
+uma opção local, iniciada por `#|`, logo após a abertura da célula:
+
+```{{r}}
+#| echo: true
+
+mean(retornos)
+```
+
+As opções locais valem somente para aquela célula e têm prioridade sobre a
+opção global correspondente. O padrão da disciplina mantém o código visível e
+omite avisos e mensagens do HTML. Se houver problema ao executar uma célula,
+consulte o Console do RStudio: as opções controlam o documento renderizado, não
+impedem que avisos e mensagens sejam produzidos durante a execução.
+
+## 6. Salvar dentro do Projeto RStudio
+
+1. Escolha **File** → **Save**.
+2. Salve o arquivo com o nome `primeiro-documento.qmd` na pasta principal do
+   seu Projeto RStudio.
+3. Confirme, na aba **Files**, que o arquivo aparece nessa pasta.
+
+Salvar dentro do projeto é importante: os arquivos da disciplina, o documento
+Quarto e os resultados gerados ficarão reunidos em uma única localização.
+
+## 7. Renderizar em HTML
+
+Com `primeiro-documento.qmd` aberto no painel **Source**, clique em
+**Render**, na barra superior do editor. Aguarde a conclusão do processo.
+
+<!--
+IMAGEM PENDENTE 2 — nome sugerido: quarto-render-rstudio.png
+Captura de tela do Windows com um arquivo .qmd aberto no painel Source do
+RStudio. O enquadramento deve mostrar: o nome “primeiro-documento.qmd” na aba
+do editor, uma parte legível do cabeçalho YAML e do texto Markdown, o botão
+Render na barra do editor e a aba Files com o arquivo .qmd. Destacar somente o
+botão Render. Não é necessário mostrar o resultado HTML, o Console, dados
+pessoais ou outros programas. Esta imagem deve ser inserida logo após este
+parágrafo.
+-->
+
+Renderizar transforma o arquivo-fonte `.qmd` em um documento final. Neste
+caso, o resultado é um arquivo HTML. O RStudio normalmente o abrirá no painel
+**Viewer** ou no navegador padrão.
+
+## 8. Verificar o resultado
+
+Confirme os três pontos abaixo antes de encerrar:
+
+1. o documento HTML mostra o título, seu nome, um sumário, os títulos de
+   seção, a célula de código R e o resultado da média;
+2. a aba **Files** contém `primeiro-documento.qmd` e
+   `primeiro-documento.html`;
+3. não há mensagem de erro impedindo a renderização.
+
+Se o resultado não estiver correto, volte ao arquivo `.qmd`, corrija-o, salve
+e clique em **Render** novamente. Você repetirá esse ciclo ao longo da
+disciplina.
+
+::: {.callout-tip icon="false"}
+## Se o botão Render não aparecer
+
+Verifique se o arquivo aberto termina em `.qmd` e se você está no Projeto
+RStudio correto. Se o problema persistir, retorne à seção de verificação do
+Quarto na [Preparação do ambiente computacional](../ambiente_computacional.qmd#sec-quarto).
+:::
+
+## Próximo passo
+
+Você concluiu o primeiro ciclo com Quarto: criou um `.qmd`, configurou seu
+YAML, inseriu código R e gerou HTML. Continue com
+[Markdown para documentos Quarto](markdown.qmd) para aprender a estruturar
+melhor o texto que apresenta e interpreta os resultados. Nas atividades da
+disciplina, esse fluxo será aplicado gradualmente a modelos, testes, gráficos
+e tabelas produzidos com R.
+
+Para consulta posterior, veja a documentação oficial sobre
+[criação de documentos Quarto](https://quarto.org/docs/get-started/hello/rstudio.html){target="_blank"}.

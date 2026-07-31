@@ -1,0 +1,158 @@
+---
+lang: pt-BR
+title: "Markdown essencial para documentos Quarto"
+subtitle: "Escreva textos, organize argumentos e use equações simples"
+---
+
+Markdown permite escrever em texto simples com uma estrutura clara. Nesta
+disciplina, ele será usado principalmente para redigir, organizar e interpretar
+os resultados produzidos por código R em documentos Quarto.
+
+Antes de começar, conclua [Quarto e RStudio: primeiro documento](quarto-rstudio.qmd).
+
+::: {.callout-important icon="false"}
+## O que importa nesta disciplina
+
+Use Markdown para títulos, parágrafos, ênfases, listas e, quando necessário,
+equações simples. Tabelas e figuras serão produzidas por células de código R;
+você deverá introduzi-las e interpretar seus resultados em texto.
+:::
+
+## Como ler os exemplos
+
+Cada exemplo apresenta a **Sintaxe**, escrita no arquivo `.qmd`, e o
+**Resultado**, que aparece depois da renderização.
+
+## 1. Títulos e parágrafos
+
+Use `#` para indicar a hierarquia dos títulos. Uma linha em branco separa
+parágrafos.
+
+**Sintaxe**
+
+```markdown
+## Resultados
+
+Esta seção apresenta os principais resultados da análise.
+
+### Desempenho no período
+
+Os indicadores melhoraram no segundo trimestre.
+```
+
+**Resultado**
+
+::: {.callout-note icon="false" title="Resultado no documento"}
+
+<h2>Resultados</h2>
+
+Esta seção apresenta os principais resultados da análise.
+
+<h3>Desempenho no período</h3>
+
+Os indicadores melhoraram no segundo trimestre.
+:::
+
+Em documentos cujo título já está no cabeçalho YAML, como o arquivo criado no
+tutorial anterior, o corpo do texto começa em `##`. Não use títulos apenas
+para alterar o tamanho visual da fonte.
+
+## 2. Ênfase, código e listas
+
+Use asteriscos para dar ênfase e crases para nomes de arquivos, comandos ou
+termos de código. Mantenha uma linha em branco antes e depois de uma lista.
+
+**Sintaxe**
+
+```markdown
+O arquivo **relatorio.qmd** reúne os resultados da *análise exploratória*.
+Execute `Render` para gerar o documento.
+
+- Organize os dados.
+- Descreva o método.
+- Interprete os resultados.
+
+1. Escreva o texto.
+2. Execute as células R.
+3. Renderize o documento.
+```
+
+**Resultado**
+
+::: {.callout-note icon="false" title="Resultado no documento"}
+
+O arquivo **relatorio.qmd** reúne os resultados da *análise exploratória*.
+Execute `Render` para gerar o documento.
+
+- Organize os dados.
+- Descreva o método.
+- Interprete os resultados.
+
+1. Escreva o texto.
+2. Execute as células R.
+3. Renderize o documento.
+:::
+
+## 3. Equações simples
+
+Use a sintaxe LaTeX para fórmulas: uma fórmula curta fica entre um par de
+cifrões; uma fórmula em destaque fica entre dois pares.
+
+**Sintaxe**
+
+```markdown
+O retorno simples é $r_t = (P_t / P_{t-1}) - 1$.
+
+$$
+\bar{r} = \frac{1}{n}\sum_{t=1}^{n} r_t
+$$
+```
+
+**Resultado**
+
+::: {.callout-note icon="false" title="Resultado no documento"}
+
+O retorno simples é $r_t = (P_t / P_{t-1}) - 1$.
+
+$$
+\bar{r} = \frac{1}{n}\sum_{t=1}^{n} r_t
+$$
+:::
+
+## 4. Tabelas e figuras serão produzidas com R
+
+Não é necessário aprender aqui a inserir imagens externas nem a construir
+tabelas manualmente em Markdown. Nas atividades e relatórios da disciplina,
+gráficos e tabelas serão gerados por células de código R. Use o texto para
+orientar a leitura do resultado e registrar sua interpretação.
+
+Por exemplo, antes de uma célula que produz uma tabela ou um gráfico, você pode
+escrever:
+
+```markdown
+## Resultados
+
+A tabela a seguir resume as estatísticas descritivas da amostra.
+O gráfico permite avaliar a evolução dos retornos no período analisado.
+```
+
+## 5. Prática
+
+No arquivo `primeiro-documento.qmd` criado no tutorial anterior, acrescente um
+título de seção, dois parágrafos curtos e uma lista. Em seguida, escreva uma
+frase antes da célula R explicando o que o cálculo da média dos retornos mostra.
+Renderize o documento e verifique se o texto e o resultado aparecem na ordem
+esperada.
+
+## Checklist antes de continuar
+
+- Separo parágrafos com uma linha em branco.
+- Uso títulos para organizar ideias, e não para escolher tamanhos de fonte.
+- Sei usar ênfase, escrever nomes de arquivos ou código curto e criar listas.
+- Consigo inserir uma equação simples quando ela ajuda a explicar o método.
+- Sei que modelos, testes, tabelas e figuras serão produzidos em células de
+  código R.
+
+Para recursos que não são foco deste tutorial, como imagens externas, tabelas
+manuais, links e layouts, consulte voluntariamente o
+[tutorial abrangente de Markdown](https://washingtonsilva.github.io/tutorials/markdown/){target="_blank"}.

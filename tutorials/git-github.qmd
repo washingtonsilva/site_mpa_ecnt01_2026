@@ -1,0 +1,298 @@
+---
+lang: pt-BR
+title: "Git e GitHub: primeiro fluxo de trabalho"
+subtitle: "Do repositório individual ao primeiro commit no RStudio"
+---
+
+Este tutorial é para quem está começando com Git e GitHub. Ao final, você terá
+um repositório individual público, criado por você no GitHub, aberto como
+**Projeto RStudio**, com uma alteração registrada no Terminal e enviada ao
+GitHub.
+
+::: {.callout-important icon="false"}
+## Resultado esperado
+
+Você só concluirá este tutorial depois de confirmar, no navegador, que a
+alteração feita no RStudio aparece no seu repositório do GitHub.
+:::
+
+## Antes de começar
+
+Conclua as etapas da página de [Preparação do ambiente computacional](../ambiente_computacional.qmd), sobretudo:
+
+- criar a conta do GitHub;
+- instalar e verificar Git, R e RStudio;
+- configurar seu nome e e-mail no Git.
+
+Você criará seu próprio repositório no GitHub. Use o nome
+`mpa-ecnt01-nome`, substituindo `nome` pelo seu primeiro
+nome, em letras minúsculas e sem acentos. Por exemplo:
+`mpa-ecnt01-joao`.
+
+O cadastro de repositórios será publicado separadamente. Salve a URL do seu
+repositório para registrá-la quando solicitado.
+
+## O fluxo em uma imagem
+
+```{mermaid}
+flowchart LR
+    A["Novo repositório individual no GitHub"] -->|"New Project → Version Control → Git"| B["Projeto RStudio no computador"]
+    B -->|"Git Bash: commit + push"| A
+```
+
+- **GitHub** hospeda o repositório individual que será consultado pelo
+  professor.
+- O **Projeto RStudio** mantém, em uma única pasta, os arquivos Quarto e os
+  demais materiais da atividade.
+- O **Terminal** do RStudio será usado com Git Bash para registrar alterações
+  e enviá-las ao GitHub.
+
+Não é preciso decorar esses termos agora. Eles farão sentido à medida que você
+repetir esse ciclo.
+
+
+## 1. Criar seu repositório individual
+
+1. Entre na sua conta do GitHub.
+2. Clique no sinal de **+**, no canto superior direito, e escolha **New
+   repository**.
+3. Confirme que o proprietário (*Owner*) é a sua conta individual do GitHub.
+4. Em **Repository name**, use o padrão
+   `mpa-ecnt01-nome`. Por exemplo: `mpa-ecnt01-joao`.
+5. Selecione a visibilidade **Public**.
+6. Marque **Add a README file**. Essa opção cria o primeiro *commit* e o
+   branch `main`, necessários para o próximo passo.
+7. Não selecione licença nem arquivo `.gitignore` nesta etapa: você criará o
+   `.gitignore` no RStudio.
+8. Clique em **Create repository**.
+
+Veja a [documentação oficial do GitHub para criar um
+repositório](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){target="_blank"}.
+
+::: {.callout-tip icon="false"}
+## Antes de continuar
+
+Na página do novo repositório, confirme que o arquivo `README.md` aparece no
+navegador. Ele foi criado pelo GitHub e será alterado no passo 5. O RStudio
+criará o arquivo `.Rproj` localmente no passo seguinte.
+:::
+
+## 2. Copiar o endereço do repositório
+
+1. Na página do seu repositório, clique no botão verde **Code**.
+2. Mantenha a opção **HTTPS** selecionada.
+3. Clique no ícone de cópia ao lado do endereço. Ele terá uma forma parecida
+   com `https://github.com/seu-usuario/seu-repositorio.git`.
+
+Use HTTPS neste primeiro tutorial. Ele é a opção mais direta para o ambiente
+da disciplina. O procedimento de cópia da URL está detalhado na
+[documentação de clonagem do GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository){target="_blank"}.
+
+## 3. Criar o Projeto RStudio a partir do repositório
+
+1. Abra o **RStudio**.
+2. Escolha **File** → **New Project**. Também é possível usar o menu de
+   projetos no canto superior direito, identificado inicialmente como
+   **Project: (None)**.
+3. Na janela exibida, escolha **Version Control** e depois **Git**.
+4. Cole, no campo **Repository URL**, o endereço HTTPS copiado no passo
+   anterior.
+5. Confira o campo **Project directory name**. Ele deve corresponder ao nome
+   do seu repositório; mantenha esse nome.
+6. Em **Browse**, escolha uma pasta-base para guardar projetos da disciplina,
+   por exemplo, uma pasta `mpa-2026` dentro de **Documentos**. Escolha a
+   pasta-base, não crie nem selecione uma pasta vazia com o nome do repositório.
+7. Clique em **Create Project** e aguarde.
+
+O RStudio clonará o repositório para uma nova pasta, criará o arquivo
+`nome-do-repositorio.Rproj` e abrirá esse projeto. Esse é o procedimento
+oficial para criar um Projeto RStudio a partir de um repositório Git remoto.
+[Veja a documentação da Posit](https://docs.posit.co/ide/user/ide/guide/tools/version-control.html){target="_blank"}.
+
+::: {.callout-tip icon="false"}
+## Verificação imediata
+
+Antes de editar qualquer arquivo, confirme três sinais no RStudio:
+
+1. o nome do seu repositório aparece no canto superior direito;
+2. a aba **Files** mostra o arquivo `README.md`;
+3. o arquivo `nome-do-repositorio.Rproj` aparece na pasta do projeto.
+
+A aba Git pode aparecer na interface porque o projeto contém um repositório,
+mas ela não será usada neste tutorial.
+:::
+
+## 4. Abrir e verificar o Terminal do RStudio
+
+1. Ao lado da aba **Console**, abra a aba **Terminal**. Um novo terminal deve
+   ser iniciado na pasta-raiz do Projeto RStudio.
+2. O terminal adotado nesta disciplina é o **Git Bash**. Se ele ainda não
+   estiver selecionado como terminal padrão no seu RStudio, siga a seção
+   [Git Bash como terminal do RStudio](../ambiente_computacional.qmd#sec-git-bash) antes
+   de continuar.
+3. Execute os comandos abaixo, um de cada vez:
+
+   ```bash
+   git --version
+   git status
+   ```
+
+O primeiro comando confirma que o Git está disponível. O segundo deve informar
+que você está no branch `main` e listar o arquivo `.Rproj` como não rastreado.
+Isso é esperado: o RStudio acabou de criar esse arquivo. Como o terminal é
+aberto no diretório do projeto, não é necessário usar `cd`.
+
+## 5. Fazer a configuração inicial
+
+1. Na aba **Files**, abra o arquivo `README.md`.
+2. Substitua todo o conteúdo pelo texto abaixo, trocando `Seu nome completo`
+   pelo seu nome, e salve o arquivo.
+
+   ```markdown
+   # Econometria Aplicada à Finanças
+
+   **Estudante:** Seu nome completo
+   ```
+
+3. Escolha **File** → **New File** → **Text File**. Salve o arquivo na
+   pasta-raiz do projeto com o nome exato `.gitignore`. Confirme que o nome
+   exibido na aba **Files** é `.gitignore`, e não `.gitignore.txt`.
+4. Cole o conteúdo abaixo no arquivo `.gitignore` e salve-o.
+
+   ```bash
+   # Windows
+   Thumbs.db
+   Desktop.ini
+
+   # R e RStudio
+   .Rhistory
+   .RData
+   .RDataTmp
+   .Ruserdata
+   .Rproj.user/
+
+   # Quarto
+   .quarto/
+   *_cache/
+   *.quarto_ipynb
+
+   # Credenciais e dados não publicáveis
+   .Renviron
+   .Renviron.*
+   !.Renviron.example
+   .env
+   .env.*
+   !.env.example
+   ```
+
+O `.gitignore` ignora apenas arquivos que ainda não foram registrados pelo
+Git. Nunca use-o como forma de proteger um arquivo que já foi enviado ao
+GitHub.
+
+5. Retorne ao **Terminal** e execute:
+
+   ```bash
+   git status
+   ```
+
+O `README.md` deve aparecer como arquivo modificado. O `.gitignore` e o
+arquivo `nome-do-repositorio.Rproj`, criado pelo RStudio, devem aparecer como
+arquivos novos. Eles serão incluídos no primeiro *commit*.
+
+## 6. Registrar a alteração com Git
+
+No Terminal, execute os comandos abaixo, um de cada vez:
+
+```bash
+git add README.md
+git add .gitignore
+git add nome-do-repositorio.Rproj
+git status
+git commit -m "Configura projeto e identificação inicial"
+```
+
+Substitua `nome-do-repositorio.Rproj` pelo nome real do seu arquivo `.Rproj`.
+O `git status` deve listar os três arquivos na seção de alterações prontas
+para o *commit* antes que você execute o último comando.
+
+Um *commit* registra um conjunto intencional de alterações. Conferir os
+arquivos antes de confirmá-lo é uma prática importante: não use `git add .`
+enquanto estiver aprendendo.
+
+## 7. Enviar o commit ao GitHub
+
+No mesmo Terminal, execute:
+
+```bash
+git push origin main
+```
+
+Nesse comando, `origin` é o nome local do repositório remoto no GitHub,
+configurado quando você o clonou; `main` é a ramificação que contém seu
+*commit*. Execute este comando somente depois de confirmar, com `git status`,
+que você está na ramificação `main`.
+
+Na primeira vez, o Git Credential Manager pode abrir uma janela do navegador
+para você entrar na sua conta do GitHub e autorizar o acesso. Conclua a
+autenticação e retorne ao RStudio.
+
+Não informe sua senha do GitHub diretamente no terminal. O Git for Windows
+inclui o Git Credential Manager, que permite autenticar via navegador e
+armazenar as credenciais de forma segura para operações HTTPS. [Veja a
+orientação oficial do GitHub](https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git?platform=windows){target="_blank"}.
+
+::: {.callout-warning icon="false"}
+## Se o push não funcionar
+
+Não tente resolver o problema com `git reset`, `git restore`, `git checkout`
+ou comandos encontrados aleatoriamente na internet. Copie a mensagem de erro,
+execute `git status` e peça ajuda durante a aula ou pelo canal da disciplina.
+:::
+
+## 8. Confirmar no GitHub
+
+1. Retorne à página do seu repositório no navegador.
+2. Atualize a página.
+3. Abra o arquivo `README.md` e confirme sua identificação.
+4. Confirme que o arquivo `.gitignore` também aparece na lista de arquivos.
+5. Abra a lista de *commits* e confirme a mensagem **Configura projeto e
+   identificação inicial**.
+
+Se essas verificações forem bem-sucedidas, você concluiu o primeiro
+fluxo de trabalho.
+
+## 9. Registrar o repositório
+
+Quando o cadastro de repositórios for publicado, registre a URL do seu
+repositório individual. Até lá, preserve essa URL e mantenha o repositório
+público, conforme as instruções da disciplina.
+
+## O ciclo que você repetirá nas aulas
+
+No Terminal do RStudio, o ciclo básico será:
+
+```bash
+git status
+git add nome-do-arquivo
+git commit -m "Descreve a alteração realizada"
+git push origin main
+```
+
+Você estudará esses comandos gradualmente. O RStudio será usado para criar e
+abrir o projeto; o Git Bash, no Terminal do RStudio, será usado para operar o
+Git. A aba Git pode aparecer na interface, mas não faz parte deste tutorial.
+
+Branches, conflitos, recuperação de versões e colaboração avançada serão
+tratados somente quando forem necessários. Neste momento, domine o ciclo
+acima e confirme cada envio no GitHub.
+
+## Checklist de conclusão
+
+- [ ] Tenho uma conta GitHub e Git instalado/configurado.
+- [ ] Criei meu repositório individual público no GitHub.
+- [ ] Criei e abri o Projeto RStudio a partir desse repositório.
+- [ ] Confirmei o `README.md` e o Terminal Git Bash no RStudio.
+- [ ] Editei e salvei o `README.md` e o `.gitignore`.
+- [ ] Fiz um commit e um *push* pelo Terminal do RStudio.
+- [ ] Confirmei a alteração no GitHub.
+- [ ] Registrei a URL no cadastro da disciplina, quando ele estiver disponível.

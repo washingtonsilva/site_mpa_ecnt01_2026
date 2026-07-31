@@ -1,0 +1,71 @@
+---
+lang: pt-BR
+title: "Tutoriais básicos e materiais de apoio"
+---
+
+Conclua primeiro as etapas de instalação e configuração da
+[Preparação do ambiente computacional](../ambiente_computacional.qmd). Depois
+de concluir o tutorial de Git e GitHub, retorne à página do ambiente para fazer
+a verificação final.
+
+::: {.callout-important icon="false"}
+## Percurso recomendado
+
+Os conhecimentos de R, RStudio, Quarto, Git e GitHub são pré-requisitos da
+disciplina. Os materiais desta página permitem recuperar ou revisar essa base
+de forma autônoma, mas não substituem os pré-requisitos.
+
+1. Todos devem concluir a instalação e a configuração do ambiente e seguir os
+   tutoriais básicos na ordem apresentada. Após o tutorial de Git e GitHub,
+   retornem à página do ambiente para a verificação final.
+2. Quem ainda não domina R e tidyverse deve concluir integralmente o primeiro
+   tutorial. Quem já domina esses fundamentos deve utilizá-lo como revisão
+   dirigida antes das atividades da disciplina.
+:::
+
+## Tutoriais básicos da disciplina {#sec-tutoriais-disciplina}
+
+Estes tutoriais usam o fluxo de trabalho e as ferramentas adotados na
+disciplina. Siga-os na ordem apresentada.
+
+### R e tidyverse: introdução prática
+
+Comece por este tutorial para consolidar os fundamentos de R e tidyverse. Ele
+deve ser concluído integralmente por quem não domina essa base e serve como
+revisão dirigida para os demais estudantes.
+
+[Abrir tutorial](https://washingtonsilva.github.io/tutorials/r-tidyverse/){target="_blank"}
+
+### Git e GitHub
+
+Crie seu repositório individual no GitHub, abra-o como Projeto RStudio e
+registre sua primeira alteração usando Git Bash no Terminal.
+
+[Abrir tutorial](git-github.qmd)
+
+### Quarto e RStudio: primeiro documento
+
+Crie um arquivo `.qmd` no seu Projeto RStudio, configure seu cabeçalho YAML,
+insira uma célula de código R e renderize-o em HTML.
+
+[Abrir tutorial](quarto-rstudio.qmd)
+
+### Markdown para documentos Quarto
+
+Amplie o arquivo `.qmd` já criado com títulos, texto, listas e equações
+simples.
+
+[Abrir tutorial](markdown.qmd)
+
+## Tutorial complementar do professor {#sec-tutoriais-apoio}
+
+Este material externo abre em uma nova aba e complementa os tutoriais básicos
+quando for necessário revisar a interface do RStudio.
+
+### RStudio: ambiente de desenvolvimento integrado
+
+Conheça a interface do RStudio e seus recursos essenciais. Para criar o
+repositório individual e configurar o fluxo de trabalho desta disciplina, siga
+sempre o tutorial de Git e GitHub apresentado acima.
+
+[Abrir tutorial](https://washingtonsilva.github.io/tutorials/rstudio/){target="_blank"}

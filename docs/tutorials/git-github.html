@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Git e GitHub: primeiro fluxo de trabalho – Econometria Aplicada à Finanças</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ec09596949e27005ae32b8ac52bfb148.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Econometria Aplicada à Finanças</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Procurar"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Git e GitHub: primeiro fluxo de trabalho</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Procurar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Início</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../programa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programa da Disciplina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cronograma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cronograma</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ambiente_computacional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ambiente computacional</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutoriais básicos e apoio</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#antes-de-começar" id="toc-antes-de-começar" class="nav-link active" data-scroll-target="#antes-de-começar">Antes de começar</a></li>
+  <li><a href="#o-fluxo-em-uma-imagem" id="toc-o-fluxo-em-uma-imagem" class="nav-link" data-scroll-target="#o-fluxo-em-uma-imagem">O fluxo em uma imagem</a></li>
+  <li><a href="#criar-seu-repositório-individual" id="toc-criar-seu-repositório-individual" class="nav-link" data-scroll-target="#criar-seu-repositório-individual">1. Criar seu repositório individual</a></li>
+  <li><a href="#copiar-o-endereço-do-repositório" id="toc-copiar-o-endereço-do-repositório" class="nav-link" data-scroll-target="#copiar-o-endereço-do-repositório">2. Copiar o endereço do repositório</a></li>
+  <li><a href="#criar-o-projeto-rstudio-a-partir-do-repositório" id="toc-criar-o-projeto-rstudio-a-partir-do-repositório" class="nav-link" data-scroll-target="#criar-o-projeto-rstudio-a-partir-do-repositório">3. Criar o Projeto RStudio a partir do repositório</a></li>
+  <li><a href="#abrir-e-verificar-o-terminal-do-rstudio" id="toc-abrir-e-verificar-o-terminal-do-rstudio" class="nav-link" data-scroll-target="#abrir-e-verificar-o-terminal-do-rstudio">4. Abrir e verificar o Terminal do RStudio</a></li>
+  <li><a href="#fazer-a-configuração-inicial" id="toc-fazer-a-configuração-inicial" class="nav-link" data-scroll-target="#fazer-a-configuração-inicial">5. Fazer a configuração inicial</a></li>
+  <li><a href="#registrar-a-alteração-com-git" id="toc-registrar-a-alteração-com-git" class="nav-link" data-scroll-target="#registrar-a-alteração-com-git">6. Registrar a alteração com Git</a></li>
+  <li><a href="#enviar-o-commit-ao-github" id="toc-enviar-o-commit-ao-github" class="nav-link" data-scroll-target="#enviar-o-commit-ao-github">7. Enviar o commit ao GitHub</a></li>
+  <li><a href="#confirmar-no-github" id="toc-confirmar-no-github" class="nav-link" data-scroll-target="#confirmar-no-github">8. Confirmar no GitHub</a></li>
+  <li><a href="#registrar-o-repositório" id="toc-registrar-o-repositório" class="nav-link" data-scroll-target="#registrar-o-repositório">9. Registrar o repositório</a></li>
+  <li><a href="#o-ciclo-que-você-repetirá-nas-aulas" id="toc-o-ciclo-que-você-repetirá-nas-aulas" class="nav-link" data-scroll-target="#o-ciclo-que-você-repetirá-nas-aulas">O ciclo que você repetirá nas aulas</a></li>
+  <li><a href="#checklist-de-conclusão" id="toc-checklist-de-conclusão" class="nav-link" data-scroll-target="#checklist-de-conclusão">Checklist de conclusão</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Git e GitHub: primeiro fluxo de trabalho</h1>
+<p class="subtitle lead">Do repositório individual ao primeiro commit no RStudio</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este tutorial é para quem está começando com Git e GitHub. Ao final, você terá um repositório individual público, criado por você no GitHub, aberto como <strong>Projeto RStudio</strong>, com uma alteração registrada no Terminal e enviada ao GitHub.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Resultado esperado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Você só concluirá este tutorial depois de confirmar, no navegador, que a alteração feita no RStudio aparece no seu repositório do GitHub.</p>
+</div>
+</div>
+<section id="antes-de-começar" class="level2">
+<h2 class="anchored" data-anchor-id="antes-de-começar">Antes de começar</h2>
+<p>Conclua as etapas da página de <a href="../ambiente_computacional.html">Preparação do ambiente computacional</a>, sobretudo:</p>
+<ul>
+<li>criar a conta do GitHub;</li>
+<li>instalar e verificar Git, R e RStudio;</li>
+<li>configurar seu nome e e-mail no Git.</li>
+</ul>
+<p>Você criará seu próprio repositório no GitHub. Use o nome <code>mpa-ecnt01-nome</code>, substituindo <code>nome</code> pelo seu primeiro nome, em letras minúsculas e sem acentos. Por exemplo: <code>mpa-ecnt01-joao</code>.</p>
+<p>O cadastro de repositórios será publicado separadamente. Salve a URL do seu repositório para registrá-la quando solicitado.</p>
+</section>
+<section id="o-fluxo-em-uma-imagem" class="level2">
+<h2 class="anchored" data-anchor-id="o-fluxo-em-uma-imagem">O fluxo em uma imagem</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["Novo repositório individual no GitHub"] --&gt;|"New Project → Version Control → Git"| B["Projeto RStudio no computador"]
+    B --&gt;|"Git Bash: commit + push"| A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>GitHub</strong> hospeda o repositório individual que será consultado pelo professor.</li>
+<li>O <strong>Projeto RStudio</strong> mantém, em uma única pasta, os arquivos Quarto e os demais materiais da atividade.</li>
+<li>O <strong>Terminal</strong> do RStudio será usado com Git Bash para registrar alterações e enviá-las ao GitHub.</li>
+</ul>
+<p>Não é preciso decorar esses termos agora. Eles farão sentido à medida que você repetir esse ciclo.</p>
+</section>
+<section id="criar-seu-repositório-individual" class="level2">
+<h2 class="anchored" data-anchor-id="criar-seu-repositório-individual">1. Criar seu repositório individual</h2>
+<ol type="1">
+<li>Entre na sua conta do GitHub.</li>
+<li>Clique no sinal de <strong>+</strong>, no canto superior direito, e escolha <strong>New repository</strong>.</li>
+<li>Confirme que o proprietário (<em>Owner</em>) é a sua conta individual do GitHub.</li>
+<li>Em <strong>Repository name</strong>, use o padrão <code>mpa-ecnt01-nome</code>. Por exemplo: <code>mpa-ecnt01-joao</code>.</li>
+<li>Selecione a visibilidade <strong>Public</strong>.</li>
+<li>Marque <strong>Add a README file</strong>. Essa opção cria o primeiro <em>commit</em> e o branch <code>main</code>, necessários para o próximo passo.</li>
+<li>Não selecione licença nem arquivo <code>.gitignore</code> nesta etapa: você criará o <code>.gitignore</code> no RStudio.</li>
+<li>Clique em <strong>Create repository</strong>.</li>
+</ol>
+<p>Veja a <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository" target="_blank">documentação oficial do GitHub para criar um repositório</a>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Antes de continuar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Na página do novo repositório, confirme que o arquivo <code>README.md</code> aparece no navegador. Ele foi criado pelo GitHub e será alterado no passo 5. O RStudio criará o arquivo <code>.Rproj</code> localmente no passo seguinte.</p>
+</div>
+</div>
+</section>
+<section id="copiar-o-endereço-do-repositório" class="level2">
+<h2 class="anchored" data-anchor-id="copiar-o-endereço-do-repositório">2. Copiar o endereço do repositório</h2>
+<ol type="1">
+<li>Na página do seu repositório, clique no botão verde <strong>Code</strong>.</li>
+<li>Mantenha a opção <strong>HTTPS</strong> selecionada.</li>
+<li>Clique no ícone de cópia ao lado do endereço. Ele terá uma forma parecida com <code>https://github.com/seu-usuario/seu-repositorio.git</code>.</li>
+</ol>
+<p>Use HTTPS neste primeiro tutorial. Ele é a opção mais direta para o ambiente da disciplina. O procedimento de cópia da URL está detalhado na <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">documentação de clonagem do GitHub</a>.</p>
+</section>
+<section id="criar-o-projeto-rstudio-a-partir-do-repositório" class="level2">
+<h2 class="anchored" data-anchor-id="criar-o-projeto-rstudio-a-partir-do-repositório">3. Criar o Projeto RStudio a partir do repositório</h2>
+<ol type="1">
+<li>Abra o <strong>RStudio</strong>.</li>
+<li>Escolha <strong>File</strong> → <strong>New Project</strong>. Também é possível usar o menu de projetos no canto superior direito, identificado inicialmente como <strong>Project: (None)</strong>.</li>
+<li>Na janela exibida, escolha <strong>Version Control</strong> e depois <strong>Git</strong>.</li>
+<li>Cole, no campo <strong>Repository URL</strong>, o endereço HTTPS copiado no passo anterior.</li>
+<li>Confira o campo <strong>Project directory name</strong>. Ele deve corresponder ao nome do seu repositório; mantenha esse nome.</li>
+<li>Em <strong>Browse</strong>, escolha uma pasta-base para guardar projetos da disciplina, por exemplo, uma pasta <code>mpa-2026</code> dentro de <strong>Documentos</strong>. Escolha a pasta-base, não crie nem selecione uma pasta vazia com o nome do repositório.</li>
+<li>Clique em <strong>Create Project</strong> e aguarde.</li>
+</ol>
+<p>O RStudio clonará o repositório para uma nova pasta, criará o arquivo <code>nome-do-repositorio.Rproj</code> e abrirá esse projeto. Esse é o procedimento oficial para criar um Projeto RStudio a partir de um repositório Git remoto. <a href="https://docs.posit.co/ide/user/ide/guide/tools/version-control.html" target="_blank">Veja a documentação da Posit</a>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Dica</span>Verificação imediata
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antes de editar qualquer arquivo, confirme três sinais no RStudio:</p>
+<ol type="1">
+<li>o nome do seu repositório aparece no canto superior direito;</li>
+<li>a aba <strong>Files</strong> mostra o arquivo <code>README.md</code>;</li>
+<li>o arquivo <code>nome-do-repositorio.Rproj</code> aparece na pasta do projeto.</li>
+</ol>
+<p>A aba Git pode aparecer na interface porque o projeto contém um repositório, mas ela não será usada neste tutorial.</p>
+</div>
+</div>
+</section>
+<section id="abrir-e-verificar-o-terminal-do-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="abrir-e-verificar-o-terminal-do-rstudio">4. Abrir e verificar o Terminal do RStudio</h2>
+<ol type="1">
+<li><p>Ao lado da aba <strong>Console</strong>, abra a aba <strong>Terminal</strong>. Um novo terminal deve ser iniciado na pasta-raiz do Projeto RStudio.</p></li>
+<li><p>O terminal adotado nesta disciplina é o <strong>Git Bash</strong>. Se ele ainda não estiver selecionado como terminal padrão no seu RStudio, siga a seção <a href="../ambiente_computacional.html#sec-git-bash">Git Bash como terminal do RStudio</a> antes de continuar.</p></li>
+<li><p>Execute os comandos abaixo, um de cada vez:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<p>O primeiro comando confirma que o Git está disponível. O segundo deve informar que você está no branch <code>main</code> e listar o arquivo <code>.Rproj</code> como não rastreado. Isso é esperado: o RStudio acabou de criar esse arquivo. Como o terminal é aberto no diretório do projeto, não é necessário usar <code>cd</code>.</p>
+</section>
+<section id="fazer-a-configuração-inicial" class="level2">
+<h2 class="anchored" data-anchor-id="fazer-a-configuração-inicial">5. Fazer a configuração inicial</h2>
+<ol type="1">
+<li><p>Na aba <strong>Files</strong>, abra o arquivo <code>README.md</code>.</p></li>
+<li><p>Substitua todo o conteúdo pelo texto abaixo, trocando <code>Seu nome completo</code> pelo seu nome, e salve o arquivo.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Econometria Aplicada à Finanças</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>**Estudante:** Seu nome completo</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Escolha <strong>File</strong> → <strong>New File</strong> → <strong>Text File</strong>. Salve o arquivo na pasta-raiz do projeto com o nome exato <code>.gitignore</code>. Confirme que o nome exibido na aba <strong>Files</strong> é <code>.gitignore</code>, e não <code>.gitignore.txt</code>.</p></li>
+<li><p>Cole o conteúdo abaixo no arquivo <code>.gitignore</code> e salve-o.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Thumbs.db</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Desktop.ini</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># R e RStudio</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ex">.Rhistory</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">.RData</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">.RDataTmp</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ex">.Ruserdata</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ex">.Rproj.user/</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Quarto</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">.quarto/</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ex">*_cache/</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ex">*.quarto_ipynb</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Credenciais e dados não publicáveis</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ex">.Renviron</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ex">.Renviron.*</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="ex">!.Renviron.example</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="ex">.env</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="ex">.env.*</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ex">!.env.example</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<p>O <code>.gitignore</code> ignora apenas arquivos que ainda não foram registrados pelo Git. Nunca use-o como forma de proteger um arquivo que já foi enviado ao GitHub.</p>
+<ol start="5" type="1">
+<li><p>Retorne ao <strong>Terminal</strong> e execute:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<p>O <code>README.md</code> deve aparecer como arquivo modificado. O <code>.gitignore</code> e o arquivo <code>nome-do-repositorio.Rproj</code>, criado pelo RStudio, devem aparecer como arquivos novos. Eles serão incluídos no primeiro <em>commit</em>.</p>
+</section>
+<section id="registrar-a-alteração-com-git" class="level2">
+<h2 class="anchored" data-anchor-id="registrar-a-alteração-com-git">6. Registrar a alteração com Git</h2>
+<p>No Terminal, execute os comandos abaixo, um de cada vez:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add README.md</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add nome-do-repositorio.Rproj</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Configura projeto e identificação inicial"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Substitua <code>nome-do-repositorio.Rproj</code> pelo nome real do seu arquivo <code>.Rproj</code>. O <code>git status</code> deve listar os três arquivos na seção de alterações prontas para o <em>commit</em> antes que você execute o último comando.</p>
+<p>Um <em>commit</em> registra um conjunto intencional de alterações. Conferir os arquivos antes de confirmá-lo é uma prática importante: não use <code>git add .</code> enquanto estiver aprendendo.</p>
+</section>
+<section id="enviar-o-commit-ao-github" class="level2">
+<h2 class="anchored" data-anchor-id="enviar-o-commit-ao-github">7. Enviar o commit ao GitHub</h2>
+<p>No mesmo Terminal, execute:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nesse comando, <code>origin</code> é o nome local do repositório remoto no GitHub, configurado quando você o clonou; <code>main</code> é a ramificação que contém seu <em>commit</em>. Execute este comando somente depois de confirmar, com <code>git status</code>, que você está na ramificação <code>main</code>.</p>
+<p>Na primeira vez, o Git Credential Manager pode abrir uma janela do navegador para você entrar na sua conta do GitHub e autorizar o acesso. Conclua a autenticação e retorne ao RStudio.</p>
+<p>Não informe sua senha do GitHub diretamente no terminal. O Git for Windows inclui o Git Credential Manager, que permite autenticar via navegador e armazenar as credenciais de forma segura para operações HTTPS. <a href="https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git?platform=windows" target="_blank">Veja a orientação oficial do GitHub</a>.</p>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Aviso</span>Se o push não funcionar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Não tente resolver o problema com <code>git reset</code>, <code>git restore</code>, <code>git checkout</code> ou comandos encontrados aleatoriamente na internet. Copie a mensagem de erro, execute <code>git status</code> e peça ajuda durante a aula ou pelo canal da disciplina.</p>
+</div>
+</div>
+</section>
+<section id="confirmar-no-github" class="level2">
+<h2 class="anchored" data-anchor-id="confirmar-no-github">8. Confirmar no GitHub</h2>
+<ol type="1">
+<li>Retorne à página do seu repositório no navegador.</li>
+<li>Atualize a página.</li>
+<li>Abra o arquivo <code>README.md</code> e confirme sua identificação.</li>
+<li>Confirme que o arquivo <code>.gitignore</code> também aparece na lista de arquivos.</li>
+<li>Abra a lista de <em>commits</em> e confirme a mensagem <strong>Configura projeto e identificação inicial</strong>.</li>
+</ol>
+<p>Se essas verificações forem bem-sucedidas, você concluiu o primeiro fluxo de trabalho.</p>
+</section>
+<section id="registrar-o-repositório" class="level2">
+<h2 class="anchored" data-anchor-id="registrar-o-repositório">9. Registrar o repositório</h2>
+<p>Quando o cadastro de repositórios for publicado, registre a URL do seu repositório individual. Até lá, preserve essa URL e mantenha o repositório público, conforme as instruções da disciplina.</p>
+</section>
+<section id="o-ciclo-que-você-repetirá-nas-aulas" class="level2">
+<h2 class="anchored" data-anchor-id="o-ciclo-que-você-repetirá-nas-aulas">O ciclo que você repetirá nas aulas</h2>
+<p>No Terminal do RStudio, o ciclo básico será:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add nome-do-arquivo</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Descreve a alteração realizada"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Você estudará esses comandos gradualmente. O RStudio será usado para criar e abrir o projeto; o Git Bash, no Terminal do RStudio, será usado para operar o Git. A aba Git pode aparecer na interface, mas não faz parte deste tutorial.</p>
+<p>Branches, conflitos, recuperação de versões e colaboração avançada serão tratados somente quando forem necessários. Neste momento, domine o ciclo acima e confirme cada envio no GitHub.</p>
+</section>
+<section id="checklist-de-conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-de-conclusão">Checklist de conclusão</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Tenho uma conta GitHub e Git instalado/configurado.</label></li>
+<li><label><input type="checkbox">Criei meu repositório individual público no GitHub.</label></li>
+<li><label><input type="checkbox">Criei e abri o Projeto RStudio a partir desse repositório.</label></li>
+<li><label><input type="checkbox">Confirmei o <code>README.md</code> e o Terminal Git Bash no RStudio.</label></li>
+<li><label><input type="checkbox">Editei e salvei o <code>README.md</code> e o <code>.gitignore</code>.</label></li>
+<li><label><input type="checkbox">Fiz um commit e um <em>push</em> pelo Terminal do RStudio.</label></li>
+<li><label><input type="checkbox">Confirmei a alteração no GitHub.</label></li>
+<li><label><input type="checkbox">Registrei a URL no cadastro da disciplina, quando ele estiver disponível.</label></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026 Washington Santos da Silva</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/washingtonssilva/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://washingtonsilva.github.io">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

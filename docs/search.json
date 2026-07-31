@@ -1,0 +1,503 @@
+[
+  {
+    "objectID": "tutorials/quarto-rstudio.html",
+    "href": "tutorials/quarto-rstudio.html",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "",
+    "text": "Neste tutorial, você criará seu primeiro documento Quarto dentro do seu Projeto RStudio, configurará seu cabeçalho YAML, escreverá um texto curto, inserirá uma célula de código R e produzirá uma página HTML:"
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#antes-de-começar",
+    "href": "tutorials/quarto-rstudio.html#antes-de-começar",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "Antes de começar",
+    "text": "Antes de começar\nConclua o tutorial Git e GitHub e abra no RStudio o Projeto RStudio criado a partir do repositório individual. O nome desse projeto deve aparecer no canto superior direito da janela.\nNão é necessário instalar nada novo: a instalação e a verificação do Quarto já fazem parte da Preparação do ambiente computacional."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#criar-um-documento-quarto",
+    "href": "tutorials/quarto-rstudio.html#criar-um-documento-quarto",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "1. Criar um documento Quarto",
+    "text": "1. Criar um documento Quarto\n\nNo RStudio, escolha File → New File → Quarto Document.\nNa janela de criação, preencha:\n\nTitle: Primeiro documento;\nAuthor: seu nome completo;\nFormat: HTML.\n\nClique em Create.\n\n\nO RStudio abrirá um novo arquivo com extensão .qmd no painel Source. Esse arquivo reúne o texto do documento e as opções de geração do resultado."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#configurar-o-cabeçalho-yaml",
+    "href": "tutorials/quarto-rstudio.html#configurar-o-cabeçalho-yaml",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "2. Configurar o cabeçalho YAML",
+    "text": "2. Configurar o cabeçalho YAML\nO cabeçalho YAML fica no início do arquivo, entre duas linhas de três hífens (---). Ele informa ao Quarto o que é o documento e como ele deve ser produzido. Substitua o cabeçalho criado pelo RStudio pelo bloco abaixo:\n---\ntitle: \"Primeiro documento\"\nauthor: \"Seu nome completo\"\nlang: pt-BR\nformat:\n  html:\n    toc: true\n    embed-resources: true\nexecute:\n  echo: true\n  warning: false\n  message: false\n---\nFaça três verificações antes de continuar:\n\nsubstitua Seu nome completo pelo seu nome;\nmantenha as duas linhas ---, uma no começo e outra no fim do cabeçalho;\nuse espaços, e nunca a tecla Tab, antes de html: e toc:.\n\nAs linhas title, author e lang definem propriedades diretas do documento. Já html está dentro de format, e toc: true está dentro de html; por isso essas linhas são recuadas. Essa estrutura gera um documento HTML com sumário automático e autocontido: embed-resources: true incorpora os recursos necessários ao próprio arquivo HTML. A chave execute vale para todas as células de código: echo: true mantém o código visível, enquanto warning: false e message: false impedem que avisos e mensagens apareçam no documento renderizado.\n\n\n\n\n\n\nDicaYAML exige atenção à estrutura\n\n\n\nUm cabeçalho sem a linha final ---, com uma indentação incorreta ou com Tab no lugar de espaços pode impedir a renderização. Quando isso acontecer, verifique primeiro o YAML antes de alterar o restante do texto."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#escrever-o-primeiro-conteúdo",
+    "href": "tutorials/quarto-rstudio.html#escrever-o-primeiro-conteúdo",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "3. Escrever o primeiro conteúdo",
+    "text": "3. Escrever o primeiro conteúdo\nDeixe uma linha em branco após a linha final --- do YAML e substitua todo o conteúdo abaixo dela pelo trecho a seguir.\n## Objetivo\n\nEste documento reúne texto, código R e resultados produzidos de forma\nreproduzível.\n\n## Resultados\n\nOs resultados das análises aparecerão abaixo das células de código R."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#inserir-e-executar-uma-célula-de-código-r",
+    "href": "tutorials/quarto-rstudio.html#inserir-e-executar-uma-célula-de-código-r",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "4. Inserir e executar uma célula de código R",
+    "text": "4. Inserir e executar uma célula de código R\nPosicione o cursor depois do texto anterior. Na barra do editor, escolha Insert → R, ou use Ctrl + Alt + I. O RStudio criará uma célula de código R. Substitua seu conteúdo pelo bloco abaixo:\n```{r}\nretornos &lt;- c(0.012, -0.004, 0.009, 0.006)\nmean(retornos)\n```\nClique no botão verde de execução da célula ou use Ctrl + Alt + C para executar a célula atual. O resultado aparecerá abaixo dela no editor. Ao renderizar o documento, o Quarto executará novamente o código e incluirá o resultado no HTML.\n\n\n\n\n\n\nImportanteCélulas de código nas atividades da disciplina\n\n\n\nModelos, testes, gráficos e tabelas serão produzidos em células de código R. Escreva o texto para apresentar e interpretar os resultados; não construa manualmente tabelas ou figuras em Markdown."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#opções-de-execução",
+    "href": "tutorials/quarto-rstudio.html#opções-de-execução",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "5. Opções de execução",
+    "text": "5. Opções de execução\nA opção global execute: echo: true do YAML mantém o código visível em todas as células. Quando uma única célula precisar de comportamento diferente, use uma opção local, iniciada por #|, logo após a abertura da célula:\n```{r}\n#| echo: true\n\nmean(retornos)\n```\nAs opções locais valem somente para aquela célula e têm prioridade sobre a opção global correspondente. O padrão da disciplina mantém o código visível e omite avisos e mensagens do HTML. Se houver problema ao executar uma célula, consulte o Console do RStudio: as opções controlam o documento renderizado, não impedem que avisos e mensagens sejam produzidos durante a execução."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#salvar-dentro-do-projeto-rstudio",
+    "href": "tutorials/quarto-rstudio.html#salvar-dentro-do-projeto-rstudio",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "6. Salvar dentro do Projeto RStudio",
+    "text": "6. Salvar dentro do Projeto RStudio\n\nEscolha File → Save.\nSalve o arquivo com o nome primeiro-documento.qmd na pasta principal do seu Projeto RStudio.\nConfirme, na aba Files, que o arquivo aparece nessa pasta.\n\nSalvar dentro do projeto é importante: os arquivos da disciplina, o documento Quarto e os resultados gerados ficarão reunidos em uma única localização."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#renderizar-em-html",
+    "href": "tutorials/quarto-rstudio.html#renderizar-em-html",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "7. Renderizar em HTML",
+    "text": "7. Renderizar em HTML\nCom primeiro-documento.qmd aberto no painel Source, clique em Render, na barra superior do editor. Aguarde a conclusão do processo.\n\nRenderizar transforma o arquivo-fonte .qmd em um documento final. Neste caso, o resultado é um arquivo HTML. O RStudio normalmente o abrirá no painel Viewer ou no navegador padrão."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#verificar-o-resultado",
+    "href": "tutorials/quarto-rstudio.html#verificar-o-resultado",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "8. Verificar o resultado",
+    "text": "8. Verificar o resultado\nConfirme os três pontos abaixo antes de encerrar:\n\no documento HTML mostra o título, seu nome, um sumário, os títulos de seção, a célula de código R e o resultado da média;\na aba Files contém primeiro-documento.qmd e primeiro-documento.html;\nnão há mensagem de erro impedindo a renderização.\n\nSe o resultado não estiver correto, volte ao arquivo .qmd, corrija-o, salve e clique em Render novamente. Você repetirá esse ciclo ao longo da disciplina.\n\n\n\n\n\n\nDicaSe o botão Render não aparecer\n\n\n\nVerifique se o arquivo aberto termina em .qmd e se você está no Projeto RStudio correto. Se o problema persistir, retorne à seção de verificação do Quarto na Preparação do ambiente computacional."
+  },
+  {
+    "objectID": "tutorials/quarto-rstudio.html#próximo-passo",
+    "href": "tutorials/quarto-rstudio.html#próximo-passo",
+    "title": "Quarto e RStudio: primeiro documento",
+    "section": "Próximo passo",
+    "text": "Próximo passo\nVocê concluiu o primeiro ciclo com Quarto: criou um .qmd, configurou seu YAML, inseriu código R e gerou HTML. Continue com Markdown para documentos Quarto para aprender a estruturar melhor o texto que apresenta e interpreta os resultados. Nas atividades da disciplina, esse fluxo será aplicado gradualmente a modelos, testes, gráficos e tabelas produzidos com R.\nPara consulta posterior, veja a documentação oficial sobre criação de documentos Quarto."
+  },
+  {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Tutoriais básicos e materiais de apoio",
+    "section": "",
+    "text": "Conclua primeiro as etapas de instalação e configuração da Preparação do ambiente computacional. Depois de concluir o tutorial de Git e GitHub, retorne à página do ambiente para fazer a verificação final.",
+    "crumbs": [
+      "Tutoriais básicos e apoio"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html#sec-tutoriais-disciplina",
+    "href": "tutorials/index.html#sec-tutoriais-disciplina",
+    "title": "Tutoriais básicos e materiais de apoio",
+    "section": "Tutoriais básicos da disciplina",
+    "text": "Tutoriais básicos da disciplina\nEstes tutoriais usam o fluxo de trabalho e as ferramentas adotados na disciplina. Siga-os na ordem apresentada.\n\nR e tidyverse: introdução prática\nComece por este tutorial para consolidar os fundamentos de R e tidyverse. Ele deve ser concluído integralmente por quem não domina essa base e serve como revisão dirigida para os demais estudantes.\nAbrir tutorial\n\n\nGit e GitHub\nCrie seu repositório individual no GitHub, abra-o como Projeto RStudio e registre sua primeira alteração usando Git Bash no Terminal.\nAbrir tutorial\n\n\nQuarto e RStudio: primeiro documento\nCrie um arquivo .qmd no seu Projeto RStudio, configure seu cabeçalho YAML, insira uma célula de código R e renderize-o em HTML.\nAbrir tutorial\n\n\nMarkdown para documentos Quarto\nAmplie o arquivo .qmd já criado com títulos, texto, listas e equações simples.\nAbrir tutorial",
+    "crumbs": [
+      "Tutoriais básicos e apoio"
+    ]
+  },
+  {
+    "objectID": "tutorials/index.html#sec-tutoriais-apoio",
+    "href": "tutorials/index.html#sec-tutoriais-apoio",
+    "title": "Tutoriais básicos e materiais de apoio",
+    "section": "Tutorial complementar do professor",
+    "text": "Tutorial complementar do professor\nEste material externo abre em uma nova aba e complementa os tutoriais básicos quando for necessário revisar a interface do RStudio.\n\nRStudio: ambiente de desenvolvimento integrado\nConheça a interface do RStudio e seus recursos essenciais. Para criar o repositório individual e configurar o fluxo de trabalho desta disciplina, siga sempre o tutorial de Git e GitHub apresentado acima.\nAbrir tutorial",
+    "crumbs": [
+      "Tutoriais básicos e apoio"
+    ]
+  },
+  {
+    "objectID": "programa.html",
+    "href": "programa.html",
+    "title": "Programa da Disciplina",
+    "section": "",
+    "text": "Desenvolver, nos mestrandos, competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#objetivo-geral",
+    "href": "programa.html#objetivo-geral",
+    "title": "Programa da Disciplina",
+    "section": "",
+    "text": "Desenvolver, nos mestrandos, competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#objetivos-específicos",
+    "href": "programa.html#objetivos-específicos",
+    "title": "Programa da Disciplina",
+    "section": "Objetivos Específicos",
+    "text": "Objetivos Específicos\nAo final da disciplina, espera-se que o mestrando seja capaz de:\n\nCompreender os fundamentos e as hipóteses da regressão linear aplicada a dados em seção cruzada e a dados de séries temporais, incluindo exogeneidade e consistência do estimador de mínimos quadrados ordinários.\nEstimar, interpretar e comunicar modelos de regressão linear em aplicações financeiras, quantificando a incerteza por meio de erros-padrão, intervalos de confiança e testes de hipóteses.\nDiagnosticar problemas de especificação, heterocedasticidade e autocorrelação dos resíduos, empregando erros-padrão robustos quando apropriado.\nEstimar e interpretar modelos para variáveis dependentes binárias e avaliar seus limites em aplicações financeiras.\nDistinguir associação e efeito causal, reconhecer a endogeneidade e avaliar criticamente estratégias de ajuste por observáveis, como o pareamento por escore de propensão, e variáveis instrumentais.\nElaborar e documentar análises empíricas reprodutíveis, seguindo boas práticas de organização, execução e comunicação de resultados.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#avaliação",
+    "href": "programa.html#avaliação",
+    "title": "Programa da Disciplina",
+    "section": "Avaliação",
+    "text": "Avaliação\nTrata-se de um planejamento e pode ser alterado conforme o andamento da disciplina.\n\nAvaliação 1 (33 pontos) — atividades práticas reprodutíveis\nAvaliação 2 (33 pontos) — exame intermediário\nAvaliação 3 (34 pontos) — exame final\n\nCritério de aprovação: nota média final igual ou superior a 60 pontos.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#bibliografia-básica",
+    "href": "programa.html#bibliografia-básica",
+    "title": "Programa da Disciplina",
+    "section": "Bibliografia Básica",
+    "text": "Bibliografia Básica\nBROOKS, Chris. Introductory Econometrics for Finance. 4. ed. Cambridge: Cambridge University Press, 2019.\nBROOKS, Chris. R Guide to Accompany Introductory Econometrics for Finance. Cambridge: Cambridge University Press, 2019.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#bibliografia-complementar",
+    "href": "programa.html#bibliografia-complementar",
+    "title": "Programa da Disciplina",
+    "section": "Bibliografia Complementar",
+    "text": "Bibliografia Complementar\nWOOLDRIDGE, Jeffrey M. Introductory Econometrics: A Modern Approach. 8. ed. Boston: Cengage, 2025.\nHUNTINGTON-KLEIN, Nick. The Effect: An Introduction to Research Design and Causality. 2. ed. Boca Raton: Chapman & Hall/CRC, 2025.\nHANCK, Christoph; ARNOLD, Martin; GERBER, Alexander; SCHMELZER, Martin. Introduction to Econometrics with R. Disponível em: https://www.econometrics-with-r.org/\n\nArtigos Selecionados\nABADIE, Alberto. Statistical Nonsignificance in Empirical Economics. American Economic Review: Insights, v. 2, n. 2, p. 193–208, 2020. DOI: 10.1257/aeri.20190252\nANGRIST, Joshua D.; KRUEGER, Alan B. Instrumental Variables and the Search for Identification: From Supply and Demand to Natural Experiments. Journal of Economic Perspectives, v. 15, n. 4, p. 69–85, 2001. DOI: 10.1257/jep.15.4.69\nCHRISTENSEN, Garret; MIGUEL, Edward. Transparency, Reproducibility, and the Credibility of Economics Research. Journal of Economic Literature, v. 56, n. 3, p. 920–980, 2018. DOI: 10.1257/jel.20171350\nIMBENS, Guido W. Statistical Significance, p-Values, and the Reporting of Uncertainty. Journal of Economic Perspectives, v. 35, n. 3, p. 157–174, 2021. DOI: 10.1257/jep.35.3.157\nIMBENS, Guido W.; XU, Yiqing. Comparing Experimental and Nonexperimental Methods: What Lessons Have We Learned Four Decades after LaLonde (1986)? Journal of Economic Perspectives, v. 39, n. 4, p. 173–202, 2025. DOI: 10.1257/jep.20251440\nKING, Gary; NIELSEN, Richard. Why Propensity Scores Should Not Be Used for Matching. Political Analysis, v. 27, n. 4, p. 435–454, 2019. DOI: 10.1017/pan.2019.11\n\n\nReferências Técnicas\nNEWEY, Whitney K.; WEST, Kenneth D. A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix. Econometrica, v. 55, n. 3, p. 703–708, 1987. DOI: 10.2307/1913610\nWASSERSTEIN, Ronald L.; LAZAR, Nicole A. The ASA’s Statement on p-Values: Context, Process, and Purpose. The American Statistician, v. 70, n. 2, p. 129–133, 2016. DOI: 10.1080/00031305.2016.1154108\nWHITE, Halbert. A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity. Econometrica, v. 48, n. 4, p. 817–838, 1980. DOI: 10.2307/1912934",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#tutoriais-online",
+    "href": "programa.html#tutoriais-online",
+    "title": "Programa da Disciplina",
+    "section": "Tutoriais Online",
+    "text": "Tutoriais Online\nRStudio: Ambiente de Desenvolvimento Integrado para a Linguagem R\nIntrodução prática à linguagem R com o tidyverse\nQuarto: Um Sistema de Publicação Técnica e Científica\nDocumentação do Sistema Quarto\nControle de Versão com Git e GitHub\nLearn LaTeX in 30 minutes",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#ementa",
+    "href": "programa.html#ementa",
+    "title": "Programa da Disciplina",
+    "section": "Ementa",
+    "text": "Ementa\nComputação científica reprodutível com R, Git/GitHub e Quarto. Regressão linear aplicada a dados em seção cruzada: especificação, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade. Modelos de apreçamento de ativos: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta de Newey-West. Modelos para variáveis dependentes binárias. Causalidade, pareamento por escore de propensão e variáveis instrumentais.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#conteúdo-programático",
+    "href": "programa.html#conteúdo-programático",
+    "title": "Programa da Disciplina",
+    "section": "Conteúdo Programático",
+    "text": "Conteúdo Programático\n\nRegressão linear aplicada a dados em seção cruzada: especificação, estimação por mínimos quadrados ordinários, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade.\nModelos de apreçamento de ativos: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta.\nModelos para variáveis dependentes binárias: modelo de probabilidade linear, logit, probit e interpretação de probabilidades, efeitos marginais e sua incerteza.\nCausalidade e endogeneidade em estudos observacionais: confundimento, pareamento por escore de propensão, variáveis instrumentais e distinção entre precisão estatística, identificação e limites das inferências causais.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#recursos-didáticos-e-materiais-de-estudo",
+    "href": "programa.html#recursos-didáticos-e-materiais-de-estudo",
+    "title": "Programa da Disciplina",
+    "section": "Recursos Didáticos e Materiais de Estudo",
+    "text": "Recursos Didáticos e Materiais de Estudo\nEntre os recursos didáticos utilizados na disciplina estão:\n\nMateriais Primários para Estudo:\n\nBibliografia recomendada.\nSlides e notas de aula (disponibilizados no site da disciplina).\nTutoriais.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#metodologia-de-ensino",
+    "href": "programa.html#metodologia-de-ensino",
+    "title": "Programa da Disciplina",
+    "section": "Metodologia de Ensino",
+    "text": "Metodologia de Ensino\nA disciplina será conduzida no formato hands-on, com abordagem de aprendizagem ativa. Cada encontro combinará exposição e live coding com atividade prática em aula usando R, RStudio, Quarto, Git e GitHub. A exposição ocupará, em média, até duas horas de duração, o tempo restante será dedicado a uma atividade prática. A ideia é articular teoria, prática computacional, interpretação e documentação reprodutível.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#plano-de-aula",
+    "href": "programa.html#plano-de-aula",
+    "title": "Programa da Disciplina",
+    "section": "Plano de Aula",
+    "text": "Plano de Aula\nTrata-se apenas de um planejamento e, como todo planejamento, pode ser alterado conforme o andamento da disciplina.\n\n\n\nAula\nData\nTópico\n\n\n\n\n1\n04/08/2026\nRegressão aplicada a Finanças\n\n\n2\n11/08/2026\nRegressão linear\n\n\n3\n18/08/2026\nInferência na regressão\n\n\n4\n25/08/2026\nHeterocedasticidade\n\n\n5\n01/09/2026\nInferência robusta\n\n\n6\n08/09/2026\nConsistência\n\n\n7\n15/09/2026\nAvaliação intermediária\n\n\n8\n22/09/2026\nModelos de apreçamento de ativos\n\n\n9\n29/09/2026\nAutocorrelação\n\n\n10\n06/10/2026\nVariáveis dependentes binárias\n\n\n11\n20/10/2026\nCausalidade\n\n\n12\n03/11/2026\nEscore de propensão\n\n\n13\n10/11/2026\nVariáveis instrumentais\n\n\n14\n17/11/2026\nRevisão integrada\n\n\n15\n24/11/2026\nAvaliação final",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "cronograma.html",
+    "href": "cronograma.html",
+    "title": "Cronograma",
+    "section": "",
+    "text": "Aqui estão o cronograma e os materiais de cada aula, como slides, dados e leituras.\n\n\n\n\n\n\nDicaComo navegar pelos slides\n\n\n\nOs slides são interativos e foram produzidos em revealjs.\nAo abrir um arquivo de slides, utilize:\n\nSetas (← →): avançar e voltar.\nF: tela cheia.\nO: visão geral dos slides.\nEsc: sair da visão geral.\nEm dispositivos móveis, deslize para os lados.\n\nOs slides abrem em uma nova aba do navegador.\n\n\n\nAula 1 (04/08/26)",
+    "crumbs": [
+      "Cronograma"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html",
+    "href": "ambiente_computacional.html",
+    "title": "Preparação do ambiente computacional",
+    "section": "",
+    "text": "Conclua este roteiro de instalação e configuração. Ele prepara o computador para as atividades da disciplina.\n\n\n\n\n\n\nNotaPlataforma adotada\n\n\n\nAs etapas detalhadas desta página foram preparadas para Windows. Usuários de macOS ou Linux devem utilizar os instaladores disponíveis nas páginas oficiais indicadas nas seções de R, RStudio, Quarto e Git. Nesses sistemas, use o terminal padrão em vez do Git Bash. Se não conseguir concluir a verificação do ambiente, procure orientação antes da primeira aula.\n\n\n\n\n\n\n\n\nImportanteJá tem os programas instalados?\n\n\n\nSe você usa R 4.5.1 ou 4.5.2, instale o R 4.6.1 indicado nesta página. Atualize também RStudio, Quarto e Git para a versão estável mais recente disponível nas páginas oficiais. Faça isso com antecedência: a atualização pode exigir reiniciar o computador ou verificar novamente o terminal do RStudio.\nOs pacotes instalados no R 4.5 não estarão disponíveis automaticamente no R 4.6. Não é necessário reinstalá-los agora: a disciplina indicará os pacotes a instalar quando eles forem usados.\n\n\n\nCaso não tenha, crie uma conta gratuita no GitHub.\nInstale R 4.6.1 e atualize RStudio, Quarto e Git.\nVerifique a identidade configurada no Git e o Git Bash como terminal do RStudio. Ajuste apenas o que for necessário.\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina, começando por R e tidyverse.\nDepois de concluir o tutorial de Git e GitHub, retorne a esta página e faça a verificação final do ambiente.\n\n\n\n\n\n\n\nImportanteAntes da primeira aula\n\n\n\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina na ordem indicada: comece por R e tidyverse e, em seguida, conclua o tutorial prático de Git e GitHub. Git e GitHub serão usados desde a primeira aula; guarde a URL do seu repositório individual público.\n\n\n\n\n\n\n\n\nNotaRepositório público\n\n\n\nNão envie senhas, chaves de acesso, dados pessoais de terceiros ou dados restritos ao repositório. Use apenas materiais autorizados para a disciplina.\n\n\nPara revisar conceitos, consulte o tutorial de Git e GitHub do professor. O Happy Git and GitHub for the useR é um aprofundamento opcional.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-preparacao",
+    "href": "ambiente_computacional.html#sec-preparacao",
+    "title": "Preparação do ambiente computacional",
+    "section": "",
+    "text": "Conclua este roteiro de instalação e configuração. Ele prepara o computador para as atividades da disciplina.\n\n\n\n\n\n\nNotaPlataforma adotada\n\n\n\nAs etapas detalhadas desta página foram preparadas para Windows. Usuários de macOS ou Linux devem utilizar os instaladores disponíveis nas páginas oficiais indicadas nas seções de R, RStudio, Quarto e Git. Nesses sistemas, use o terminal padrão em vez do Git Bash. Se não conseguir concluir a verificação do ambiente, procure orientação antes da primeira aula.\n\n\n\n\n\n\n\n\nImportanteJá tem os programas instalados?\n\n\n\nSe você usa R 4.5.1 ou 4.5.2, instale o R 4.6.1 indicado nesta página. Atualize também RStudio, Quarto e Git para a versão estável mais recente disponível nas páginas oficiais. Faça isso com antecedência: a atualização pode exigir reiniciar o computador ou verificar novamente o terminal do RStudio.\nOs pacotes instalados no R 4.5 não estarão disponíveis automaticamente no R 4.6. Não é necessário reinstalá-los agora: a disciplina indicará os pacotes a instalar quando eles forem usados.\n\n\n\nCaso não tenha, crie uma conta gratuita no GitHub.\nInstale R 4.6.1 e atualize RStudio, Quarto e Git.\nVerifique a identidade configurada no Git e o Git Bash como terminal do RStudio. Ajuste apenas o que for necessário.\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina, começando por R e tidyverse.\nDepois de concluir o tutorial de Git e GitHub, retorne a esta página e faça a verificação final do ambiente.\n\n\n\n\n\n\n\nImportanteAntes da primeira aula\n\n\n\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina na ordem indicada: comece por R e tidyverse e, em seguida, conclua o tutorial prático de Git e GitHub. Git e GitHub serão usados desde a primeira aula; guarde a URL do seu repositório individual público.\n\n\n\n\n\n\n\n\nNotaRepositório público\n\n\n\nNão envie senhas, chaves de acesso, dados pessoais de terceiros ou dados restritos ao repositório. Use apenas materiais autorizados para a disciplina.\n\n\nPara revisar conceitos, consulte o tutorial de Git e GitHub do professor. O Happy Git and GitHub for the useR é um aprofundamento opcional.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#instalação-dos-programas",
+    "href": "ambiente_computacional.html#instalação-dos-programas",
+    "title": "Preparação do ambiente computacional",
+    "section": "Instalação dos programas",
+    "text": "Instalação dos programas\n\nLinguagem R\n\n\n\n\n\n\nDicaInstalar R 4.6.1\n\n\n\n\nAcesse CRAN.\nClique em Download R for Windows e, na página seguinte, em base.\nClique em Download R-4.6.1 for Windows.\nApós o download, execute o instalador e aceite as opções padrão até a instalação ser concluída. Mesmo que você já use uma versão anterior de R, instale o R 4.6.1.\n\n\n\n\n\nRStudio\n\n\n\n\n\n\nDicaInstalar ou atualizar o RStudio Desktop\n\n\n\n\nAcesse a página de download do RStudio.\nNa seção 2: Install RStudio, clique em Download RStudio Desktop for Windows.\nApós o download, execute o instalador e avance até a instalação ser concluída. Se o RStudio já estiver instalado, esse procedimento o atualizará.\n\n\n\n\n\nSistema Quarto\n\n\n\n\n\n\nDicaInstalar ou atualizar o Quarto CLI\n\n\n\n\nAcesse a página de download do Quarto.\nBaixe o instalador de Quarto CLI para Windows.\nExecute o instalador e avance até a instalação ser concluída. Se o Quarto já estiver instalado, esse procedimento o atualizará.\n\n\n\n\n\nTinyTeX\n\n\n\n\n\n\nImportanteInstalar o TinyTeX quando uma atividade exigir PDF\n\n\n\nTinyTeX é a distribuição LaTeX recomendada para gerar PDF a partir de documentos Quarto. Ele só é necessário para gerar PDF localmente.\nA disciplina avisará antes da primeira atividade que exigir PDF. Instale-o depois de instalar o Quarto, com antecedência em relação a essa atividade.\nSe ainda não tiver o TinyTeX, abra a aba Terminal do RStudio e execute:\nquarto install tinytex\nSe já tiver o TinyTeX, atualize a distribuição com:\nquarto update tinytex\n\n\n\n\nGit\n\n\n\n\n\n\nDicaJá tem Git for Windows?\n\n\n\nAbra o Git Bash e execute:\ngit update-git-for-windows\nSiga as instruções exibidas. Ao terminar, abra um novo terminal e confirme a atualização com:\ngit --version\nSe o comando não funcionar, baixe e execute o instalador da seção seguinte. Isso pode ocorrer em instalações portáteis ou personalizadas.\n\n\n\n\n\n\n\n\nDicaInstalar o Git for Windows\n\n\n\n\nAcesse git-scm.com e clique em Download for Windows.\nApós o download, execute o instalador.\nMantenha as configurações padrão sugeridas. Na janela Adjusting the name of the initial branch, marque Override the default branch name for new repositories e informe main.\nClique em Next nas janelas restantes e conclua a instalação. Este instalador também pode ser usado para atualizar o Git quando o comando da seção anterior não funcionar.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-github",
+    "href": "ambiente_computacional.html#sec-github",
+    "title": "Preparação do ambiente computacional",
+    "section": "Conta GitHub",
+    "text": "Conta GitHub\nCaso ainda não tenha uma conta, acesse github.com, clique em Sign up, conclua o cadastro e confirme seu e-mail. Use uma conta individual que você possa manter durante toda a disciplina.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-configurar-git",
+    "href": "ambiente_computacional.html#sec-configurar-git",
+    "title": "Preparação do ambiente computacional",
+    "section": "Verificar e configurar o Git",
+    "text": "Verificar e configurar o Git\nAbra o Git Bash, disponível no menu Iniciar após a instalação do Git, e verifique o nome e o e-mail que o Git usará no histórico de seus commits:\ngit config --global --get user.name\ngit config --global --get user.email\n\n\n\n\n\n\nDicaJá há uma identidade configurada?\n\n\n\nSe os dois comandos exibirem seu nome e um e-mail associado à conta do GitHub que você usará na disciplina, não altere nada. Continue para a seção Git Bash como terminal do RStudio.\n\n\nSe algum comando não exibir um valor, ou se precisar usar outra identidade, configure o nome e o e-mail:\ngit config --global user.name \"Seu Nome\"\ngit config --global user.email \"seuemail@exemplo.com\"\nUse um e-mail associado à conta do GitHub que você utilizará na disciplina.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-git-bash",
+    "href": "ambiente_computacional.html#sec-git-bash",
+    "title": "Preparação do ambiente computacional",
+    "section": "Git Bash como terminal do RStudio",
+    "text": "Git Bash como terminal do RStudio\nOs comandos Git desta disciplina serão executados no Terminal do RStudio usando Git Bash. Depois de instalar o Git for Windows, o Git Bash pode já estar selecionado no RStudio, mas isso depende das configurações do seu computador. Verifique antes de alterar qualquer opção:\n\nAbra RStudio → Tools → Global Options → Terminal.\nEm New terminals open with, verifique a opção exibida.\nSe já estiver selecionado Git Bash, não altere nada. Caso esteja selecionado PowerShell ou outra opção, escolha Git Bash.\nConfirme a configuração e abra um novo terminal no RStudio.\n\nSe Git Bash não aparecer na lista, reinstale o Git for Windows mantendo as opções padrão e tente novamente. O Git Bash padroniza os comandos com macOS e Linux. Ele oferece comandos no estilo Unix, mas não transforma o Windows em outro sistema operacional.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-validacao",
+    "href": "ambiente_computacional.html#sec-validacao",
+    "title": "Preparação do ambiente computacional",
+    "section": "Verificação do ambiente",
+    "text": "Verificação do ambiente\nAntes da primeira aula, confirme que você consegue:\n\nAbrir R e RStudio.\nAbrir o terminal do RStudio e executar:\nquarto --version\ngit --version\nConfirmar que seu nome e e-mail do Git estão configurados conforme a seção anterior.\nApós concluir o tutorial de Git e GitHub, criar seu repositório individual público, abri-lo como Projeto RStudio, confirmar que o Terminal usa Git Bash, editar arquivos e usar git status, git add, git commit e git push para enviá-los ao GitHub.\nRegistrar a URL do seu repositório no cadastro da disciplina quando o formulário for publicado.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "",
+    "text": "Esta disciplina objetiva preparar os mestrandos para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.\nAntes da primeira aula, acesse a página Ambiente computacional para criar as contas necessárias, instalar e configurar os programas necessários em seu computador.",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "index.html#bem-vindo-à-disciplina",
+    "href": "index.html#bem-vindo-à-disciplina",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "",
+    "text": "Esta disciplina objetiva preparar os mestrandos para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.\nAntes da primeira aula, acesse a página Ambiente computacional para criar as contas necessárias, instalar e configurar os programas necessários em seu computador.",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "index.html#informações-gerais",
+    "href": "index.html#informações-gerais",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "Informações gerais",
+    "text": "Informações gerais\n\nProfessor: Prof. Dr. Washington Santos da Silva\nE-mail: washington.silva@ifmg.edu.br\nHorário de aula: Terça-Feira, 18:30-22:30\nLocal: aulas síncronas via Google Meet e aula presencial",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "index.html#conteúdo",
+    "href": "index.html#conteúdo",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "Conteúdo",
+    "text": "Conteúdo\nUse este site como guia da disciplina:\n\nAmbiente computacional: contas, programas e configurações necessárias antes da primeira aula.\nPrograma da Disciplina: objetivos, ementa, bibliografia e planejamento completo.\nTutoriais básicos e materiais de apoio: preparação em R/RStudio e primeiros passos com Git/GitHub, Quarto/RStudio e Markdown.\nCronograma: aulas, slides, dados e leituras.",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "tutorials/git-github.html",
+    "href": "tutorials/git-github.html",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "",
+    "text": "Este tutorial é para quem está começando com Git e GitHub. Ao final, você terá um repositório individual público, criado por você no GitHub, aberto como Projeto RStudio, com uma alteração registrada no Terminal e enviada ao GitHub."
+  },
+  {
+    "objectID": "tutorials/git-github.html#antes-de-começar",
+    "href": "tutorials/git-github.html#antes-de-começar",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "Antes de começar",
+    "text": "Antes de começar\nConclua as etapas da página de Preparação do ambiente computacional, sobretudo:\n\ncriar a conta do GitHub;\ninstalar e verificar Git, R e RStudio;\nconfigurar seu nome e e-mail no Git.\n\nVocê criará seu próprio repositório no GitHub. Use o nome mpa-ecnt01-nome, substituindo nome pelo seu primeiro nome, em letras minúsculas e sem acentos. Por exemplo: mpa-ecnt01-joao.\nO cadastro de repositórios será publicado separadamente. Salve a URL do seu repositório para registrá-la quando solicitado."
+  },
+  {
+    "objectID": "tutorials/git-github.html#o-fluxo-em-uma-imagem",
+    "href": "tutorials/git-github.html#o-fluxo-em-uma-imagem",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "O fluxo em uma imagem",
+    "text": "O fluxo em uma imagem\n\n\n\n\n\nflowchart LR\n    A[\"Novo repositório individual no GitHub\"] --&gt;|\"New Project → Version Control → Git\"| B[\"Projeto RStudio no computador\"]\n    B --&gt;|\"Git Bash: commit + push\"| A\n\n\n\n\n\n\n\nGitHub hospeda o repositório individual que será consultado pelo professor.\nO Projeto RStudio mantém, em uma única pasta, os arquivos Quarto e os demais materiais da atividade.\nO Terminal do RStudio será usado com Git Bash para registrar alterações e enviá-las ao GitHub.\n\nNão é preciso decorar esses termos agora. Eles farão sentido à medida que você repetir esse ciclo."
+  },
+  {
+    "objectID": "tutorials/git-github.html#criar-seu-repositório-individual",
+    "href": "tutorials/git-github.html#criar-seu-repositório-individual",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "1. Criar seu repositório individual",
+    "text": "1. Criar seu repositório individual\n\nEntre na sua conta do GitHub.\nClique no sinal de +, no canto superior direito, e escolha New repository.\nConfirme que o proprietário (Owner) é a sua conta individual do GitHub.\nEm Repository name, use o padrão mpa-ecnt01-nome. Por exemplo: mpa-ecnt01-joao.\nSelecione a visibilidade Public.\nMarque Add a README file. Essa opção cria o primeiro commit e o branch main, necessários para o próximo passo.\nNão selecione licença nem arquivo .gitignore nesta etapa: você criará o .gitignore no RStudio.\nClique em Create repository.\n\nVeja a documentação oficial do GitHub para criar um repositório.\n\n\n\n\n\n\nDicaAntes de continuar\n\n\n\nNa página do novo repositório, confirme que o arquivo README.md aparece no navegador. Ele foi criado pelo GitHub e será alterado no passo 5. O RStudio criará o arquivo .Rproj localmente no passo seguinte."
+  },
+  {
+    "objectID": "tutorials/git-github.html#copiar-o-endereço-do-repositório",
+    "href": "tutorials/git-github.html#copiar-o-endereço-do-repositório",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "2. Copiar o endereço do repositório",
+    "text": "2. Copiar o endereço do repositório\n\nNa página do seu repositório, clique no botão verde Code.\nMantenha a opção HTTPS selecionada.\nClique no ícone de cópia ao lado do endereço. Ele terá uma forma parecida com https://github.com/seu-usuario/seu-repositorio.git.\n\nUse HTTPS neste primeiro tutorial. Ele é a opção mais direta para o ambiente da disciplina. O procedimento de cópia da URL está detalhado na documentação de clonagem do GitHub."
+  },
+  {
+    "objectID": "tutorials/git-github.html#criar-o-projeto-rstudio-a-partir-do-repositório",
+    "href": "tutorials/git-github.html#criar-o-projeto-rstudio-a-partir-do-repositório",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "3. Criar o Projeto RStudio a partir do repositório",
+    "text": "3. Criar o Projeto RStudio a partir do repositório\n\nAbra o RStudio.\nEscolha File → New Project. Também é possível usar o menu de projetos no canto superior direito, identificado inicialmente como Project: (None).\nNa janela exibida, escolha Version Control e depois Git.\nCole, no campo Repository URL, o endereço HTTPS copiado no passo anterior.\nConfira o campo Project directory name. Ele deve corresponder ao nome do seu repositório; mantenha esse nome.\nEm Browse, escolha uma pasta-base para guardar projetos da disciplina, por exemplo, uma pasta mpa-2026 dentro de Documentos. Escolha a pasta-base, não crie nem selecione uma pasta vazia com o nome do repositório.\nClique em Create Project e aguarde.\n\nO RStudio clonará o repositório para uma nova pasta, criará o arquivo nome-do-repositorio.Rproj e abrirá esse projeto. Esse é o procedimento oficial para criar um Projeto RStudio a partir de um repositório Git remoto. Veja a documentação da Posit.\n\n\n\n\n\n\nDicaVerificação imediata\n\n\n\nAntes de editar qualquer arquivo, confirme três sinais no RStudio:\n\no nome do seu repositório aparece no canto superior direito;\na aba Files mostra o arquivo README.md;\no arquivo nome-do-repositorio.Rproj aparece na pasta do projeto.\n\nA aba Git pode aparecer na interface porque o projeto contém um repositório, mas ela não será usada neste tutorial."
+  },
+  {
+    "objectID": "tutorials/git-github.html#abrir-e-verificar-o-terminal-do-rstudio",
+    "href": "tutorials/git-github.html#abrir-e-verificar-o-terminal-do-rstudio",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "4. Abrir e verificar o Terminal do RStudio",
+    "text": "4. Abrir e verificar o Terminal do RStudio\n\nAo lado da aba Console, abra a aba Terminal. Um novo terminal deve ser iniciado na pasta-raiz do Projeto RStudio.\nO terminal adotado nesta disciplina é o Git Bash. Se ele ainda não estiver selecionado como terminal padrão no seu RStudio, siga a seção Git Bash como terminal do RStudio antes de continuar.\nExecute os comandos abaixo, um de cada vez:\ngit --version\ngit status\n\nO primeiro comando confirma que o Git está disponível. O segundo deve informar que você está no branch main e listar o arquivo .Rproj como não rastreado. Isso é esperado: o RStudio acabou de criar esse arquivo. Como o terminal é aberto no diretório do projeto, não é necessário usar cd."
+  },
+  {
+    "objectID": "tutorials/git-github.html#fazer-a-configuração-inicial",
+    "href": "tutorials/git-github.html#fazer-a-configuração-inicial",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "5. Fazer a configuração inicial",
+    "text": "5. Fazer a configuração inicial\n\nNa aba Files, abra o arquivo README.md.\nSubstitua todo o conteúdo pelo texto abaixo, trocando Seu nome completo pelo seu nome, e salve o arquivo.\n# Econometria Aplicada à Finanças\n\n**Estudante:** Seu nome completo\nEscolha File → New File → Text File. Salve o arquivo na pasta-raiz do projeto com o nome exato .gitignore. Confirme que o nome exibido na aba Files é .gitignore, e não .gitignore.txt.\nCole o conteúdo abaixo no arquivo .gitignore e salve-o.\n# Windows\nThumbs.db\nDesktop.ini\n\n# R e RStudio\n.Rhistory\n.RData\n.RDataTmp\n.Ruserdata\n.Rproj.user/\n\n# Quarto\n.quarto/\n*_cache/\n*.quarto_ipynb\n\n# Credenciais e dados não publicáveis\n.Renviron\n.Renviron.*\n!.Renviron.example\n.env\n.env.*\n!.env.example\n\nO .gitignore ignora apenas arquivos que ainda não foram registrados pelo Git. Nunca use-o como forma de proteger um arquivo que já foi enviado ao GitHub.\n\nRetorne ao Terminal e execute:\ngit status\n\nO README.md deve aparecer como arquivo modificado. O .gitignore e o arquivo nome-do-repositorio.Rproj, criado pelo RStudio, devem aparecer como arquivos novos. Eles serão incluídos no primeiro commit."
+  },
+  {
+    "objectID": "tutorials/git-github.html#registrar-a-alteração-com-git",
+    "href": "tutorials/git-github.html#registrar-a-alteração-com-git",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "6. Registrar a alteração com Git",
+    "text": "6. Registrar a alteração com Git\nNo Terminal, execute os comandos abaixo, um de cada vez:\ngit add README.md\ngit add .gitignore\ngit add nome-do-repositorio.Rproj\ngit status\ngit commit -m \"Configura projeto e identificação inicial\"\nSubstitua nome-do-repositorio.Rproj pelo nome real do seu arquivo .Rproj. O git status deve listar os três arquivos na seção de alterações prontas para o commit antes que você execute o último comando.\nUm commit registra um conjunto intencional de alterações. Conferir os arquivos antes de confirmá-lo é uma prática importante: não use git add . enquanto estiver aprendendo."
+  },
+  {
+    "objectID": "tutorials/git-github.html#enviar-o-commit-ao-github",
+    "href": "tutorials/git-github.html#enviar-o-commit-ao-github",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "7. Enviar o commit ao GitHub",
+    "text": "7. Enviar o commit ao GitHub\nNo mesmo Terminal, execute:\ngit push origin main\nNesse comando, origin é o nome local do repositório remoto no GitHub, configurado quando você o clonou; main é a ramificação que contém seu commit. Execute este comando somente depois de confirmar, com git status, que você está na ramificação main.\nNa primeira vez, o Git Credential Manager pode abrir uma janela do navegador para você entrar na sua conta do GitHub e autorizar o acesso. Conclua a autenticação e retorne ao RStudio.\nNão informe sua senha do GitHub diretamente no terminal. O Git for Windows inclui o Git Credential Manager, que permite autenticar via navegador e armazenar as credenciais de forma segura para operações HTTPS. Veja a orientação oficial do GitHub.\n\n\n\n\n\n\nAvisoSe o push não funcionar\n\n\n\nNão tente resolver o problema com git reset, git restore, git checkout ou comandos encontrados aleatoriamente na internet. Copie a mensagem de erro, execute git status e peça ajuda durante a aula ou pelo canal da disciplina."
+  },
+  {
+    "objectID": "tutorials/git-github.html#confirmar-no-github",
+    "href": "tutorials/git-github.html#confirmar-no-github",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "8. Confirmar no GitHub",
+    "text": "8. Confirmar no GitHub\n\nRetorne à página do seu repositório no navegador.\nAtualize a página.\nAbra o arquivo README.md e confirme sua identificação.\nConfirme que o arquivo .gitignore também aparece na lista de arquivos.\nAbra a lista de commits e confirme a mensagem Configura projeto e identificação inicial.\n\nSe essas verificações forem bem-sucedidas, você concluiu o primeiro fluxo de trabalho."
+  },
+  {
+    "objectID": "tutorials/git-github.html#registrar-o-repositório",
+    "href": "tutorials/git-github.html#registrar-o-repositório",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "9. Registrar o repositório",
+    "text": "9. Registrar o repositório\nQuando o cadastro de repositórios for publicado, registre a URL do seu repositório individual. Até lá, preserve essa URL e mantenha o repositório público, conforme as instruções da disciplina."
+  },
+  {
+    "objectID": "tutorials/git-github.html#o-ciclo-que-você-repetirá-nas-aulas",
+    "href": "tutorials/git-github.html#o-ciclo-que-você-repetirá-nas-aulas",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "O ciclo que você repetirá nas aulas",
+    "text": "O ciclo que você repetirá nas aulas\nNo Terminal do RStudio, o ciclo básico será:\ngit status\ngit add nome-do-arquivo\ngit commit -m \"Descreve a alteração realizada\"\ngit push origin main\nVocê estudará esses comandos gradualmente. O RStudio será usado para criar e abrir o projeto; o Git Bash, no Terminal do RStudio, será usado para operar o Git. A aba Git pode aparecer na interface, mas não faz parte deste tutorial.\nBranches, conflitos, recuperação de versões e colaboração avançada serão tratados somente quando forem necessários. Neste momento, domine o ciclo acima e confirme cada envio no GitHub."
+  },
+  {
+    "objectID": "tutorials/git-github.html#checklist-de-conclusão",
+    "href": "tutorials/git-github.html#checklist-de-conclusão",
+    "title": "Git e GitHub: primeiro fluxo de trabalho",
+    "section": "Checklist de conclusão",
+    "text": "Checklist de conclusão\n\nTenho uma conta GitHub e Git instalado/configurado.\nCriei meu repositório individual público no GitHub.\nCriei e abri o Projeto RStudio a partir desse repositório.\nConfirmei o README.md e o Terminal Git Bash no RStudio.\nEditei e salvei o README.md e o .gitignore.\nFiz um commit e um push pelo Terminal do RStudio.\nConfirmei a alteração no GitHub.\nRegistrei a URL no cadastro da disciplina, quando ele estiver disponível."
+  },
+  {
+    "objectID": "tutorials/markdown.html",
+    "href": "tutorials/markdown.html",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "",
+    "text": "Markdown permite escrever em texto simples com uma estrutura clara. Nesta disciplina, ele será usado principalmente para redigir, organizar e interpretar os resultados produzidos por código R em documentos Quarto.\nAntes de começar, conclua Quarto e RStudio: primeiro documento."
+  },
+  {
+    "objectID": "tutorials/markdown.html#como-ler-os-exemplos",
+    "href": "tutorials/markdown.html#como-ler-os-exemplos",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "Como ler os exemplos",
+    "text": "Como ler os exemplos\nCada exemplo apresenta a Sintaxe, escrita no arquivo .qmd, e o Resultado, que aparece depois da renderização."
+  },
+  {
+    "objectID": "tutorials/markdown.html#títulos-e-parágrafos",
+    "href": "tutorials/markdown.html#títulos-e-parágrafos",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "1. Títulos e parágrafos",
+    "text": "1. Títulos e parágrafos\nUse # para indicar a hierarquia dos títulos. Uma linha em branco separa parágrafos.\nSintaxe\n## Resultados\n\nEsta seção apresenta os principais resultados da análise.\n\n### Desempenho no período\n\nOs indicadores melhoraram no segundo trimestre.\nResultado\n\n\n\n\n\n\nNotaResultado no documento\n\n\n\n\nResultados\n\nEsta seção apresenta os principais resultados da análise.\n\nDesempenho no período\n\nOs indicadores melhoraram no segundo trimestre.\n\n\nEm documentos cujo título já está no cabeçalho YAML, como o arquivo criado no tutorial anterior, o corpo do texto começa em ##. Não use títulos apenas para alterar o tamanho visual da fonte."
+  },
+  {
+    "objectID": "tutorials/markdown.html#ênfase-código-e-listas",
+    "href": "tutorials/markdown.html#ênfase-código-e-listas",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "2. Ênfase, código e listas",
+    "text": "2. Ênfase, código e listas\nUse asteriscos para dar ênfase e crases para nomes de arquivos, comandos ou termos de código. Mantenha uma linha em branco antes e depois de uma lista.\nSintaxe\nO arquivo **relatorio.qmd** reúne os resultados da *análise exploratória*.\nExecute `Render` para gerar o documento.\n\n- Organize os dados.\n- Descreva o método.\n- Interprete os resultados.\n\n1. Escreva o texto.\n2. Execute as células R.\n3. Renderize o documento.\nResultado\n\n\n\n\n\n\nNotaResultado no documento\n\n\n\nO arquivo relatorio.qmd reúne os resultados da análise exploratória. Execute Render para gerar o documento.\n\nOrganize os dados.\nDescreva o método.\nInterprete os resultados.\n\n\nEscreva o texto.\nExecute as células R.\nRenderize o documento."
+  },
+  {
+    "objectID": "tutorials/markdown.html#equações-simples",
+    "href": "tutorials/markdown.html#equações-simples",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "3. Equações simples",
+    "text": "3. Equações simples\nUse a sintaxe LaTeX para fórmulas: uma fórmula curta fica entre um par de cifrões; uma fórmula em destaque fica entre dois pares.\nSintaxe\nO retorno simples é $r_t = (P_t / P_{t-1}) - 1$.\n\n$$\n\\bar{r} = \\frac{1}{n}\\sum_{t=1}^{n} r_t\n$$\nResultado\n\n\n\n\n\n\nNotaResultado no documento\n\n\n\nO retorno simples é \\(r_t = (P_t / P_{t-1}) - 1\\).\n\\[\n\\bar{r} = \\frac{1}{n}\\sum_{t=1}^{n} r_t\n\\]"
+  },
+  {
+    "objectID": "tutorials/markdown.html#tabelas-e-figuras-serão-produzidas-com-r",
+    "href": "tutorials/markdown.html#tabelas-e-figuras-serão-produzidas-com-r",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "4. Tabelas e figuras serão produzidas com R",
+    "text": "4. Tabelas e figuras serão produzidas com R\nNão é necessário aprender aqui a inserir imagens externas nem a construir tabelas manualmente em Markdown. Nas atividades e relatórios da disciplina, gráficos e tabelas serão gerados por células de código R. Use o texto para orientar a leitura do resultado e registrar sua interpretação.\nPor exemplo, antes de uma célula que produz uma tabela ou um gráfico, você pode escrever:\n## Resultados\n\nA tabela a seguir resume as estatísticas descritivas da amostra.\nO gráfico permite avaliar a evolução dos retornos no período analisado."
+  },
+  {
+    "objectID": "tutorials/markdown.html#prática",
+    "href": "tutorials/markdown.html#prática",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "5. Prática",
+    "text": "5. Prática\nNo arquivo primeiro-documento.qmd criado no tutorial anterior, acrescente um título de seção, dois parágrafos curtos e uma lista. Em seguida, escreva uma frase antes da célula R explicando o que o cálculo da média dos retornos mostra. Renderize o documento e verifique se o texto e o resultado aparecem na ordem esperada."
+  },
+  {
+    "objectID": "tutorials/markdown.html#checklist-antes-de-continuar",
+    "href": "tutorials/markdown.html#checklist-antes-de-continuar",
+    "title": "Markdown essencial para documentos Quarto",
+    "section": "Checklist antes de continuar",
+    "text": "Checklist antes de continuar\n\nSeparo parágrafos com uma linha em branco.\nUso títulos para organizar ideias, e não para escolher tamanhos de fonte.\nSei usar ênfase, escrever nomes de arquivos ou código curto e criar listas.\nConsigo inserir uma equação simples quando ela ajuda a explicar o método.\nSei que modelos, testes, tabelas e figuras serão produzidos em células de código R.\n\nPara recursos que não são foco deste tutorial, como imagens externas, tabelas manuais, links e layouts, consulte voluntariamente o tutorial abrangente de Markdown."
+  }
+]

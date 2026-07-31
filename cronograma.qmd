@@ -1,0 +1,29 @@
+---
+title: "Cronograma"
+lang: pt-BR
+---
+
+Aqui estão o cronograma e os materiais de cada aula, como slides, dados e
+leituras.
+
+
+::: {.callout-tip icon="false"}
+## Como navegar pelos slides
+
+Os slides são interativos e foram produzidos em **revealjs**.
+
+Ao abrir um arquivo de slides, utilize:
+
+- **Setas (← →)**: avançar e voltar.
+- **`F`**: tela cheia.
+- **`O`**: visão geral dos slides.
+- **`Esc`**: sair da visão geral.
+- Em dispositivos móveis, deslize para os lados.
+
+Os slides abrem em uma nova aba do navegador.
+:::
+
+
+
+
+# Aula 1 (04/08/26)

@@ -1,0 +1,33 @@
+---
+lang: pt-BR
+title: "Econometria Aplicada à Finanças - 2026/2"
+subtitle: "Mestrado Profissional em Administração <br> IFMG Campus Formiga"
+---
+
+## Bem-vindo à disciplina
+
+Esta disciplina objetiva preparar os mestrandos para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.
+
+Antes da primeira aula, acesse a página
+[Ambiente computacional](ambiente_computacional.qmd) para criar as contas necessárias,
+instalar e configurar os programas necessários em seu computador.
+
+
+## Informações gerais
+
+- **Professor:** [Prof. Dr. Washington Santos da Silva](https://washingtonsilva.github.io){target="_blank"}
+- **E-mail:** washington.silva@ifmg.edu.br
+- **Horário de aula:** Terça-Feira, 18:30-22:30
+- **Local:** aulas síncronas via Google Meet e aula presencial
+
+
+## Conteúdo
+
+Use este site como guia da disciplina:
+
+- [Ambiente computacional](ambiente_computacional.qmd): contas, programas e configurações
+  necessárias antes da primeira aula.
+- [Programa da Disciplina](programa.qmd): objetivos, ementa, bibliografia e
+  planejamento completo.
+- [Tutoriais básicos e materiais de apoio](tutorials/index.qmd): preparação em R/RStudio e primeiros passos com Git/GitHub, Quarto/RStudio e Markdown.
+- [Cronograma](cronograma.qmd): aulas, slides, dados e leituras.

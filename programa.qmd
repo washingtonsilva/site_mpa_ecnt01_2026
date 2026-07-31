@@ -1,0 +1,171 @@
+---
+lang: pt-BR
+title: "Programa da Disciplina"
+subtitle: "Econometria Aplicada à Finanças 2026/2 <br> Mestrado Profissional em Administração"
+author: "Prof. Dr. Washington S. da Silva"
+---
+
+
+## Objetivo Geral
+
+Desenvolver, nos mestrandos, competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.
+
+
+
+## Objetivos Específicos
+
+Ao final da disciplina, espera-se que o mestrando seja capaz de:
+
+1. Compreender os fundamentos e as hipóteses da regressão linear aplicada a dados em seção cruzada e a dados de séries temporais, incluindo exogeneidade e consistência do estimador de mínimos quadrados ordinários.
+
+2. Estimar, interpretar e comunicar modelos de regressão linear em aplicações financeiras, quantificando a incerteza por meio de erros-padrão, intervalos de confiança e testes de hipóteses.
+
+3. Diagnosticar problemas de especificação, heterocedasticidade e autocorrelação dos resíduos, empregando erros-padrão robustos quando apropriado.
+
+4. Estimar e interpretar modelos para variáveis dependentes binárias e avaliar seus limites em aplicações financeiras.
+
+5. Distinguir associação e efeito causal, reconhecer a endogeneidade e avaliar criticamente estratégias de ajuste por observáveis, como o pareamento por escore de propensão, e variáveis instrumentais.
+
+6. Elaborar e documentar análises empíricas reprodutíveis, seguindo boas práticas de organização, execução e comunicação de resultados.
+
+
+
+## Avaliação
+
+Trata-se de um planejamento e pode ser alterado conforme o andamento da disciplina.
+
+1. **Avaliação 1 (33 pontos)** — atividades práticas reprodutíveis
+
+2. **Avaliação 2 (33 pontos)** — exame intermediário
+
+3. **Avaliação 3 (34 pontos)** — exame final
+
+**Critério de aprovação:** nota média final igual ou superior a 60 pontos.
+
+
+## Bibliografia Básica
+
+BROOKS, Chris. **Introductory Econometrics for Finance**. 4. ed. Cambridge: Cambridge University Press, 2019.
+
+BROOKS, Chris. **R Guide to Accompany Introductory Econometrics for Finance**. Cambridge: Cambridge University Press, 2019.
+
+
+## Bibliografia Complementar
+
+WOOLDRIDGE, Jeffrey M. **Introductory Econometrics: A Modern Approach**. 8. ed. Boston: Cengage, 2025.
+
+HUNTINGTON-KLEIN, Nick. **The Effect: An Introduction to Research Design and Causality**. 2. ed. Boca Raton: Chapman & Hall/CRC, 2025.
+
+HANCK, Christoph; ARNOLD, Martin; GERBER, Alexander; SCHMELZER, Martin. **Introduction to Econometrics with R**. Disponível em: [https://www.econometrics-with-r.org/](https://www.econometrics-with-r.org/){target="_blank"}
+
+
+### Artigos Selecionados
+
+ABADIE, Alberto. Statistical Nonsignificance in Empirical Economics. *American Economic Review: Insights*, v. 2, n. 2, p. 193--208, 2020. DOI: [10.1257/aeri.20190252](https://doi.org/10.1257/aeri.20190252){target="_blank"}
+
+ANGRIST, Joshua D.; KRUEGER, Alan B. Instrumental Variables and the Search for Identification: From Supply and Demand to Natural Experiments. *Journal of Economic Perspectives*, v. 15, n. 4, p. 69--85, 2001. DOI: [10.1257/jep.15.4.69](https://doi.org/10.1257/jep.15.4.69){target="_blank"}
+
+CHRISTENSEN, Garret; MIGUEL, Edward. Transparency, Reproducibility, and the Credibility of Economics Research. *Journal of Economic Literature*, v. 56, n. 3, p. 920--980, 2018. DOI: [10.1257/jel.20171350](https://doi.org/10.1257/jel.20171350){target="_blank"}
+
+IMBENS, Guido W. Statistical Significance, p-Values, and the Reporting of Uncertainty. *Journal of Economic Perspectives*, v. 35, n. 3, p. 157--174, 2021. DOI: [10.1257/jep.35.3.157](https://doi.org/10.1257/jep.35.3.157){target="_blank"}
+
+IMBENS, Guido W.; XU, Yiqing. Comparing Experimental and Nonexperimental Methods: What Lessons Have We Learned Four Decades after LaLonde (1986)? *Journal of Economic Perspectives*, v. 39, n. 4, p. 173--202, 2025. DOI: [10.1257/jep.20251440](https://doi.org/10.1257/jep.20251440){target="_blank"}
+
+KING, Gary; NIELSEN, Richard. Why Propensity Scores Should Not Be Used for Matching. *Political Analysis*, v. 27, n. 4, p. 435--454, 2019. DOI: [10.1017/pan.2019.11](https://doi.org/10.1017/pan.2019.11){target="_blank"}
+
+
+### Referências Técnicas
+
+NEWEY, Whitney K.; WEST, Kenneth D. A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix. *Econometrica*, v. 55, n. 3, p. 703--708, 1987. DOI: [10.2307/1913610](https://doi.org/10.2307/1913610){target="_blank"}
+
+WASSERSTEIN, Ronald L.; LAZAR, Nicole A. The ASA's Statement on p-Values: Context, Process, and Purpose. *The American Statistician*, v. 70, n. 2, p. 129--133, 2016. DOI: [10.1080/00031305.2016.1154108](https://doi.org/10.1080/00031305.2016.1154108){target="_blank"}
+
+WHITE, Halbert. A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity. *Econometrica*, v. 48, n. 4, p. 817--838, 1980. DOI: [10.2307/1912934](https://doi.org/10.2307/1912934){target="_blank"}
+
+
+
+
+## Tutoriais Online
+
+[RStudio: Ambiente de Desenvolvimento Integrado para a Linguagem R](https://washingtonsilva.github.io/tutorials/rstudio/){target="_blank"}
+
+[Introdução prática à linguagem R com o tidyverse](https://washingtonsilva.github.io/tutorials/r-tidyverse/){target="_blank"}
+
+[Quarto: Um Sistema de Publicação Técnica e Científica](https://washingtonsilva.github.io/tutorials/quarto/){target="_blank"}
+
+[Documentação do Sistema Quarto](https://quarto.org/docs/guide/){target="_blank"}
+
+[Controle de Versão com Git e GitHub](https://washingtonsilva.github.io/tutorials/git/){target="_blank"}
+
+[Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes){target="_blank"}
+
+
+
+## Ementa
+
+Computação científica reprodutível com R, Git/GitHub e Quarto. Regressão linear aplicada a dados em seção cruzada: especificação, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade. Modelos de apreçamento de ativos: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta de Newey-West. Modelos para variáveis dependentes binárias. Causalidade, pareamento por escore de propensão e variáveis instrumentais.
+
+
+
+## Conteúdo Programático
+
+
+1. **Regressão linear aplicada a dados em seção cruzada**: especificação, estimação por mínimos quadrados ordinários, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade.
+
+2. **Modelos de apreçamento de ativos**: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta.
+
+3. **Modelos para variáveis dependentes binárias**: modelo de probabilidade linear, logit, probit e interpretação de probabilidades, efeitos marginais e sua incerteza.
+
+4. **Causalidade e endogeneidade em estudos observacionais**: confundimento, pareamento por escore de propensão, variáveis instrumentais e distinção entre precisão estatística, identificação e limites das inferências causais.
+
+
+
+
+
+## Recursos Didáticos e Materiais de Estudo
+
+Entre os recursos didáticos utilizados na disciplina estão:
+
+- **Materiais Primários para Estudo**:
+
+  - Bibliografia recomendada.
+  
+  - Slides e notas de aula (disponibilizados no site da disciplina).
+  
+  - Tutoriais.
+
+
+
+## Metodologia de Ensino
+
+A disciplina será conduzida no formato *hands-on*, com abordagem de aprendizagem ativa. Cada encontro combinará exposição e *live coding* com atividade prática em aula usando R, RStudio, Quarto, Git e GitHub. A exposição ocupará, em média, até duas horas de
+duração, o tempo restante será dedicado a uma atividade prática. A ideia é articular teoria, prática computacional, 
+interpretação e documentação reprodutível. 
+
+
+
+
+## Plano de Aula
+
+Trata-se apenas de um planejamento e, como todo planejamento, pode ser alterado conforme o andamento da disciplina.
+
+| Aula | Data       | Tópico |
+|------|------------|--------|
+| 1    | 04/08/2026 | Regressão aplicada a Finanças |
+| 2    | 11/08/2026 | Regressão linear |
+| 3    | 18/08/2026 | Inferência na regressão |
+| 4    | 25/08/2026 | Heterocedasticidade |
+| 5    | 01/09/2026 | Inferência robusta |
+| 6    | 08/09/2026 | Consistência |
+| 7    | 15/09/2026 | Avaliação intermediária |
+| 8    | 22/09/2026 | Modelos de apreçamento de ativos |
+| 9    | 29/09/2026 | Autocorrelação |
+| 10   | 06/10/2026 | Variáveis dependentes binárias |
+| 11   | 20/10/2026 | Causalidade |
+| 12   | 03/11/2026 | Escore de propensão |
+| 13   | 10/11/2026 | Variáveis instrumentais |
+| 14   | 17/11/2026 | Revisão integrada |
+| 15   | 24/11/2026 | Avaliação final |
+
+
+
