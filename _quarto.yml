@@ -6,6 +6,7 @@ project:
     - "tutorials/*.qmd"
   resources:
     - "slides/"
+    - "atividades_praticas/"
 
 website:
   title: "Econometria Aplicada à Finanças"
