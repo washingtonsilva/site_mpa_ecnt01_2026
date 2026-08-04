@@ -52,7 +52,11 @@ BROOKS, Chris. **R Guide to Accompany Introductory Econometrics for Finance**. C
 
 ## Bibliografia Complementar
 
-WOOLDRIDGE, Jeffrey M. **Introductory Econometrics: A Modern Approach**. 8. ed. Boston: Cengage, 2025.
+WOOLDRIDGE, Jeffrey M. **Introdução à econometria: uma abordagem moderna**. Tradução da 4. ed. São Paulo: Thomson, 2006.
+
+HILL, R. C.; GRIFFITHS, W. E.; JUDGE, G. G. **Econometria**. 3. ed. São Paulo: Saraiva, 2010.
+
+WOOLDRIDGE, Jeffrey M. **Econometric Analysis of Cross Section and Panel Data**. 2. ed. Cambridge, MA: MIT Press, 2010.
 
 HUNTINGTON-KLEIN, Nick. **The Effect: An Introduction to Research Design and Causality**. 2. ed. Boca Raton: Chapman & Hall/CRC, 2025.
 
@@ -166,6 +170,5 @@ Trata-se apenas de um planejamento e, como todo planejamento, pode ser alterado 
 | 13   | 10/11/2026 | Variáveis instrumentais |
 | 14   | 17/11/2026 | Revisão integrada |
 | 15   | 24/11/2026 | Avaliação final |
-
 
 
