@@ -31,5 +31,18 @@ Os slides abrem em uma nova aba do navegador.
 - **Slides:**
 
   - [Slides Aula 1](slides/01-aula.html){target="_blank"}
-  - [Atividade Prática 1](atividades_praticas/01-atividade.html)
+  - [Atividade Prática 1](atividades_praticas/01-atividade.html){target="_blank"}
   - [01-atividade-template.zip](atividades_praticas/01-atividade-template.zip)
+  - [Solução: Atividade Prática 1](atividades_praticas/01-atividade-solucoes.html)
+
+
+
+
+# Aula 2 (11/08/26)
+
+- **Slides:**
+
+  - [Slides Aula 2](slides/02-aula.html){target="_blank"}
+  - [Atividade Prática 2](atividades_praticas/02-atividade.html){target="_blank"}
+  - [02-atividade-template.zip](atividades_praticas/02-atividade-template.zip)
+  - [data-ps1.csv](dados/data-ps1.csv)
