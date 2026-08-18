@@ -162,17 +162,17 @@ Trata-se apenas de um planejamento e, como todo planejamento, pode ser alterado 
 | Aula | Data       | Tópico |
 |------|------------|--------|
 | 1    | 04/08/2026 | Apresentação da disciplina. O modelo de regressão linear simples |
-| 2    | 11/08/2026 | O modelo de regressão linear múltipla I                          |
-| 3    | 18/08/2026 | O modelo de regressão linear múltipla II                         |
-| 4    | 25/08/2026 | Transformações e interações em modelos de regressão              |
-| 5    | 01/09/2026 | Heterocedasticidade                                              |
-| 6    | 08/09/2026 | Autocorrelação. Regressão linear com séries temporais            | 
-| 7    | 15/09/2026 | Consistência                                                     |
-| 8    | 22/09/2026 | Regressão robusta                                                |
-| 9    | 29/09/2026 | Avaliação intermediária                                          |
-| 10   | 06/10/2026 | Modelos para variáveis dependentes binárias                      |
-| 11   | 20/10/2026 | Causalidade                                                      |
-| 12   | 03/11/2026 | Escore de propensão                                              |
-| 13   | 10/11/2026 | Variáveis instrumentais                                          |
-| 14   | 17/11/2026 |                                                                  |
+| 2    | 11/08/2026 | O modelo de regressão linear múltipla - Parte I                  |
+| 3    | 18/08/2026 | Heterocedasticidade                                              |
+| 4    | 25/08/2026 | Heterocedasticidade                                              |
+| 5    | 01/09/2026 | Regressão linear com séries temporais: Autocorrelação            |
+| 6    | 08/09/2026 | O modelo de regressão linear múltipla - Parte II                 |
+| 7    | 15/09/2026 | O modelo de regressão linear múltipla - Parte III                |
+| 8    | 22/09/2026 | Consistência                                                     |
+| 9    | 29/09/2026 | Regressão robusta                                                |
+| 10   | 06/10/2026 | Avaliação intermediária                                          |
+| 11   | 20/10/2026 | Modelos para variáveis dependentes binárias                      |
+| 12   | 03/11/2026 | Causalidade                                                      |
+| 13   | 10/11/2026 | Escore de propensão                                              |
+| 14   | 17/11/2026 | Variáveis instrumentais                                          |
 | 15   | 24/11/2026 | Avaliação final                                                  |
