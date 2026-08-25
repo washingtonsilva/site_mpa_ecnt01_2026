@@ -46,6 +46,7 @@ Os slides abrem em uma nova aba do navegador.
   - [Atividade Prática 2](atividades_praticas/02-atividade.html){target="_blank"}
   - [02-atividade-template.zip](atividades_praticas/02-atividade-template.zip)
   - [data-ps1.csv](dados/data-ps1.csv)
+  - [Solução: Atividade Prática 2](atividades_praticas/02-atividade-solucoes.html)
 
 
 
@@ -58,3 +59,15 @@ Os slides abrem em uma nova aba do navegador.
   - [Slides Aula 3](slides/03-aula.html){target="_blank"}
   - [Atividade Prática 3](atividades_praticas/03-atividade.html){target="_blank"}
   - [03-atividade-template.zip](atividades_praticas/03-atividade-template.zip)
+
+
+
+
+
+# Aula 4 (25/08/26)
+
+- **Slides:**
+
+  - [Slides Aula 4](slides/04-aula.html){target="_blank"}
+  - [Atividade Prática 4](atividades_praticas/04-atividade.html){target="_blank"}
+  - [04-atividade-template.zip](atividades_praticas/04-atividade-template.zip)
