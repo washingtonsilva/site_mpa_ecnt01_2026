@@ -111,7 +111,7 @@
     "href": "programa.html",
     "title": "Programa da Disciplina",
     "section": "",
-    "text": "Desenvolver, nos mestrandos, competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.",
+    "text": "Desenvolver nos mestrandos competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a finanças, com dados em seção cruzada e de séries temporais, produzindo análises empíricas reprodutíveis.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -121,7 +121,7 @@
     "href": "programa.html#objetivo-geral",
     "title": "Programa da Disciplina",
     "section": "",
-    "text": "Desenvolver, nos mestrandos, competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.",
+    "text": "Desenvolver nos mestrandos competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a finanças, com dados em seção cruzada e de séries temporais, produzindo análises empíricas reprodutíveis.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -131,7 +131,17 @@
     "href": "programa.html#objetivos-específicos",
     "title": "Programa da Disciplina",
     "section": "Objetivos Específicos",
-    "text": "Objetivos Específicos\nAo final da disciplina, espera-se que o mestrando seja capaz de:\n\nCompreender os fundamentos e as hipóteses da regressão linear aplicada a dados em seção cruzada e a dados de séries temporais, incluindo exogeneidade e consistência do estimador de mínimos quadrados ordinários.\nEstimar, interpretar e comunicar modelos de regressão linear em aplicações financeiras, quantificando a incerteza por meio de erros-padrão, intervalos de confiança e testes de hipóteses.\nDiagnosticar problemas de especificação, heterocedasticidade e autocorrelação dos resíduos, empregando erros-padrão robustos quando apropriado.\nEstimar e interpretar modelos para variáveis dependentes binárias e avaliar seus limites em aplicações financeiras.\nDistinguir associação e efeito causal, reconhecer a endogeneidade e avaliar criticamente estratégias de ajuste por observáveis, como o pareamento por escore de propensão, e variáveis instrumentais.\nElaborar e documentar análises empíricas reprodutíveis, seguindo boas práticas de organização, execução e comunicação de resultados.",
+    "text": "Objetivos Específicos\nAo final da disciplina, espera-se que o mestrando seja capaz de:\n\nCompreender os fundamentos, as hipóteses e as propriedades da regressão linear com dados em seção cruzada e séries temporais, incluindo exogeneidade e consistência.\nEstimar, interpretar e comunicar modelos de regressão linear em aplicações financeiras, quantificando a incerteza por meio de erros-padrão, intervalos de confiança e testes de hipóteses.\nDiagnosticar modelos lineares e empregar métodos robustos diante de heterocedasticidade, correlação intragrupo, autocorrelação e observações influentes.\nEstimar e interpretar modelos para variáveis dependentes binárias e avaliar seus limites em aplicações financeiras.\nDistinguir associação e efeito causal, reconhecer a endogeneidade e avaliar criticamente o pareamento por escore de propensão e as variáveis instrumentais.\nAplicar práticas de organização, execução, documentação e comunicação reprodutível em análises empíricas.",
+    "crumbs": [
+      "Programa da Disciplina"
+    ]
+  },
+  {
+    "objectID": "programa.html#conhecimentos-prévios-esperados",
+    "href": "programa.html#conhecimentos-prévios-esperados",
+    "title": "Programa da Disciplina",
+    "section": "Conhecimentos prévios esperados",
+    "text": "Conhecimentos prévios esperados\nEspera-se que os estudantes tenham cursado Introdução à Ciência de Dados ou possuam conhecimentos equivalentes de R, incluindo importação e preparação de dados, escrita de funções e noções de programação funcional, além de fundamentos de probabilidade e experiência básica com Git/GitHub e Quarto.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -171,7 +181,7 @@
     "href": "programa.html#tutoriais-online",
     "title": "Programa da Disciplina",
     "section": "Tutoriais Online",
-    "text": "Tutoriais Online\nRStudio: Ambiente de Desenvolvimento Integrado para a Linguagem R\nIntrodução prática à linguagem R com o tidyverse\nQuarto: Um Sistema de Publicação Técnica e Científica\nDocumentação do Sistema Quarto\nControle de Versão com Git e GitHub\nLearn LaTeX in 30 minutes",
+    "text": "Tutoriais Online\nRStudio: Ambiente de Desenvolvimento Integrado para a Linguagem R\nIntrodução prática à linguagem R com o tidyverse\nQuarto: Um Sistema de Publicação Técnica e Científica\nDocumentação do Sistema Quarto\nControle de Versão com Git e GitHub",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -181,7 +191,7 @@
     "href": "programa.html#ementa",
     "title": "Programa da Disciplina",
     "section": "Ementa",
-    "text": "Ementa\nComputação científica reprodutível com R, Git/GitHub e Quarto. Regressão linear aplicada a dados em seção cruzada: especificação, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade. Modelos de apreçamento de ativos: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta de Newey-West. Modelos para variáveis dependentes binárias. Causalidade, pareamento por escore de propensão e variáveis instrumentais.",
+    "text": "Ementa\nRegressão linear aplicada a dados em seção cruzada: especificação, estimação, inferência, heterocedasticidade, correlação intragrupo, erros-padrão robustos, exogeneidade, consistência e endogeneidade. Regressão linear estática aplicada a séries temporais: autocorrelação dos erros e erros-padrão de Newey–West, com aplicações em finanças. Modelos para variáveis dependentes binárias. Causalidade, pareamento por escore de propensão e variáveis instrumentais.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -191,7 +201,7 @@
     "href": "programa.html#conteúdo-programático",
     "title": "Programa da Disciplina",
     "section": "Conteúdo Programático",
-    "text": "Conteúdo Programático\n\nRegressão linear aplicada a dados em seção cruzada: especificação, estimação por mínimos quadrados ordinários, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade.\nModelos de apreçamento de ativos: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta.\nModelos para variáveis dependentes binárias: modelo de probabilidade linear, logit, probit e interpretação de probabilidades, efeitos marginais e sua incerteza.\nCausalidade e endogeneidade em estudos observacionais: confundimento, pareamento por escore de propensão, variáveis instrumentais e distinção entre precisão estatística, identificação e limites das inferências causais.",
+    "text": "Conteúdo Programático\n\nRegressão linear com dados em seção cruzada: especificação, estimação por mínimos quadrados ordinários, inferência e diagnóstico; heterocedasticidade, correlação intragrupo e erros-padrão robustos; regressão robusta; exogeneidade, consistência e endogeneidade.\nRegressão linear estática com séries temporais: autocorrelação, erros-padrão de Newey–West e estabilidade dos parâmetros.\nModelos para variáveis dependentes binárias: modelo de probabilidade linear, logit, probit, probabilidades e efeitos marginais.\nInferência causal: causalidade, confundimento, pareamento por escore de propensão e variáveis instrumentais.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -201,7 +211,7 @@
     "href": "programa.html#recursos-didáticos-e-materiais-de-estudo",
     "title": "Programa da Disciplina",
     "section": "Recursos Didáticos e Materiais de Estudo",
-    "text": "Recursos Didáticos e Materiais de Estudo\nEntre os recursos didáticos utilizados na disciplina estão:\n\nMateriais Primários para Estudo:\n\nBibliografia recomendada.\nSlides e notas de aula (disponibilizados no site da disciplina).\nTutoriais.",
+    "text": "Recursos Didáticos e Materiais de Estudo\nOs recursos didáticos utilizados na disciplina incluem:\n\nbibliografia recomendada;\nslides e notas de aula disponibilizados no site da disciplina;\ntutoriais.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -211,7 +221,7 @@
     "href": "programa.html#metodologia-de-ensino",
     "title": "Programa da Disciplina",
     "section": "Metodologia de Ensino",
-    "text": "Metodologia de Ensino\nA disciplina será conduzida no formato hands-on, com abordagem de aprendizagem ativa. Cada encontro combinará exposição e live coding com atividade prática em aula usando R, RStudio, Quarto, Git e GitHub. A exposição ocupará, em média, até duas horas de duração, o tempo restante será dedicado a uma atividade prática. A ideia é articular teoria, prática computacional, interpretação e documentação reprodutível.",
+    "text": "Metodologia de Ensino\nA disciplina será conduzida no formato hands-on, com abordagem de aprendizagem ativa. Cada encontro combinará exposição, live coding e atividade prática. A exposição ocupará, em média, até duas horas, e o tempo restante será dedicado a uma atividade própria ou a uma etapa claramente delimitada de uma atividade mais ampla.\nR, Git/GitHub e Quarto serão utilizados como ferramentas de trabalho, pressupondo os conhecimentos básicos previamente indicados. A abordagem articulará teoria, prática computacional, interpretação e documentação reprodutível.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -221,7 +231,7 @@
     "href": "programa.html#plano-de-aula",
     "title": "Programa da Disciplina",
     "section": "Plano de Aula",
-    "text": "Plano de Aula\nTrata-se apenas de um planejamento e, como todo planejamento, pode ser alterado conforme o andamento da disciplina.\n\n\n\n\n\n\n\n\nAula\nData\nTópico\n\n\n\n\n1\n04/08/2026\nApresentação da disciplina. O modelo de regressão linear simples\n\n\n2\n11/08/2026\nO modelo de regressão linear múltipla - Parte I\n\n\n3\n18/08/2026\nHeterocedasticidade\n\n\n4\n25/08/2026\nHeterocedasticidade\n\n\n5\n01/09/2026\nRegressão linear com séries temporais: Autocorrelação\n\n\n6\n08/09/2026\nO modelo de regressão linear múltipla - Parte II\n\n\n7\n15/09/2026\nO modelo de regressão linear múltipla - Parte III\n\n\n8\n22/09/2026\nConsistência\n\n\n9\n29/09/2026\nRegressão robusta\n\n\n10\n06/10/2026\nAvaliação intermediária\n\n\n11\n20/10/2026\nModelos para variáveis dependentes binárias\n\n\n12\n03/11/2026\nCausalidade\n\n\n13\n10/11/2026\nEscore de propensão\n\n\n14\n17/11/2026\nVariáveis instrumentais\n\n\n15\n24/11/2026\nAvaliação final",
+    "text": "Plano de Aula\nTrata-se apenas de um planejamento e, como todo planejamento, pode ser alterado conforme o andamento da disciplina.\n\n\n\n\n\n\n\n\nAula\nData\nTópico\n\n\n\n\n1\n04/08/2026\nApresentação da disciplina. Regressão linear simples\n\n\n2\n11/08/2026\nRegressão linear múltipla\n\n\n3\n18/08/2026\nHeterocedasticidade\n\n\n4\n25/08/2026\nHeterocedasticidade e correlação intragrupo\n\n\n5\n01/09/2026\nRegressão linear estática com séries temporais\n\n\n6\n08/09/2026\nEstabilidade dos parâmetros\n\n\n7\n15/09/2026\nDiagnóstico do modelo linear\n\n\n8\n22/09/2026\nRegressão robusta\n\n\n9\n29/09/2026\nModelos para variáveis dependentes binárias\n\n\n10\n06/10/2026\nAvaliação intermediária\n\n\n11\n20/10/2026\nConsistência, exogeneidade e endogeneidade\n\n\n12\n03/11/2026\nCausalidade\n\n\n13\n10/11/2026\nPareamento por escore de propensão\n\n\n14\n17/11/2026\nVariáveis instrumentais\n\n\n15\n24/11/2026\nAvaliação final",
     "crumbs": [
       "Programa da Disciplina"
     ]

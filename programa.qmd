@@ -8,7 +8,9 @@ author: "Prof. Dr. Washington S. da Silva"
 
 ## Objetivo Geral
 
-Desenvolver, nos mestrandos, competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.
+Desenvolver nos mestrandos competências para formular, implementar, diagnosticar
+e interpretar análises de regressão aplicadas a finanças, com dados em seção
+cruzada e de séries temporais, produzindo análises empíricas reprodutíveis.
 
 
 
@@ -16,17 +18,35 @@ Desenvolver, nos mestrandos, competências para formular, implementar, diagnosti
 
 Ao final da disciplina, espera-se que o mestrando seja capaz de:
 
-1. Compreender os fundamentos e as hipóteses da regressão linear aplicada a dados em seção cruzada e a dados de séries temporais, incluindo exogeneidade e consistência do estimador de mínimos quadrados ordinários.
+1. Compreender os fundamentos, as hipóteses e as propriedades da regressão
+   linear com dados em seção cruzada e séries temporais, incluindo exogeneidade e
+   consistência.
 
-2. Estimar, interpretar e comunicar modelos de regressão linear em aplicações financeiras, quantificando a incerteza por meio de erros-padrão, intervalos de confiança e testes de hipóteses.
+2. Estimar, interpretar e comunicar modelos de regressão linear em aplicações
+   financeiras, quantificando a incerteza por meio de erros-padrão, intervalos de
+   confiança e testes de hipóteses.
 
-3. Diagnosticar problemas de especificação, heterocedasticidade e autocorrelação dos resíduos, empregando erros-padrão robustos quando apropriado.
+3. Diagnosticar modelos lineares e empregar métodos robustos diante de
+   heterocedasticidade, correlação intragrupo, autocorrelação e observações
+   influentes.
 
-4. Estimar e interpretar modelos para variáveis dependentes binárias e avaliar seus limites em aplicações financeiras.
+4. Estimar e interpretar modelos para variáveis dependentes binárias e avaliar
+   seus limites em aplicações financeiras.
 
-5. Distinguir associação e efeito causal, reconhecer a endogeneidade e avaliar criticamente estratégias de ajuste por observáveis, como o pareamento por escore de propensão, e variáveis instrumentais.
+5. Distinguir associação e efeito causal, reconhecer a endogeneidade e avaliar
+   criticamente o pareamento por escore de propensão e as variáveis instrumentais.
 
-6. Elaborar e documentar análises empíricas reprodutíveis, seguindo boas práticas de organização, execução e comunicação de resultados.
+6. Aplicar práticas de organização, execução, documentação e comunicação
+   reprodutível em análises empíricas.
+
+
+
+## Conhecimentos prévios esperados
+
+Espera-se que os estudantes tenham cursado Introdução à Ciência de Dados ou
+possuam conhecimentos equivalentes de R, incluindo importação e preparação de
+dados, escrita de funções e noções de programação funcional, além de fundamentos
+de probabilidade e experiência básica com Git/GitHub e Quarto.
 
 
 
@@ -107,72 +127,81 @@ WHITE, Halbert. A Heteroskedasticity-Consistent Covariance Matrix Estimator and 
 
 [Controle de Versão com Git e GitHub](https://washingtonsilva.github.io/tutorials/git/){target="_blank"}
 
-[Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes){target="_blank"}
-
 
 
 ## Ementa
 
-Computação científica reprodutível com R, Git/GitHub e Quarto. Regressão linear aplicada a dados em seção cruzada: especificação, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade. Modelos de apreçamento de ativos: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta de Newey-West. Modelos para variáveis dependentes binárias. Causalidade, pareamento por escore de propensão e variáveis instrumentais.
+Regressão linear aplicada a dados em seção cruzada: especificação, estimação,
+inferência, heterocedasticidade, correlação intragrupo, erros-padrão robustos,
+exogeneidade, consistência e endogeneidade. Regressão linear estática aplicada a 
+séries temporais: autocorrelação dos erros e erros-padrão de Newey–West, com aplicações 
+em finanças. Modelos para variáveis dependentes binárias. Causalidade, pareamento 
+por escore de propensão e variáveis instrumentais.
 
 
 
 ## Conteúdo Programático
 
+1. **Regressão linear com dados em seção cruzada**: especificação, estimação por
+   mínimos quadrados ordinários, inferência e diagnóstico; heterocedasticidade,
+   correlação intragrupo e erros-padrão robustos; regressão robusta; exogeneidade,
+   consistência e endogeneidade.
 
-1. **Regressão linear aplicada a dados em seção cruzada**: especificação, estimação por mínimos quadrados ordinários, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade.
+2. **Regressão linear estática com séries temporais**: autocorrelação,
+   erros-padrão de Newey–West e estabilidade dos parâmetros.
 
-2. **Modelos de apreçamento de ativos**: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta.
+3. **Modelos para variáveis dependentes binárias**: modelo de probabilidade
+   linear, logit, probit, probabilidades e efeitos marginais.
 
-3. **Modelos para variáveis dependentes binárias**: modelo de probabilidade linear, logit, probit e interpretação de probabilidades, efeitos marginais e sua incerteza.
-
-4. **Causalidade e endogeneidade em estudos observacionais**: confundimento, pareamento por escore de propensão, variáveis instrumentais e distinção entre precisão estatística, identificação e limites das inferências causais.
-
-
+4. **Inferência causal**: causalidade, confundimento, pareamento por escore de
+   propensão e variáveis instrumentais.
 
 
 
 ## Recursos Didáticos e Materiais de Estudo
 
-Entre os recursos didáticos utilizados na disciplina estão:
+Os recursos didáticos utilizados na disciplina incluem:
 
-- **Materiais Primários para Estudo**:
-
-  - Bibliografia recomendada.
-  
-  - Slides e notas de aula (disponibilizados no site da disciplina).
-  
-  - Tutoriais.
+- bibliografia recomendada;
+- slides e notas de aula disponibilizados no site da disciplina;
+- tutoriais.
 
 
 
 ## Metodologia de Ensino
 
-A disciplina será conduzida no formato *hands-on*, com abordagem de aprendizagem ativa. Cada encontro combinará exposição e *live coding* com atividade prática em aula usando R, RStudio, Quarto, Git e GitHub. A exposição ocupará, em média, até duas horas de
-duração, o tempo restante será dedicado a uma atividade prática. A ideia é articular teoria, prática computacional, 
-interpretação e documentação reprodutível. 
+A disciplina será conduzida no formato *hands-on*, com abordagem de aprendizagem
+ativa. Cada encontro combinará exposição, *live coding* e atividade prática. A
+exposição ocupará, em média, até duas horas, e o tempo restante será dedicado a
+uma atividade própria ou a uma etapa claramente delimitada de uma atividade
+mais ampla.
 
+R, Git/GitHub e Quarto serão utilizados como ferramentas de trabalho,
+pressupondo os conhecimentos básicos previamente indicados. A abordagem
+articulará teoria, prática computacional, interpretação e documentação
+reprodutível.
 
 
 
 ## Plano de Aula
 
-Trata-se apenas de um planejamento e, como todo planejamento, pode ser alterado conforme o andamento da disciplina.
+Trata-se apenas de um planejamento e, como todo planejamento, pode ser alterado
+conforme o andamento da disciplina.
 
-| Aula | Data       | Tópico |
-|------|------------|--------|
-| 1    | 04/08/2026 | Apresentação da disciplina. O modelo de regressão linear simples |
-| 2    | 11/08/2026 | O modelo de regressão linear múltipla - Parte I                  |
-| 3    | 18/08/2026 | Heterocedasticidade                                              |
-| 4    | 25/08/2026 | Heterocedasticidade                                              |
-| 5    | 01/09/2026 | Regressão linear com séries temporais: Autocorrelação            |
-| 6    | 08/09/2026 | O modelo de regressão linear múltipla - Parte II                 |
-| 7    | 15/09/2026 | O modelo de regressão linear múltipla - Parte III                |
-| 8    | 22/09/2026 | Consistência                                                     |
-| 9    | 29/09/2026 | Regressão robusta                                                |
-| 10   | 06/10/2026 | Avaliação intermediária                                          |
-| 11   | 20/10/2026 | Modelos para variáveis dependentes binárias                      |
-| 12   | 03/11/2026 | Causalidade                                                      |
-| 13   | 10/11/2026 | Escore de propensão                                              |
-| 14   | 17/11/2026 | Variáveis instrumentais                                          |
-| 15   | 24/11/2026 | Avaliação final                                                  |
+| Aula | Data       | Tópico                                               |
+| ---: | ---------- | ---------------------------------------------------- |
+|    1 | 04/08/2026 | Apresentação da disciplina. Regressão linear simples |
+|    2 | 11/08/2026 | Regressão linear múltipla                            |
+|    3 | 18/08/2026 | Heterocedasticidade                                  |
+|    4 | 25/08/2026 | Heterocedasticidade e correlação intragrupo          |
+|    5 | 01/09/2026 | Regressão linear estática com séries temporais       |
+|    6 | 08/09/2026 | Estabilidade dos parâmetros                          |
+|    7 | 15/09/2026 | Diagnóstico do modelo linear                         |
+|    8 | 22/09/2026 | Regressão robusta                                    |
+|    9 | 29/09/2026 | Modelos para variáveis dependentes binárias          |
+|   10 | 06/10/2026 | Avaliação intermediária                              |
+|   11 | 20/10/2026 | Consistência, exogeneidade e endogeneidade           |
+|   12 | 03/11/2026 | Causalidade                                          |
+|   13 | 10/11/2026 | Pareamento por escore de propensão                   |
+|   14 | 17/11/2026 | Variáveis instrumentais                              |
+|   15 | 24/11/2026 | Avaliação final                                      |

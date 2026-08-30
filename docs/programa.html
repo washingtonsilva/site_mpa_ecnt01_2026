@@ -162,6 +162,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objetivo-geral" id="toc-objetivo-geral" class="nav-link active" data-scroll-target="#objetivo-geral">Objetivo Geral</a></li>
   <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos">Objetivos Específicos</a></li>
+  <li><a href="#conhecimentos-prévios-esperados" id="toc-conhecimentos-prévios-esperados" class="nav-link" data-scroll-target="#conhecimentos-prévios-esperados">Conhecimentos prévios esperados</a></li>
   <li><a href="#avaliação" id="toc-avaliação" class="nav-link" data-scroll-target="#avaliação">Avaliação</a></li>
   <li><a href="#bibliografia-básica" id="toc-bibliografia-básica" class="nav-link" data-scroll-target="#bibliografia-básica">Bibliografia Básica</a></li>
   <li><a href="#bibliografia-complementar" id="toc-bibliografia-complementar" class="nav-link" data-scroll-target="#bibliografia-complementar">Bibliografia Complementar</a>
@@ -209,19 +210,23 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="objetivo-geral" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo-geral">Objetivo Geral</h2>
-<p>Desenvolver, nos mestrandos, competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.</p>
+<p>Desenvolver nos mestrandos competências para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a finanças, com dados em seção cruzada e de séries temporais, produzindo análises empíricas reprodutíveis.</p>
 </section>
 <section id="objetivos-específicos" class="level2">
 <h2 class="anchored" data-anchor-id="objetivos-específicos">Objetivos Específicos</h2>
 <p>Ao final da disciplina, espera-se que o mestrando seja capaz de:</p>
 <ol type="1">
-<li><p>Compreender os fundamentos e as hipóteses da regressão linear aplicada a dados em seção cruzada e a dados de séries temporais, incluindo exogeneidade e consistência do estimador de mínimos quadrados ordinários.</p></li>
+<li><p>Compreender os fundamentos, as hipóteses e as propriedades da regressão linear com dados em seção cruzada e séries temporais, incluindo exogeneidade e consistência.</p></li>
 <li><p>Estimar, interpretar e comunicar modelos de regressão linear em aplicações financeiras, quantificando a incerteza por meio de erros-padrão, intervalos de confiança e testes de hipóteses.</p></li>
-<li><p>Diagnosticar problemas de especificação, heterocedasticidade e autocorrelação dos resíduos, empregando erros-padrão robustos quando apropriado.</p></li>
+<li><p>Diagnosticar modelos lineares e empregar métodos robustos diante de heterocedasticidade, correlação intragrupo, autocorrelação e observações influentes.</p></li>
 <li><p>Estimar e interpretar modelos para variáveis dependentes binárias e avaliar seus limites em aplicações financeiras.</p></li>
-<li><p>Distinguir associação e efeito causal, reconhecer a endogeneidade e avaliar criticamente estratégias de ajuste por observáveis, como o pareamento por escore de propensão, e variáveis instrumentais.</p></li>
-<li><p>Elaborar e documentar análises empíricas reprodutíveis, seguindo boas práticas de organização, execução e comunicação de resultados.</p></li>
+<li><p>Distinguir associação e efeito causal, reconhecer a endogeneidade e avaliar criticamente o pareamento por escore de propensão e as variáveis instrumentais.</p></li>
+<li><p>Aplicar práticas de organização, execução, documentação e comunicação reprodutível em análises empíricas.</p></li>
 </ol>
+</section>
+<section id="conhecimentos-prévios-esperados" class="level2">
+<h2 class="anchored" data-anchor-id="conhecimentos-prévios-esperados">Conhecimentos prévios esperados</h2>
+<p>Espera-se que os estudantes tenham cursado Introdução à Ciência de Dados ou possuam conhecimentos equivalentes de R, incluindo importação e preparação de dados, escrita de funções e noções de programação funcional, além de fundamentos de probabilidade e experiência básica com Git/GitHub e Quarto.</p>
 </section>
 <section id="avaliação" class="level2">
 <h2 class="anchored" data-anchor-id="avaliação">Avaliação</h2>
@@ -271,126 +276,123 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://washingtonsilva.github.io/tutorials/quarto/" target="_blank">Quarto: Um Sistema de Publicação Técnica e Científica</a></p>
 <p><a href="https://quarto.org/docs/guide/" target="_blank">Documentação do Sistema Quarto</a></p>
 <p><a href="https://washingtonsilva.github.io/tutorials/git/" target="_blank">Controle de Versão com Git e GitHub</a></p>
-<p><a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" target="_blank">Learn LaTeX in 30 minutes</a></p>
 </section>
 <section id="ementa" class="level2">
 <h2 class="anchored" data-anchor-id="ementa">Ementa</h2>
-<p>Computação científica reprodutível com R, Git/GitHub e Quarto. Regressão linear aplicada a dados em seção cruzada: especificação, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade. Modelos de apreçamento de ativos: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta de Newey-West. Modelos para variáveis dependentes binárias. Causalidade, pareamento por escore de propensão e variáveis instrumentais.</p>
+<p>Regressão linear aplicada a dados em seção cruzada: especificação, estimação, inferência, heterocedasticidade, correlação intragrupo, erros-padrão robustos, exogeneidade, consistência e endogeneidade. Regressão linear estática aplicada a séries temporais: autocorrelação dos erros e erros-padrão de Newey–West, com aplicações em finanças. Modelos para variáveis dependentes binárias. Causalidade, pareamento por escore de propensão e variáveis instrumentais.</p>
 </section>
 <section id="conteúdo-programático" class="level2">
 <h2 class="anchored" data-anchor-id="conteúdo-programático">Conteúdo Programático</h2>
 <ol type="1">
-<li><p><strong>Regressão linear aplicada a dados em seção cruzada</strong>: especificação, estimação por mínimos quadrados ordinários, estimação pontual, inferência, heterocedasticidade, erros-padrão robustos, exogeneidade, consistência e endogeneidade.</p></li>
-<li><p><strong>Modelos de apreçamento de ativos</strong>: estimação e interpretação de alfas e betas, autocorrelação dos resíduos e inferência robusta.</p></li>
-<li><p><strong>Modelos para variáveis dependentes binárias</strong>: modelo de probabilidade linear, logit, probit e interpretação de probabilidades, efeitos marginais e sua incerteza.</p></li>
-<li><p><strong>Causalidade e endogeneidade em estudos observacionais</strong>: confundimento, pareamento por escore de propensão, variáveis instrumentais e distinção entre precisão estatística, identificação e limites das inferências causais.</p></li>
+<li><p><strong>Regressão linear com dados em seção cruzada</strong>: especificação, estimação por mínimos quadrados ordinários, inferência e diagnóstico; heterocedasticidade, correlação intragrupo e erros-padrão robustos; regressão robusta; exogeneidade, consistência e endogeneidade.</p></li>
+<li><p><strong>Regressão linear estática com séries temporais</strong>: autocorrelação, erros-padrão de Newey–West e estabilidade dos parâmetros.</p></li>
+<li><p><strong>Modelos para variáveis dependentes binárias</strong>: modelo de probabilidade linear, logit, probit, probabilidades e efeitos marginais.</p></li>
+<li><p><strong>Inferência causal</strong>: causalidade, confundimento, pareamento por escore de propensão e variáveis instrumentais.</p></li>
 </ol>
 </section>
 <section id="recursos-didáticos-e-materiais-de-estudo" class="level2">
 <h2 class="anchored" data-anchor-id="recursos-didáticos-e-materiais-de-estudo">Recursos Didáticos e Materiais de Estudo</h2>
-<p>Entre os recursos didáticos utilizados na disciplina estão:</p>
+<p>Os recursos didáticos utilizados na disciplina incluem:</p>
 <ul>
-<li><p><strong>Materiais Primários para Estudo</strong>:</p>
-<ul>
-<li><p>Bibliografia recomendada.</p></li>
-<li><p>Slides e notas de aula (disponibilizados no site da disciplina).</p></li>
-<li><p>Tutoriais.</p></li>
-</ul></li>
+<li>bibliografia recomendada;</li>
+<li>slides e notas de aula disponibilizados no site da disciplina;</li>
+<li>tutoriais.</li>
 </ul>
 </section>
 <section id="metodologia-de-ensino" class="level2">
 <h2 class="anchored" data-anchor-id="metodologia-de-ensino">Metodologia de Ensino</h2>
-<p>A disciplina será conduzida no formato <em>hands-on</em>, com abordagem de aprendizagem ativa. Cada encontro combinará exposição e <em>live coding</em> com atividade prática em aula usando R, RStudio, Quarto, Git e GitHub. A exposição ocupará, em média, até duas horas de duração, o tempo restante será dedicado a uma atividade prática. A ideia é articular teoria, prática computacional, interpretação e documentação reprodutível.</p>
+<p>A disciplina será conduzida no formato <em>hands-on</em>, com abordagem de aprendizagem ativa. Cada encontro combinará exposição, <em>live coding</em> e atividade prática. A exposição ocupará, em média, até duas horas, e o tempo restante será dedicado a uma atividade própria ou a uma etapa claramente delimitada de uma atividade mais ampla.</p>
+<p>R, Git/GitHub e Quarto serão utilizados como ferramentas de trabalho, pressupondo os conhecimentos básicos previamente indicados. A abordagem articulará teoria, prática computacional, interpretação e documentação reprodutível.</p>
 </section>
 <section id="plano-de-aula" class="level2">
 <h2 class="anchored" data-anchor-id="plano-de-aula">Plano de Aula</h2>
 <p>Trata-se apenas de um planejamento e, como todo planejamento, pode ser alterado conforme o andamento da disciplina.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 46%">
-<col style="width: 30%">
+<col style="width: 6%">
+<col style="width: 15%">
+<col style="width: 78%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Aula</th>
+<th style="text-align: right;">Aula</th>
 <th>Data</th>
 <th>Tópico</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
+<td style="text-align: right;">1</td>
 <td>04/08/2026</td>
-<td>Apresentação da disciplina. O modelo de regressão linear simples</td>
+<td>Apresentação da disciplina. Regressão linear simples</td>
 </tr>
 <tr class="even">
-<td>2</td>
+<td style="text-align: right;">2</td>
 <td>11/08/2026</td>
-<td>O modelo de regressão linear múltipla - Parte I</td>
+<td>Regressão linear múltipla</td>
 </tr>
 <tr class="odd">
-<td>3</td>
+<td style="text-align: right;">3</td>
 <td>18/08/2026</td>
 <td>Heterocedasticidade</td>
 </tr>
 <tr class="even">
-<td>4</td>
+<td style="text-align: right;">4</td>
 <td>25/08/2026</td>
-<td>Heterocedasticidade</td>
+<td>Heterocedasticidade e correlação intragrupo</td>
 </tr>
 <tr class="odd">
-<td>5</td>
+<td style="text-align: right;">5</td>
 <td>01/09/2026</td>
-<td>Regressão linear com séries temporais: Autocorrelação</td>
+<td>Regressão linear estática com séries temporais</td>
 </tr>
 <tr class="even">
-<td>6</td>
+<td style="text-align: right;">6</td>
 <td>08/09/2026</td>
-<td>O modelo de regressão linear múltipla - Parte II</td>
+<td>Estabilidade dos parâmetros</td>
 </tr>
 <tr class="odd">
-<td>7</td>
+<td style="text-align: right;">7</td>
 <td>15/09/2026</td>
-<td>O modelo de regressão linear múltipla - Parte III</td>
+<td>Diagnóstico do modelo linear</td>
 </tr>
 <tr class="even">
-<td>8</td>
+<td style="text-align: right;">8</td>
 <td>22/09/2026</td>
-<td>Consistência</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>29/09/2026</td>
 <td>Regressão robusta</td>
 </tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td>29/09/2026</td>
+<td>Modelos para variáveis dependentes binárias</td>
+</tr>
 <tr class="even">
-<td>10</td>
+<td style="text-align: right;">10</td>
 <td>06/10/2026</td>
 <td>Avaliação intermediária</td>
 </tr>
 <tr class="odd">
-<td>11</td>
+<td style="text-align: right;">11</td>
 <td>20/10/2026</td>
-<td>Modelos para variáveis dependentes binárias</td>
+<td>Consistência, exogeneidade e endogeneidade</td>
 </tr>
 <tr class="even">
-<td>12</td>
+<td style="text-align: right;">12</td>
 <td>03/11/2026</td>
 <td>Causalidade</td>
 </tr>
 <tr class="odd">
-<td>13</td>
+<td style="text-align: right;">13</td>
 <td>10/11/2026</td>
-<td>Escore de propensão</td>
+<td>Pareamento por escore de propensão</td>
 </tr>
 <tr class="even">
-<td>14</td>
+<td style="text-align: right;">14</td>
 <td>17/11/2026</td>
 <td>Variáveis instrumentais</td>
 </tr>
 <tr class="odd">
-<td>15</td>
+<td style="text-align: right;">15</td>
 <td>24/11/2026</td>
 <td>Avaliação final</td>
 </tr>
