@@ -87,3 +87,15 @@ Os slides abrem em uma nova aba do navegador.
   - [Atividade Prática 5](atividades_praticas/05-atividade.html){target="_blank"}
   - [05-atividade-template.zip](atividades_praticas/05-atividade-template.zip)
   - [data-ps2.csv](dados/data-ps2.csv)
+
+
+
+
+
+# Aula 6 (08/09/26)
+
+- **Slides:**
+
+  - [Slides Aula 6](slides/06-aula.html){target="_blank"}
+  - [Atividade Prática 6](atividades_praticas/06-atividade.html){target="_blank"}
+  - [06-atividade-template.zip](atividades_praticas/06-atividade-template.zip)
