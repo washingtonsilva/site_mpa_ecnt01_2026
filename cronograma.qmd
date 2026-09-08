@@ -99,3 +99,8 @@ Os slides abrem em uma nova aba do navegador.
   - [Slides Aula 6](slides/06-aula.html){target="_blank"}
   - [Atividade Prática 6](atividades_praticas/06-atividade.html){target="_blank"}
   - [06-atividade-template.zip](atividades_praticas/06-atividade-template.zip)
+
+- **Avaliação 2: Exame Intermediário**
+
+  - [Avaliação 2: Exame Intermediário](avaliacoes/02-avaliacao.html){target="_blank"}
+  - Esta avaliação será realizada na aula do dia **06/10**.
