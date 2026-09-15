@@ -104,3 +104,14 @@ Os slides abrem em uma nova aba do navegador.
 
   - [Avaliação 2: Exame Intermediário](avaliacoes/02-avaliacao.html){target="_blank"}
   - Esta avaliação será realizada na aula do dia **06/10**.
+
+
+
+
+
+# Aula 7 (15/09/26)
+
+- **Slides:**
+
+  - [Slides Aula 7](slides/07-aula.html){target="_blank"}
+  - [07-atividade.zip](atividades_praticas/07-atividade.zip)
