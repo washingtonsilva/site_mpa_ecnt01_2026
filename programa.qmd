@@ -103,6 +103,8 @@ IMBENS, Guido W.; XU, Yiqing. Comparing Experimental and Nonexperimental Methods
 
 KING, Gary; NIELSEN, Richard. Why Propensity Scores Should Not Be Used for Matching. *Political Analysis*, v. 27, n. 4, p. 435--454, 2019. DOI: [10.1017/pan.2019.11](https://doi.org/10.1017/pan.2019.11){target="_blank"}
 
+KOENKER, Roger; HALLOCK, Kevin F. Quantile Regression. *Journal of Economic Perspectives*, v. 15, n. 4, p. 143--156, 2001. DOI: [10.1257/jep.15.4.143](https://doi.org/10.1257/jep.15.4.143){target="_blank"}
+
 
 ### Referências Técnicas
 
