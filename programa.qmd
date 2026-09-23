@@ -199,7 +199,7 @@ conforme o andamento da disciplina.
 |    5 | 01/09/2026 | Regressão linear estática com séries temporais       |
 |    6 | 08/09/2026 | Testes de quebra estrutural                          |
 |    7 | 15/09/2026 | Diagnóstico do modelo linear                         |
-|    8 | 22/09/2026 | Regressão robusta                                    |
+|    8 | 22/09/2026 | Regressão robusta. Regressão quantílica              |
 |    9 | 29/09/2026 | Modelos para variáveis dependentes limitadas         |
 |   10 | 06/10/2026 | Avaliação intermediária                              |
 |   11 | 20/10/2026 | Consistência, exogeneidade e endogeneidade           |
