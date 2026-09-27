@@ -128,3 +128,15 @@ Os slides abrem em uma nova aba do navegador.
   - [08-codigo.zip](atividades_praticas/08-codigo.zip)
   - [Atividade Prática 8](atividades_praticas/08-atividade.html){target="_blank"}
 
+
+
+
+
+# Aula 9 (29/09/26)
+
+- **Slides:**
+
+  - [Slides Aula 9](slides/09-aula.html){target="_blank"}
+  - [09-codigo.zip](atividades_praticas/09-codigo.zip)
+  - [Atividade Prática 9](atividades_praticas/09-atividade.html){target="_blank"}
+  - [09-atividade-template.zip](atividades_praticas/09-atividade-template.zip)
