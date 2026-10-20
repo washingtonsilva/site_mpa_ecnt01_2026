@@ -140,3 +140,17 @@ Os slides abrem em uma nova aba do navegador.
   - [09-codigo.zip](atividades_praticas/09-codigo.zip)
   - [Atividade Prática 9](atividades_praticas/09-atividade.html){target="_blank"}
   - [09-atividade-template.zip](atividades_praticas/09-atividade-template.zip)
+
+
+
+
+
+# Aula 10 (06/10/26)
+
+- **Avaliação 2: Exame Intermediário**
+
+
+
+
+
+# Aula 11 (20/10/26)
