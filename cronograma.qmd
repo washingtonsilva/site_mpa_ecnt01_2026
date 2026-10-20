@@ -164,3 +164,6 @@ Os slides abrem em uma nova aba do navegador.
   - [Slides Aula 11](slides/11-aula.html){target="_blank"}
   - [Atividade Prática 10](atividades_praticas/10-atividade.html){target="_blank"}
   - [10-atividade-template.zip](atividades_praticas/10-atividade-template.zip)
+  - [dados-risco-credito.csv](dados/dados-risco-credito.csv)
+  - [dados-escolha-investimento.csv](dados/dados-escolha-investimento.csv)
+
