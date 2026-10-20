@@ -153,7 +153,8 @@ por escore de propensão e variáveis instrumentais.
    erros-padrão de Newey–West e estabilidade dos parâmetros.
 
 3. **Modelos para variáveis dependentes limitadas**: modelo de probabilidade
-   linear, logit, probit, probabilidades e efeitos marginais.
+   linear, logit, probit, logit multinomial, probit ordenador, efeitos parciais 
+   médidos, medidas de qualidade do ajuste.
 
 4. **Inferência causal**: causalidade, confundimento, pareamento por escore de
    propensão e variáveis instrumentais.

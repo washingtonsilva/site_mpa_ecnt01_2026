@@ -201,7 +201,7 @@
     "href": "programa.html#conteúdo-programático",
     "title": "Programa da Disciplina",
     "section": "Conteúdo Programático",
-    "text": "Conteúdo Programático\n\nRegressão linear com dados em seção cruzada: especificação, estimação por mínimos quadrados ordinários, inferência e diagnóstico; heterocedasticidade, correlação intragrupo e erros-padrão robustos; regressão robusta; exogeneidade, consistência e endogeneidade.\nRegressão linear estática com séries temporais: autocorrelação, erros-padrão de Newey–West e estabilidade dos parâmetros.\nModelos para variáveis dependentes limitadas: modelo de probabilidade linear, logit, probit, probabilidades e efeitos marginais.\nInferência causal: causalidade, confundimento, pareamento por escore de propensão e variáveis instrumentais.",
+    "text": "Conteúdo Programático\n\nRegressão linear com dados em seção cruzada: especificação, estimação por mínimos quadrados ordinários, inferência e diagnóstico; heterocedasticidade, correlação intragrupo e erros-padrão robustos; regressão robusta; exogeneidade, consistência e endogeneidade.\nRegressão linear estática com séries temporais: autocorrelação, erros-padrão de Newey–West e estabilidade dos parâmetros.\nModelos para variáveis dependentes limitadas: modelo de probabilidade linear, logit, probit, logit multinomial, probit ordenador, efeitos parciais médidos, medidas de qualidade do ajuste.\nInferência causal: causalidade, confundimento, pareamento por escore de propensão e variáveis instrumentais.",
     "crumbs": [
       "Programa da Disciplina"
     ]
