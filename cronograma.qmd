@@ -85,8 +85,9 @@ Os slides abrem em uma nova aba do navegador.
 
   - [Slides Aula 5](slides/05-aula.html){target="_blank"}
   - [Atividade Prática 5](atividades_praticas/05-atividade.html){target="_blank"}
-  - [05-atividade-template.zip](atividades_praticas/05-atividade-template.zip)
+  - [05-atividade-template.zip](atividades_praticas/05-atividade-template.zip)\
   - [data-ps2.csv](dados/data-ps2.csv)
+  - [Soluções da Atividade 5](atividades_praticas/05-atividade-solucoes.html){target="_blank"}
 
 
 
@@ -99,6 +100,7 @@ Os slides abrem em uma nova aba do navegador.
   - [Slides Aula 6](slides/06-aula.html){target="_blank"}
   - [Atividade Prática 6](atividades_praticas/06-atividade.html){target="_blank"}
   - [06-atividade-template.zip](atividades_praticas/06-atividade-template.zip)
+  - [Soluções da Atividade 6](atividades_praticas/06-atividade-solucoes.html){target="_blank"}
 
 - **Avaliação 2: Exame Intermediário**
 
@@ -127,6 +129,7 @@ Os slides abrem em uma nova aba do navegador.
   - [Slides Aula 8](slides/08-aula.html){target="_blank"}
   - [08-codigo.zip](atividades_praticas/08-codigo.zip)
   - [Atividade Prática 8](atividades_praticas/08-atividade.html){target="_blank"}
+  - [Soluções da Atividade 8](atividades_praticas/08-atividade-solucao.html){target="_blank"}
 
 
 
@@ -140,6 +143,7 @@ Os slides abrem em uma nova aba do navegador.
   - [09-codigo.zip](atividades_praticas/09-codigo.zip)
   - [Atividade Prática 9](atividades_praticas/09-atividade.html){target="_blank"}
   - [09-atividade-template.zip](atividades_praticas/09-atividade-template.zip)
+  - [Soluções da Atividade 9](atividades_praticas/09-atividade-solucao.html){target="_blank"}
 
 
 
