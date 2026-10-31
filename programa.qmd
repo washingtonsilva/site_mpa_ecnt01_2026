@@ -204,7 +204,8 @@ conforme o andamento da disciplina.
 |    9 | 29/09/2026 | Modelos para variáveis dependentes limitadas I          |
 |   10 | 06/10/2026 | Avaliação intermediária                                 |
 |   11 | 20/10/2026 | Modelos para variáveis dependentes limitadas II         |
-|   12 | 03/11/2026 | Exogeneidade/Endogeneidade, Consistência e Causalidade  |
-|   13 | 10/11/2026 | Pareamento por escore de propensão                      |
-|   14 | 17/11/2026 | Variáveis instrumentais                                 |
+|   12 | 03/11/2026 | Exogeneidade/Endogeneidade, Propriedades de Estimadores |
+|      |            | Fontes de Endogeneidade. Causalidade e Experimentos     |
+|   13 | 10/11/2026 | Variáveis instrumentais                                 |
+|   14 | 17/11/2026 | Outro método de inferência causal                       |
 |   15 | 24/11/2026 | Avaliação final                                         |
