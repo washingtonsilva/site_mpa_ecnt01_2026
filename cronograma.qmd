@@ -28,7 +28,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 1 (04/08/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 1](slides/01-aula.html){target="_blank"}
   - [Atividade Prática 1](atividades_praticas/01-atividade.html){target="_blank"}
@@ -40,7 +40,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 2 (11/08/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 2](slides/02-aula.html){target="_blank"}
   - [Atividade Prática 2](atividades_praticas/02-atividade.html){target="_blank"}
@@ -54,7 +54,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 3 (18/08/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 3](slides/03-aula.html){target="_blank"}
   - [Atividade Prática 3](atividades_praticas/03-atividade.html){target="_blank"}
@@ -67,7 +67,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 4 (25/08/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 4](slides/04-aula.html){target="_blank"}
   - [Atividade Prática 4](atividades_praticas/04-atividade.html){target="_blank"}
@@ -81,7 +81,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 5 (01/09/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 5](slides/05-aula.html){target="_blank"}
   - [Atividade Prática 5](atividades_praticas/05-atividade.html){target="_blank"}
@@ -95,7 +95,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 6 (08/09/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 6](slides/06-aula.html){target="_blank"}
   - [Atividade Prática 6](atividades_praticas/06-atividade.html){target="_blank"}
@@ -113,7 +113,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 7 (15/09/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 7](slides/07-aula.html){target="_blank"}
   - [07-atividade.zip](atividades_praticas/07-atividade.zip)
@@ -137,7 +137,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 9 (29/09/26)
 
-- **Slides:**
+- **Materiais:***
 
   - [Slides Aula 9](slides/09-aula.html){target="_blank"}
   - [09-codigo.zip](atividades_praticas/09-codigo.zip)
@@ -159,7 +159,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 11 (20/10/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 11](slides/11-aula.html){target="_blank"}
   - [Atividade Prática 10](atividades_praticas/10-atividade.html){target="_blank"}
@@ -173,7 +173,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 12 (03/11/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 12](slides/12-aula.html){target="_blank"}
   - [Atividade Prática 11](atividades_praticas/11-atividade.html){target="_blank"}
