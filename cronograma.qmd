@@ -124,7 +124,7 @@ Os slides abrem em uma nova aba do navegador.
 
 # Aula 8 (21/09/26)
 
-- **Slides:**
+- **Materiais:**
 
   - [Slides Aula 8](slides/08-aula.html){target="_blank"}
   - [08-codigo.zip](atividades_praticas/08-codigo.zip)
