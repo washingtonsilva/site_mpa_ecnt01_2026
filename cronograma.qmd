@@ -190,3 +190,15 @@ Os slides abrem em uma nova aba do navegador.
 
   - [Slides Aula 13](slides/13-aula.html){target="_blank"}
   - `Atividade Prática 12`: está descrita nos slides.
+
+
+
+
+# Aula 14 (17/11/26)
+
+- **Materiais:**
+
+  - [Slides Aula 14](slides/14-aula.html){target="_blank"}
+  - [Atividade Prática 13](atividades_praticas/13-atividade.html){target="_blank"}
+  - [13-atividade-template.zip](atividades_praticas/13-atividade-template.zip)
+  - [medicaid-did-2013-2015.csv](dados/medicaid-did-2013-2015.csv)

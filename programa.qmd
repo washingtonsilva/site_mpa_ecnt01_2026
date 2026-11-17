@@ -34,7 +34,8 @@ Ao final da disciplina, espera-se que o mestrando seja capaz de:
    seus limites em aplicações financeiras.
 
 5. Distinguir associação e efeito causal, reconhecer a endogeneidade e avaliar
-   criticamente o pareamento por escore de propensão e as variáveis instrumentais.
+   criticamente modelos de regressão com variáveis instrumentais e 
+   diferenças-em-diferenças com dados em corte transversal.
 
 6. Aplicar práticas de organização, execução, documentação e comunicação
    reprodutível em análises empíricas.
@@ -137,8 +138,8 @@ Regressão linear aplicada a dados em seção cruzada: especificação, estimaç
 inferência, heterocedasticidade, correlação intragrupo, erros-padrão robustos,
 exogeneidade, consistência e endogeneidade. Regressão linear estática aplicada a 
 séries temporais: autocorrelação dos erros e erros-padrão de Newey–West, com aplicações 
-em finanças. Modelos para variáveis dependentes binárias. Causalidade, pareamento 
-por escore de propensão e variáveis instrumentais.
+em finanças. Modelos para variáveis dependentes binárias. Causalidade, experimentos, 
+variáveis instrumentais e diferenças-em-diferenças com dados em corte transversal
 
 
 
@@ -156,8 +157,8 @@ por escore de propensão e variáveis instrumentais.
    linear, logit, probit, logit multinomial, probit ordenador, efeitos parciais 
    médidos, medidas de qualidade do ajuste.
 
-4. **Inferência causal**: causalidade, confundimento, pareamento por escore de
-   propensão e variáveis instrumentais.
+4. **Inferência causal**: causalidade, experimentos, variáveis instrumentais e 
+   diferenças-em-diferenças com dados em corte transversal repetidos.
 
 
 
@@ -207,5 +208,5 @@ conforme o andamento da disciplina.
 |   12 | 03/11/2026 | Exogeneidade/Endogeneidade, Propriedades de Estimadores |
 |      |            | Fontes de Endogeneidade. Causalidade e Experimentos     |
 |   13 | 10/11/2026 | Variáveis instrumentais                                 |
-|   14 | 17/11/2026 | Outro método de inferência causal                       |
+|   14 | 17/11/2026 | Diferenças-em-Diferenças com dados em corte transversal repetidos                       |
 |   15 | 24/11/2026 | Avaliação final                                         |
