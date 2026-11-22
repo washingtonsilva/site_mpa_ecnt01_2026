@@ -202,3 +202,11 @@ Os slides abrem em uma nova aba do navegador.
   - [Atividade Prática 13](atividades_praticas/13-atividade.html){target="_blank"}
   - [13-atividade-template.zip](atividades_praticas/13-atividade-template.zip)
   - [medicaid-did-2013-2015.csv](dados/medicaid-did-2013-2015.csv)
+
+
+
+
+# Aula 15 (24/11/26)
+
+  - Avaliação final
+  - [Enviar o arquivo nome-exame-final.qmd](https://entregas-econometria.wssaleph.workers.dev/){target="_blank"}
