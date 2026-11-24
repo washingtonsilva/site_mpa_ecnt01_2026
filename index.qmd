@@ -1,6 +1,6 @@
 ---
 lang: pt-BR
-title: "Econometria Aplicada à Finanças - 2026/2"
+title: "Econometria Aplicada a Finanças - 2026/2"
 subtitle: "Mestrado Profissional em Administração <br> IFMG Campus Formiga"
 ---
 

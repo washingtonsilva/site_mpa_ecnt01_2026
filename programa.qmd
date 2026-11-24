@@ -1,7 +1,7 @@
 ---
 lang: pt-BR
 title: "Programa da Disciplina"
-subtitle: "Econometria Aplicada à Finanças 2026/2 <br> Mestrado Profissional em Administração"
+subtitle: "Econometria Aplicada a Finanças 2026/2 <br> Mestrado Profissional em Administração"
 author: "Prof. Dr. Washington S. da Silva"
 ---
 
