@@ -151,7 +151,7 @@
     "href": "programa.html#avaliação",
     "title": "Programa da Disciplina",
     "section": "Avaliação",
-    "text": "Avaliação\nTrata-se de um planejamento e pode ser alterado conforme o andamento da disciplina.\n\nAvaliação 1 (33 pontos) — atividades práticas reprodutíveis\nAvaliação 2 (33 pontos) — exame intermediário\nAvaliação 3 (34 pontos) — exame final\n\nCritério de aprovação: nota média final igual ou superior a 60 pontos.",
+    "text": "Avaliação\nTrata-se de um planejamento e pode ser alterado conforme o andamento da disciplina.\n\nAvaliação 1 (33 pontos) — atividades práticas reprodutíveis\nAvaliação 2 (33 pontos) — seminários individuais\nAvaliação 3 (34 pontos) — exame final\n\nCritério de aprovação: nota média final igual ou superior a 60 pontos.",
     "crumbs": [
       "Programa da Disciplina"
     ]
@@ -231,7 +231,7 @@
     "href": "programa.html#plano-de-aula",
     "title": "Programa da Disciplina",
     "section": "Plano de Aula",
-    "text": "Plano de Aula\nTrata-se apenas de um planejamento e, como todo planejamento, pode ser alterado conforme o andamento da disciplina.\n\n\n\n\n\n\n\n\nAula\nData\nTópico\n\n\n\n\n1\n04/08/2026\nApresentação da disciplina. Regressão linear simples\n\n\n2\n11/08/2026\nRegressão linear múltipla\n\n\n3\n18/08/2026\nHeterocedasticidade\n\n\n4\n25/08/2026\nHeterocedasticidade e correlação intragrupo\n\n\n5\n01/09/2026\nRegressão linear estática com séries temporais\n\n\n6\n08/09/2026\nTestes de quebra estrutural\n\n\n7\n15/09/2026\nDiagnóstico do modelo linear\n\n\n8\n22/09/2026\nRegressão robusta. Regressão quantílica\n\n\n9\n29/09/2026\nModelos para variáveis dependentes limitadas I\n\n\n10\n06/10/2026\nAvaliação 2\n\n\n11\n20/10/2026\nModelos para variáveis dependentes limitadas II\n\n\n12\n03/11/2026\nExogeneidade/Endogeneidade, Propriedades de Estimadores\n\n\n\n\nFontes de Endogeneidade. Causalidade e Experimentos\n\n\n13\n10/11/2026\nVariáveis instrumentais\n\n\n14\n17/11/2026\nDiferenças-em-Diferenças com dados em corte transversal repetidos\n\n\n15\n24/11/2026\nAvaliação 3",
+    "text": "Plano de Aula\n\n\n\n\n\n\n\n\nAula\nData\nConteúdo\n\n\n\n\n1\n04/08/2026\nApresentação da disciplina. O modelo de regressão linear simples\n\n\n2\n11/08/2026\nModelo de regressão linear múltipla I\n\n\n3\n18/08/2026\nHeterocedasticidade\n\n\n4\n25/08/2026\nHeterocedasticidade\n\n\n5\n01/09/2026\nRegressão linear estática com séries temporais\n\n\n6\n08/09/2026\nTestes de quebra estrutural\n\n\n7\n15/09/2026\nDiagnóstico do modelo linear\n\n\n8\n22/09/2026\nRegressão robusta. Regressão quantílica\n\n\n9\n29/09/2026\nModelos para variáveis dependentes limitadas I\n\n\n10\n06/10/2026\nAvaliação 2\n\n\n11\n20/10/2026\nModelos para variáveis dependentes limitadas II\n\n\n12\n03/11/2026\nExogeneidade. Endogeneidade, Propriedades de Estimadores. Fontes de Endogeneidade. Causalidade e Experimentos\n\n\n13\n10/11/2026\nVariáveis instrumentais\n\n\n14\n17/11/2026\nDiferença-em-Diferenças com dados de corte transversal repetidos\n\n\n15\n24/11/2026\nAvaliação 3",
     "crumbs": [
       "Programa da Disciplina"
     ]
