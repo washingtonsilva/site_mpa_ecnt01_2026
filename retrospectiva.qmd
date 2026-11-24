@@ -1,0 +1,390 @@
+---
+title: "Uma retrospectiva de Econometria Aplicada a Finanças · 2026/2"
+lang: pt-BR
+toc: false
+---
+
+```{=html}
+<style>
+  #quarto-document-content:has(> #retrospectiva) { width: 100%; }
+  .journey {
+    --journey-green: #bce68c;
+    --journey-muted: #c4d8cf;
+    --journey-bg: #102a23;
+    color: #f7faf6;
+    margin-block: 1.4rem 2rem;
+  }
+  .journey-scene {
+    min-height: 25rem;
+    padding: clamp(1.25rem, 4vw, 3rem);
+    border: 1px solid #36554b;
+    border-radius: 1.1rem;
+    background: radial-gradient(ellipse at 95% 0, #214a3b, var(--journey-bg) 65%);
+    display: grid;
+    align-content: center;
+    gap: .75rem;
+  }
+  .journey-scene + .journey-scene { margin-top: 1rem; }
+  .journey h2, .journey h3, .journey pre, .journey p { margin: 0; }
+  .journey h2 {
+    color: var(--journey-green);
+    font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+    font-weight: 700;
+  }
+  .journey h3 {
+    color: inherit;
+    font-size: clamp(1.45rem, 3.6vw, 2.15rem);
+    line-height: 1.15;
+  }
+  #quarto-document-content .journey p,
+  #quarto-document-content .journey li { text-align: left; hyphens: none; }
+  .journey-scene > p { color: var(--journey-muted); }
+  .journey pre {
+    color: #f7faf6;
+    background: #0b201a;
+    border: 1px solid #36554b;
+    border-radius: .6rem;
+    padding: .7rem .9rem;
+  }
+  .journey .journey-plot {
+    display: block;
+    width: min(100%, 30rem);
+    height: auto;
+    margin-block: .15rem;
+    overflow: visible;
+  }
+  .journey-plot text { fill: var(--journey-muted); font: 12px system-ui, sans-serif; }
+  .journey-plot .grid { stroke: #42665a; stroke-width: 1; }
+  .journey-plot .axis { stroke: #91b0a2; stroke-width: 1.2; }
+  .journey-plot circle { fill: #f5c352; }
+  .journey-plot .fit { stroke: var(--journey-green); stroke-width: 3; stroke-linecap: round; }
+  .journey-quarto {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+    align-items: stretch;
+  }
+  .journey-quarto pre { overflow-x: auto; }
+  .journey-report {
+    color: #19392f;
+    background: #f4f8ee;
+    border-radius: .6rem;
+    padding: .9rem 1rem;
+  }
+  .journey-report strong { display: block; margin-bottom: .35rem; }
+  .journey-report .journey-plot text { fill: #39594d; }
+  .journey-report .journey-plot .grid { stroke: #cdd9ca; }
+  .journey-report .journey-plot .axis { stroke: #728a7d; }
+  .journey-report .journey-plot circle { fill: #9c5900; }
+  .journey-report .journey-plot .fit { stroke: #246045; }
+  .journey-commits {
+    list-style: none;
+    padding: 0 0 0 1.1rem;
+    margin: .35rem 0 .35rem .46rem;
+    border-left: 2px solid #729781;
+  }
+  .journey-commits li { position: relative; padding-block: .4rem; }
+  .journey-commits li::before {
+    content: "";
+    position: absolute;
+    left: -1.52rem;
+    top: .85rem;
+    width: .72rem;
+    height: .72rem;
+    border-radius: 50%;
+    background: var(--journey-green);
+    box-shadow: 0 0 0 3px var(--journey-bg);
+  }
+  .journey-release {
+    width: fit-content;
+    padding: .2rem .65rem;
+    border-radius: .35rem;
+    background: var(--journey-green);
+    color: #102a23;
+    font: 700 1rem ui-monospace, monospace;
+  }
+  .journey-publication {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .6rem 1rem;
+    width: fit-content;
+    padding: .55rem .75rem;
+    border: 1px solid #527869;
+    border-radius: .6rem;
+  }
+  .journey .journey-punchline {
+    --delay: .65s;
+    color: var(--journey-green);
+    font-weight: 700;
+  }
+  .journey-spark {
+    --delay: .8s;
+    width: 6.5rem;
+    height: 3.5rem;
+    color: #f5c352;
+  }
+  .journey-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    color: #19392f;
+    margin-top: .75rem;
+  }
+  .journey-controls .btn-success,
+  .journey-controls .btn-outline-success:hover {
+    color: #fff;
+    background: #215940;
+    border-color: #215940;
+  }
+  .journey-controls .btn-outline-success {
+    color: #215940;
+    border-color: #215940;
+  }
+  .journey-controls[hidden] { display: none; }
+  .journey-controls .journey-progress { margin-left: auto; }
+  .journey.is-interactive .journey-scene:not(.is-current) { display: none; }
+  .journey.is-interactive .journey-scene { margin-top: 0; }
+  .journey.is-playing .is-current > h2,
+  .journey.is-playing .is-current > h3 {
+    animation: journey-reveal .24s ease-out both;
+  }
+  .journey.is-playing .is-current .journey-plot circle,
+  .journey.is-playing .is-current .journey-report,
+  .journey.is-playing .is-current .journey-commits li,
+  .journey.is-playing .is-current .journey-punchline,
+  .journey.is-playing .is-current .journey-spark {
+    animation: journey-reveal .36s ease-out both;
+    animation-delay: var(--delay, .12s);
+  }
+  .journey.is-playing .is-current .journey-plot .fit {
+    stroke-dasharray: 1;
+    animation: journey-fit .55s .45s ease-out both;
+  }
+  .journey.is-paused .is-current * { animation-play-state: paused !important; }
+  @keyframes journey-reveal {
+    from { opacity: 0; transform: translateY(.35rem); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes journey-fit {
+    from { stroke-dashoffset: 1; }
+    to { stroke-dashoffset: 0; }
+  }
+  @media (max-height: 800px) and (min-width: 60rem) {
+    .journey { margin-top: .85rem; }
+    .journey-scene { padding-block: 1.25rem; }
+    .journey .journey-plot { width: min(100%, 25rem); }
+  }
+  @media (max-width: 38rem) {
+    .journey-scene { min-height: 0; }
+    .journey-quarto { grid-template-columns: 1fr; }
+    .journey-controls .journey-progress { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .journey *, .journey-plot * { animation: none !important; }
+  }
+</style>
+
+<div class="journey" id="retrospectiva">
+<section class="journey-scene" aria-labelledby="jornada-r">
+<h2 id="jornada-r">R</h2>
+<h3>A reta saiu!</h3>
+<p>Aqui, os retornos são simulados. O <code>lm()</code> vocês já conhecem bem.</p>
+```
+
+```{r}
+#| echo: false
+#| results: asis
+
+# Simular retornos excedentes, em pontos percentuais, para ilustrar o ajuste.
+set.seed(26)
+mercado <- -4:4
+ativo <- round(0.35 + 0.85 * mercado + rnorm(length(mercado), sd = 0.9), 1)
+dados <- data.frame(mercado, ativo)
+modelo <- lm(ativo ~ mercado, data = dados)
+
+# Converter os dados e os extremos da reta em posições no gráfico SVG.
+x_svg <- function(x) 221 + 35 * x
+y_svg <- function(y) 100 - 13 * y
+limites <- range(mercado)
+reta <- predict(modelo, newdata = data.frame(mercado = limites))
+marcas_x <- c(-4, -2, 0, 2, 4)
+marcas_y <- c(-4, -2, 0, 2, 4)
+
+grafico <- c(
+  '<svg class="journey-plot" viewBox="0 0 440 225" role="img" aria-label="Retornos simulados do ativo e do mercado, com reta de mínimos quadrados ascendente.">',
+  sprintf('<line class="grid" x1="56" y1="%1$.0f" x2="400" y2="%1$.0f"/>', y_svg(marcas_y)),
+  '<path class="axis" fill="none" d="M56 18 V171 H400"/>',
+  sprintf('<text x="%d" y="189" text-anchor="middle">%d</text>', x_svg(marcas_x), marcas_x),
+  sprintf('<text x="46" y="%d" text-anchor="end">%d</text>', y_svg(marcas_y) + 4, marcas_y),
+  '<text x="220" y="210" text-anchor="middle">Retorno excedente do mercado (p.p.)</text>',
+  '<text x="17" y="95" text-anchor="middle" transform="rotate(-90 17 95)">Retorno excedente do ativo (p.p.)</text>',
+  sprintf('<circle cx="%.0f" cy="%.1f" r="4" style="--delay: %.2fs"/>',
+          x_svg(mercado), y_svg(ativo), seq_along(mercado) * 0.05),
+  sprintf('<line class="fit" pathLength="1" x1="%.0f" y1="%.2f" x2="%.0f" y2="%.2f"/>',
+          x_svg(limites[1]), y_svg(reta[1]), x_svg(limites[2]), y_svg(reta[2])),
+  '</svg>'
+)
+cat(grafico, sep = "\n")
+```
+
+```{=html}
+<pre><code>modelo &lt;- lm(ativo ~ mercado, data = dados)</code></pre>
+</section>
+
+<section class="journey-scene" aria-labelledby="jornada-quarto">
+<h2 id="jornada-quarto">Quarto</h2>
+<h3>Rodou. Agora explica.</h3>
+<div class="journey-quarto">
+<pre aria-label="Trecho do arquivo Quarto"><code>## Ativo e mercado
+
+&#96;&#96;&#96;{r}
+#| echo: false
+plot(ativo ~ mercado, data = dados)
+abline(modelo)
+&#96;&#96;&#96;
+
+No exemplo simulado, o retorno
+excedente estimado do ativo sobe
+junto com o do mercado.</code></pre>
+<div class="journey-report">
+<strong>Ativo e mercado</strong>
+```
+
+```{r}
+#| echo: false
+#| results: asis
+cat(grafico, sep = "\n")
+```
+
+```{=html}
+<p>No exemplo simulado, o retorno excedente estimado do ativo sobe junto com o do mercado.</p>
+</div>
+</div>
+</section>
+
+<section class="journey-scene" aria-labelledby="jornada-git">
+<h2 id="jornada-git">Git</h2>
+<h3>Um commit de cada vez</h3>
+<ol class="journey-commits">
+<li style="--delay: .08s">Ajusta o CAPM</li>
+<li style="--delay: .22s">Revisa a endogeneidade</li>
+<li style="--delay: .36s">Roda o DiD</li>
+<li style="--delay: .50s">Só mais um ajuste. Agora vai.</li>
+</ol>
+</section>
+
+<section class="journey-scene" aria-labelledby="jornada-github">
+<h2 id="jornada-github">GitHub</h2>
+<div class="journey-publication">
+<span class="journey-release" aria-label="Tag 2026.2">2026.2</span>
+<strong>Ativo e mercado · Relatório publicado</strong>
+</div>
+<h3>Paulo e Jonathan, valeu!</h3>
+<p>Foi muito bom dar aula para vocês dois. Obrigado pela parceria neste semestre. Até a próxima!</p>
+<p class="journey-punchline">E cuidado com o viés de seleção!</p>
+<svg class="journey-spark" viewBox="0 0 105 54" aria-hidden="true">
+  <path d="M42 47l13-29m-6 29 26-27M31 44l-11-9m21 2-2-10m23 13 12-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M53 9l5-5m18 6 6-3m-2 27 9 1M25 20l-4-6" fill="none" stroke="#bce68c" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="35" cy="11" r="2" fill="#bce68c"/>
+  <circle cx="92" cy="20" r="2" fill="currentColor"/>
+</svg>
+</section>
+
+<div class="journey-controls" aria-label="Controles da retrospectiva" role="group" hidden>
+<button type="button" class="btn btn-success" data-control="play">Iniciar animação</button>
+<button type="button" class="btn btn-outline-success" data-control="previous" disabled>Anterior</button>
+<button type="button" class="btn btn-outline-success" data-control="next" disabled>Próxima</button>
+<span class="journey-progress" role="status" aria-atomic="true"></span>
+</div>
+</div>
+
+<script>
+(() => {
+  const journey = document.querySelector("#retrospectiva");
+  const scenes = [...journey.querySelectorAll(".journey-scene")];
+  const controls = journey.querySelector(".journey-controls");
+  const play = controls.querySelector('[data-control="play"]');
+  const previous = controls.querySelector('[data-control="previous"]');
+  const next = controls.querySelector('[data-control="next"]');
+  const progress = controls.querySelector(".journey-progress");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const sceneDuration = 5000;
+  const lastScene = scenes.length - 1;
+
+  let current = 0;
+  let started = false;
+  let playing = false;
+  let animateScene = false;
+  let timer;
+  let deadline;
+  let remaining = sceneDuration;
+
+  function update() {
+    scenes.forEach((scene, index) => scene.classList.toggle("is-current", index === current));
+    journey.classList.toggle("is-playing", animateScene);
+    journey.classList.toggle("is-paused", started && !playing && current !== lastScene);
+    play.textContent = !started ? "Iniciar animação"
+      : current === lastScene ? "Rever animação"
+      : playing ? "Pausar" : "Continuar";
+    previous.disabled = !started || current === 0;
+    next.disabled = !started || current === lastScene;
+    const announcement = started
+      ? `${scenes[current].querySelector("h2").textContent} · ${current + 1} de ${scenes.length}`
+      : `${scenes.length} cenas`;
+    if (progress.textContent !== announcement) progress.textContent = announcement;
+  }
+
+  function schedule() {
+    deadline = performance.now() + remaining;
+    timer = window.setTimeout(() => show(current + 1), remaining);
+  }
+
+  function show(index) {
+    window.clearTimeout(timer);
+    current = index;
+    animateScene = playing;
+    remaining = sceneDuration;
+    const focusedControl = document.activeElement;
+    if (current === lastScene) playing = false;
+    update();
+    if ((focusedControl === previous && previous.disabled)
+      || (focusedControl === next && next.disabled)) play.focus();
+    if (playing) schedule();
+  }
+
+  function configureMotion() {
+    window.clearTimeout(timer);
+    started = false;
+    playing = false;
+    animateScene = false;
+    current = 0;
+    journey.classList.toggle("is-interactive", !reducedMotion.matches);
+    controls.hidden = reducedMotion.matches;
+    update();
+  }
+
+  play.addEventListener("click", () => {
+    if (!started || current === lastScene) {
+      started = true;
+      playing = true;
+      show(0);
+    } else if (playing) {
+      window.clearTimeout(timer);
+      remaining = Math.max(0, deadline - performance.now());
+      playing = false;
+      update();
+    } else {
+      playing = true;
+      update();
+      schedule();
+    }
+  });
+  previous.addEventListener("click", () => show(current - 1));
+  next.addEventListener("click", () => show(current + 1));
+  reducedMotion.addEventListener("change", configureMotion);
+  configureMotion();
+})();
+</script>
+```

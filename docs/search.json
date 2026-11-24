@@ -107,6 +107,133 @@
     ]
   },
   {
+    "objectID": "retrospectiva.html",
+    "href": "retrospectiva.html",
+    "title": "Uma retrospectiva de Econometria Aplicada a Finanças · 2026/2",
+    "section": "",
+    "text": "R\nA reta saiu!\nAqui, os retornos são simulados. O lm() vocês já conhecem bem.\n\n      -4 -2 0 2 4 -4 -2 0 2 4 Retorno excedente do mercado (p.p.) Retorno excedente do ativo (p.p.)          \n\nmodelo &lt;- lm(ativo ~ mercado, data = dados)\n\n\n\nQuarto\nRodou. Agora explica.\n\n## Ativo e mercado\n\n```{r}\n#| echo: false\nplot(ativo ~ mercado, data = dados)\nabline(modelo)\n```\n\nNo exemplo simulado, o retorno\nexcedente estimado do ativo sobe\njunto com o do mercado.\n\nAtivo e mercado\n\n      -4 -2 0 2 4 -4 -2 0 2 4 Retorno excedente do mercado (p.p.) Retorno excedente do ativo (p.p.)          \n\nNo exemplo simulado, o retorno excedente estimado do ativo sobe junto com o do mercado.\n\n\n\n\n\nGit\nUm commit de cada vez\n\nAjusta o CAPM\nRevisa a endogeneidade\nRoda o DiD\nSó mais um ajuste. Agora vai.\n\n\n\n\nGitHub\n\n2026.2\nAtivo e mercado · Relatório publicado\n\nPaulo e Jonathan, valeu!\nFoi muito bom dar aula para vocês dois. Obrigado pela parceria neste semestre. Até a próxima!\nE cuidado com o viés de seleção!\n\n  \n  \n  \n  \n\n\n\n\nIniciar animação\nAnterior\nPróxima"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "",
+    "text": "Esta disciplina objetiva preparar os mestrandos para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.\nAntes da primeira aula, acesse a página Ambiente computacional para criar as contas necessárias, instalar e configurar os programas necessários em seu computador.",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "index.html#bem-vindo-à-disciplina",
+    "href": "index.html#bem-vindo-à-disciplina",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "",
+    "text": "Esta disciplina objetiva preparar os mestrandos para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.\nAntes da primeira aula, acesse a página Ambiente computacional para criar as contas necessárias, instalar e configurar os programas necessários em seu computador.",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "index.html#informações-gerais",
+    "href": "index.html#informações-gerais",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "Informações gerais",
+    "text": "Informações gerais\n\nProfessor: Prof. Dr. Washington Santos da Silva\nE-mail: washington.silva@ifmg.edu.br\nHorário de aula: Terça-Feira, 18:30-22:30\nLocal: aulas síncronas via Google Meet e aula presencial",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "index.html#conteúdo",
+    "href": "index.html#conteúdo",
+    "title": "Econometria Aplicada à Finanças - 2026/2",
+    "section": "Conteúdo",
+    "text": "Conteúdo\nUse este site como guia da disciplina:\n\nAmbiente computacional: contas, programas e configurações necessárias antes da primeira aula.\nPrograma da Disciplina: objetivos, ementa, bibliografia e planejamento completo.\nTutoriais básicos e materiais de apoio: preparação em R/RStudio e primeiros passos com Git/GitHub, Quarto/RStudio e Markdown.\nCronograma: aulas, slides, dados e leituras.",
+    "crumbs": [
+      "Início"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html",
+    "href": "ambiente_computacional.html",
+    "title": "Preparação do ambiente computacional",
+    "section": "",
+    "text": "Conclua este roteiro de instalação e configuração. Ele prepara o computador para as atividades da disciplina.\n\n\n\n\n\n\nNotaPlataforma adotada\n\n\n\nAs etapas detalhadas desta página foram preparadas para Windows. Usuários de macOS ou Linux devem utilizar os instaladores disponíveis nas páginas oficiais indicadas nas seções de R, RStudio, Quarto e Git. Nesses sistemas, use o terminal padrão em vez do Git Bash. Se não conseguir concluir a verificação do ambiente, procure orientação antes da primeira aula.\n\n\n\n\n\n\n\n\nImportanteJá tem os programas instalados?\n\n\n\nSe você usa R 4.5.1 ou 4.5.2, instale o R 4.6.1 indicado nesta página. Atualize também RStudio, Quarto e Git para a versão estável mais recente disponível nas páginas oficiais. Faça isso com antecedência: a atualização pode exigir reiniciar o computador ou verificar novamente o terminal do RStudio.\nOs pacotes instalados no R 4.5 não estarão disponíveis automaticamente no R 4.6. Não é necessário reinstalá-los agora: a disciplina indicará os pacotes a instalar quando eles forem usados.\n\n\n\nCaso não tenha, crie uma conta gratuita no GitHub.\nInstale R 4.6.1 e atualize RStudio, Quarto e Git.\nVerifique a identidade configurada no Git e o Git Bash como terminal do RStudio. Ajuste apenas o que for necessário.\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina, começando por R e tidyverse.\nDepois de concluir o tutorial de Git e GitHub, retorne a esta página e faça a verificação final do ambiente.\n\n\n\n\n\n\n\nImportanteAntes da primeira aula\n\n\n\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina na ordem indicada: comece por R e tidyverse e, em seguida, conclua o tutorial prático de Git e GitHub. Git e GitHub serão usados desde a primeira aula; guarde a URL do seu repositório individual público.\n\n\n\n\n\n\n\n\nNotaRepositório público\n\n\n\nNão envie senhas, chaves de acesso, dados pessoais de terceiros ou dados restritos ao repositório. Use apenas materiais autorizados para a disciplina.\n\n\nPara revisar conceitos, consulte o tutorial de Git e GitHub do professor. O Happy Git and GitHub for the useR é um aprofundamento opcional.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-preparacao",
+    "href": "ambiente_computacional.html#sec-preparacao",
+    "title": "Preparação do ambiente computacional",
+    "section": "",
+    "text": "Conclua este roteiro de instalação e configuração. Ele prepara o computador para as atividades da disciplina.\n\n\n\n\n\n\nNotaPlataforma adotada\n\n\n\nAs etapas detalhadas desta página foram preparadas para Windows. Usuários de macOS ou Linux devem utilizar os instaladores disponíveis nas páginas oficiais indicadas nas seções de R, RStudio, Quarto e Git. Nesses sistemas, use o terminal padrão em vez do Git Bash. Se não conseguir concluir a verificação do ambiente, procure orientação antes da primeira aula.\n\n\n\n\n\n\n\n\nImportanteJá tem os programas instalados?\n\n\n\nSe você usa R 4.5.1 ou 4.5.2, instale o R 4.6.1 indicado nesta página. Atualize também RStudio, Quarto e Git para a versão estável mais recente disponível nas páginas oficiais. Faça isso com antecedência: a atualização pode exigir reiniciar o computador ou verificar novamente o terminal do RStudio.\nOs pacotes instalados no R 4.5 não estarão disponíveis automaticamente no R 4.6. Não é necessário reinstalá-los agora: a disciplina indicará os pacotes a instalar quando eles forem usados.\n\n\n\nCaso não tenha, crie uma conta gratuita no GitHub.\nInstale R 4.6.1 e atualize RStudio, Quarto e Git.\nVerifique a identidade configurada no Git e o Git Bash como terminal do RStudio. Ajuste apenas o que for necessário.\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina, começando por R e tidyverse.\nDepois de concluir o tutorial de Git e GitHub, retorne a esta página e faça a verificação final do ambiente.\n\n\n\n\n\n\n\nImportanteAntes da primeira aula\n\n\n\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina na ordem indicada: comece por R e tidyverse e, em seguida, conclua o tutorial prático de Git e GitHub. Git e GitHub serão usados desde a primeira aula; guarde a URL do seu repositório individual público.\n\n\n\n\n\n\n\n\nNotaRepositório público\n\n\n\nNão envie senhas, chaves de acesso, dados pessoais de terceiros ou dados restritos ao repositório. Use apenas materiais autorizados para a disciplina.\n\n\nPara revisar conceitos, consulte o tutorial de Git e GitHub do professor. O Happy Git and GitHub for the useR é um aprofundamento opcional.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#instalação-dos-programas",
+    "href": "ambiente_computacional.html#instalação-dos-programas",
+    "title": "Preparação do ambiente computacional",
+    "section": "Instalação dos programas",
+    "text": "Instalação dos programas\n\nLinguagem R\n\n\n\n\n\n\nDicaInstalar R 4.6.1\n\n\n\n\nAcesse CRAN.\nClique em Download R for Windows e, na página seguinte, em base.\nClique em Download R-4.6.1 for Windows.\nApós o download, execute o instalador e aceite as opções padrão até a instalação ser concluída. Mesmo que você já use uma versão anterior de R, instale o R 4.6.1.\n\n\n\n\n\nRStudio\n\n\n\n\n\n\nDicaInstalar ou atualizar o RStudio Desktop\n\n\n\n\nAcesse a página de download do RStudio.\nNa seção 2: Install RStudio, clique em Download RStudio Desktop for Windows.\nApós o download, execute o instalador e avance até a instalação ser concluída. Se o RStudio já estiver instalado, esse procedimento o atualizará.\n\n\n\n\n\nSistema Quarto\n\n\n\n\n\n\nDicaInstalar ou atualizar o Quarto CLI\n\n\n\n\nAcesse a página de download do Quarto.\nBaixe o instalador de Quarto CLI para Windows.\nExecute o instalador e avance até a instalação ser concluída. Se o Quarto já estiver instalado, esse procedimento o atualizará.\n\n\n\n\n\nTinyTeX\n\n\n\n\n\n\nImportanteInstalar o TinyTeX quando uma atividade exigir PDF\n\n\n\nTinyTeX é a distribuição LaTeX recomendada para gerar PDF a partir de documentos Quarto. Ele só é necessário para gerar PDF localmente.\nA disciplina avisará antes da primeira atividade que exigir PDF. Instale-o depois de instalar o Quarto, com antecedência em relação a essa atividade.\nSe ainda não tiver o TinyTeX, abra a aba Terminal do RStudio e execute:\nquarto install tinytex\nSe já tiver o TinyTeX, atualize a distribuição com:\nquarto update tinytex\n\n\n\n\nGit\n\n\n\n\n\n\nDicaJá tem Git for Windows?\n\n\n\nAbra o Git Bash e execute:\ngit update-git-for-windows\nSiga as instruções exibidas. Ao terminar, abra um novo terminal e confirme a atualização com:\ngit --version\nSe o comando não funcionar, baixe e execute o instalador da seção seguinte. Isso pode ocorrer em instalações portáteis ou personalizadas.\n\n\n\n\n\n\n\n\nDicaInstalar o Git for Windows\n\n\n\n\nAcesse git-scm.com e clique em Download for Windows.\nApós o download, execute o instalador.\nMantenha as configurações padrão sugeridas. Na janela Adjusting the name of the initial branch, marque Override the default branch name for new repositories e informe main.\nClique em Next nas janelas restantes e conclua a instalação. Este instalador também pode ser usado para atualizar o Git quando o comando da seção anterior não funcionar.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-github",
+    "href": "ambiente_computacional.html#sec-github",
+    "title": "Preparação do ambiente computacional",
+    "section": "Conta GitHub",
+    "text": "Conta GitHub\nCaso ainda não tenha uma conta, acesse github.com, clique em Sign up, conclua o cadastro e confirme seu e-mail. Use uma conta individual que você possa manter durante toda a disciplina.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-configurar-git",
+    "href": "ambiente_computacional.html#sec-configurar-git",
+    "title": "Preparação do ambiente computacional",
+    "section": "Verificar e configurar o Git",
+    "text": "Verificar e configurar o Git\nAbra o Git Bash, disponível no menu Iniciar após a instalação do Git, e verifique o nome e o e-mail que o Git usará no histórico de seus commits:\ngit config --global --get user.name\ngit config --global --get user.email\n\n\n\n\n\n\nDicaJá há uma identidade configurada?\n\n\n\nSe os dois comandos exibirem seu nome e um e-mail associado à conta do GitHub que você usará na disciplina, não altere nada. Continue para a seção Git Bash como terminal do RStudio.\n\n\nSe algum comando não exibir um valor, ou se precisar usar outra identidade, configure o nome e o e-mail:\ngit config --global user.name \"Seu Nome\"\ngit config --global user.email \"seuemail@exemplo.com\"\nUse um e-mail associado à conta do GitHub que você utilizará na disciplina.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-git-bash",
+    "href": "ambiente_computacional.html#sec-git-bash",
+    "title": "Preparação do ambiente computacional",
+    "section": "Git Bash como terminal do RStudio",
+    "text": "Git Bash como terminal do RStudio\nOs comandos Git desta disciplina serão executados no Terminal do RStudio usando Git Bash. Depois de instalar o Git for Windows, o Git Bash pode já estar selecionado no RStudio, mas isso depende das configurações do seu computador. Verifique antes de alterar qualquer opção:\n\nAbra RStudio → Tools → Global Options → Terminal.\nEm New terminals open with, verifique a opção exibida.\nSe já estiver selecionado Git Bash, não altere nada. Caso esteja selecionado PowerShell ou outra opção, escolha Git Bash.\nConfirme a configuração e abra um novo terminal no RStudio.\n\nSe Git Bash não aparecer na lista, reinstale o Git for Windows mantendo as opções padrão e tente novamente. O Git Bash padroniza os comandos com macOS e Linux. Ele oferece comandos no estilo Unix, mas não transforma o Windows em outro sistema operacional.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "ambiente_computacional.html#sec-validacao",
+    "href": "ambiente_computacional.html#sec-validacao",
+    "title": "Preparação do ambiente computacional",
+    "section": "Verificação do ambiente",
+    "text": "Verificação do ambiente\nAntes da primeira aula, confirme que você consegue:\n\nAbrir R e RStudio.\nAbrir o terminal do RStudio e executar:\nquarto --version\ngit --version\nConfirmar que seu nome e e-mail do Git estão configurados conforme a seção anterior.\nApós concluir o tutorial de Git e GitHub, criar seu repositório individual público, abri-lo como Projeto RStudio, confirmar que o Terminal usa Git Bash, editar arquivos e usar git status, git add, git commit e git push para enviá-los ao GitHub.\nRegistrar a URL do seu repositório no cadastro da disciplina quando o formulário for publicado.",
+    "crumbs": [
+      "Ambiente computacional"
+    ]
+  },
+  {
+    "objectID": "cronograma.html",
+    "href": "cronograma.html",
+    "title": "Cronograma",
+    "section": "",
+    "text": "Aqui estão o cronograma e os materiais de cada aula, como slides, dados e leituras.\n\n\n\n\n\n\nDicaComo navegar pelos slides\n\n\n\nOs slides são interativos e foram produzidos em revealjs.\nAo abrir um arquivo de slides, utilize:\n\nSetas (← →): avançar e voltar.\nF: tela cheia.\nO: visão geral dos slides.\nEsc: sair da visão geral.\nEm dispositivos móveis, deslize para os lados.\n\nOs slides abrem em uma nova aba do navegador.\n\n\n\nAula 1 (04/08/26)\n\nMateriais:\n\nSlides Aula 1\nAtividade Prática 1\n01-atividade-template.zip\nSolução: Atividade Prática 1\n\n\n\n\nAula 2 (11/08/26)\n\nMateriais:\n\nSlides Aula 2\nAtividade Prática 2\n02-atividade-template.zip\ndata-ps1.csv\nSolução: Atividade Prática 2\n\n\n\n\nAula 3 (18/08/26)\n\nMateriais:\n\nSlides Aula 3\nAtividade Prática 3\n03-atividade-template.zip\nSolução: Atividade Prática 3\n\n\n\n\nAula 4 (25/08/26)\n\nMateriais:\n\nSlides Aula 4\nAtividade Prática 4\n04-atividade-template.zip\ndata-ps1.csv\nSolução: Atividade Prática 4\n\n\n\n\nAula 5 (01/09/26)\n\nMateriais:\n\nSlides Aula 5\nAtividade Prática 5\n05-atividade-template.zip\n\ndata-ps2.csv\nSoluções da Atividade 5\n\n\n\n\nAula 6 (08/09/26)\n\nMateriais:\n\nSlides Aula 6\nAtividade Prática 6\n06-atividade-template.zip\nSoluções da Atividade 6\n\nAvaliação 2: Exame Intermediário\n\nAvaliação 2: Exame Intermediário\nEsta avaliação será realizada na aula do dia 06/10.\n\n\n\n\nAula 7 (15/09/26)\n\nMateriais:\n\nSlides Aula 7\n07-atividade.zip\n\n\n\n\nAula 8 (21/09/26)\n\nMateriais:\n\nSlides Aula 8\n08-codigo.zip\nAtividade Prática 8\nSoluções da Atividade 8\n\n\n\n\nAula 9 (29/09/26)\n\nMateriais:*\n\nSlides Aula 9\n09-codigo.zip\nAtividade Prática 9\n09-atividade-template.zip\nSoluções da Atividade 9\n\n\n\n\nAula 10 (06/10/26)\n\nAvaliação 2: Exame Intermediário\n\n\n\nAula 11 (20/10/26)\n\nMateriais:\n\nSlides Aula 11\nAtividade Prática 10\n10-atividade-template.zip\ndados-risco-credito.csv\ndados-escolha-investimento.csv\n\n\n\n\nAula 12 (03/11/26)\n\nMateriais:\n\nSlides Aula 12\nAtividade Prática 11\ncasaburi-willis-2018-principal.dta\n11-atividade-template.zip\n\n\n\n\nAula 13 (10/11/26)\n\nMateriais:\n\nSlides Aula 13\nAtividade Prática 12: está descrita nos slides.\n\n\n\n\nAula 14 (17/11/26)\n\nMateriais:\n\nSlides Aula 14\nAtividade Prática 13\n13-atividade-template.zip\nmedicaid-did-2013-2015.csv\n\n\n\n\nAula 15 (24/11/26)\n\nAvaliação 3\n03-avaliacao-template.zip\ndid-a3.csv\nRetrospectiva da disciplina (animação)",
+    "crumbs": [
+      "Cronograma"
+    ]
+  },
+  {
     "objectID": "programa.html",
     "href": "programa.html",
     "title": "Programa da Disciplina",
@@ -234,126 +361,6 @@
     "text": "Plano de Aula\n\n\n\n\n\n\n\n\nAula\nData\nConteúdo\n\n\n\n\n1\n04/08/2026\nApresentação da disciplina. O modelo de regressão linear simples\n\n\n2\n11/08/2026\nModelo de regressão linear múltipla I\n\n\n3\n18/08/2026\nHeterocedasticidade\n\n\n4\n25/08/2026\nHeterocedasticidade\n\n\n5\n01/09/2026\nRegressão linear estática com séries temporais\n\n\n6\n08/09/2026\nTestes de quebra estrutural\n\n\n7\n15/09/2026\nDiagnóstico do modelo linear\n\n\n8\n22/09/2026\nRegressão robusta. Regressão quantílica\n\n\n9\n29/09/2026\nModelos para variáveis dependentes limitadas I\n\n\n10\n06/10/2026\nAvaliação 2\n\n\n11\n20/10/2026\nModelos para variáveis dependentes limitadas II\n\n\n12\n03/11/2026\nExogeneidade. Endogeneidade, Propriedades de Estimadores. Fontes de Endogeneidade. Causalidade e Experimentos\n\n\n13\n10/11/2026\nVariáveis instrumentais\n\n\n14\n17/11/2026\nDiferença-em-Diferenças com dados de corte transversal repetidos\n\n\n15\n24/11/2026\nAvaliação 3",
     "crumbs": [
       "Programa da Disciplina"
-    ]
-  },
-  {
-    "objectID": "cronograma.html",
-    "href": "cronograma.html",
-    "title": "Cronograma",
-    "section": "",
-    "text": "Aqui estão o cronograma e os materiais de cada aula, como slides, dados e leituras.\n\n\n\n\n\n\nDicaComo navegar pelos slides\n\n\n\nOs slides são interativos e foram produzidos em revealjs.\nAo abrir um arquivo de slides, utilize:\n\nSetas (← →): avançar e voltar.\nF: tela cheia.\nO: visão geral dos slides.\nEsc: sair da visão geral.\nEm dispositivos móveis, deslize para os lados.\n\nOs slides abrem em uma nova aba do navegador.\n\n\n\nAula 1 (04/08/26)\n\nMateriais:\n\nSlides Aula 1\nAtividade Prática 1\n01-atividade-template.zip\nSolução: Atividade Prática 1\n\n\n\n\nAula 2 (11/08/26)\n\nMateriais:\n\nSlides Aula 2\nAtividade Prática 2\n02-atividade-template.zip\ndata-ps1.csv\nSolução: Atividade Prática 2\n\n\n\n\nAula 3 (18/08/26)\n\nMateriais:\n\nSlides Aula 3\nAtividade Prática 3\n03-atividade-template.zip\nSolução: Atividade Prática 3\n\n\n\n\nAula 4 (25/08/26)\n\nMateriais:\n\nSlides Aula 4\nAtividade Prática 4\n04-atividade-template.zip\ndata-ps1.csv\nSolução: Atividade Prática 4\n\n\n\n\nAula 5 (01/09/26)\n\nMateriais:\n\nSlides Aula 5\nAtividade Prática 5\n05-atividade-template.zip\n\ndata-ps2.csv\nSoluções da Atividade 5\n\n\n\n\nAula 6 (08/09/26)\n\nMateriais:\n\nSlides Aula 6\nAtividade Prática 6\n06-atividade-template.zip\nSoluções da Atividade 6\n\nAvaliação 2: Exame Intermediário\n\nAvaliação 2: Exame Intermediário\nEsta avaliação será realizada na aula do dia 06/10.\n\n\n\n\nAula 7 (15/09/26)\n\nMateriais:\n\nSlides Aula 7\n07-atividade.zip\n\n\n\n\nAula 8 (21/09/26)\n\nMateriais:\n\nSlides Aula 8\n08-codigo.zip\nAtividade Prática 8\nSoluções da Atividade 8\n\n\n\n\nAula 9 (29/09/26)\n\nMateriais:*\n\nSlides Aula 9\n09-codigo.zip\nAtividade Prática 9\n09-atividade-template.zip\nSoluções da Atividade 9\n\n\n\n\nAula 10 (06/10/26)\n\nAvaliação 2: Exame Intermediário\n\n\n\nAula 11 (20/10/26)\n\nMateriais:\n\nSlides Aula 11\nAtividade Prática 10\n10-atividade-template.zip\ndados-risco-credito.csv\ndados-escolha-investimento.csv\n\n\n\n\nAula 12 (03/11/26)\n\nMateriais:\n\nSlides Aula 12\nAtividade Prática 11\ncasaburi-willis-2018-principal.dta\n11-atividade-template.zip\n\n\n\n\nAula 13 (10/11/26)\n\nMateriais:\n\nSlides Aula 13\nAtividade Prática 12: está descrita nos slides.\n\n\n\n\nAula 14 (17/11/26)\n\nMateriais:\n\nSlides Aula 14\nAtividade Prática 13\n13-atividade-template.zip\nmedicaid-did-2013-2015.csv\n\n\n\n\nAula 15 (24/11/26)\n\nAvaliação 3\n03-avaliacao-template.zip\ndid-a3.csv",
-    "crumbs": [
-      "Cronograma"
-    ]
-  },
-  {
-    "objectID": "ambiente_computacional.html",
-    "href": "ambiente_computacional.html",
-    "title": "Preparação do ambiente computacional",
-    "section": "",
-    "text": "Conclua este roteiro de instalação e configuração. Ele prepara o computador para as atividades da disciplina.\n\n\n\n\n\n\nNotaPlataforma adotada\n\n\n\nAs etapas detalhadas desta página foram preparadas para Windows. Usuários de macOS ou Linux devem utilizar os instaladores disponíveis nas páginas oficiais indicadas nas seções de R, RStudio, Quarto e Git. Nesses sistemas, use o terminal padrão em vez do Git Bash. Se não conseguir concluir a verificação do ambiente, procure orientação antes da primeira aula.\n\n\n\n\n\n\n\n\nImportanteJá tem os programas instalados?\n\n\n\nSe você usa R 4.5.1 ou 4.5.2, instale o R 4.6.1 indicado nesta página. Atualize também RStudio, Quarto e Git para a versão estável mais recente disponível nas páginas oficiais. Faça isso com antecedência: a atualização pode exigir reiniciar o computador ou verificar novamente o terminal do RStudio.\nOs pacotes instalados no R 4.5 não estarão disponíveis automaticamente no R 4.6. Não é necessário reinstalá-los agora: a disciplina indicará os pacotes a instalar quando eles forem usados.\n\n\n\nCaso não tenha, crie uma conta gratuita no GitHub.\nInstale R 4.6.1 e atualize RStudio, Quarto e Git.\nVerifique a identidade configurada no Git e o Git Bash como terminal do RStudio. Ajuste apenas o que for necessário.\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina, começando por R e tidyverse.\nDepois de concluir o tutorial de Git e GitHub, retorne a esta página e faça a verificação final do ambiente.\n\n\n\n\n\n\n\nImportanteAntes da primeira aula\n\n\n\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina na ordem indicada: comece por R e tidyverse e, em seguida, conclua o tutorial prático de Git e GitHub. Git e GitHub serão usados desde a primeira aula; guarde a URL do seu repositório individual público.\n\n\n\n\n\n\n\n\nNotaRepositório público\n\n\n\nNão envie senhas, chaves de acesso, dados pessoais de terceiros ou dados restritos ao repositório. Use apenas materiais autorizados para a disciplina.\n\n\nPara revisar conceitos, consulte o tutorial de Git e GitHub do professor. O Happy Git and GitHub for the useR é um aprofundamento opcional.",
-    "crumbs": [
-      "Ambiente computacional"
-    ]
-  },
-  {
-    "objectID": "ambiente_computacional.html#sec-preparacao",
-    "href": "ambiente_computacional.html#sec-preparacao",
-    "title": "Preparação do ambiente computacional",
-    "section": "",
-    "text": "Conclua este roteiro de instalação e configuração. Ele prepara o computador para as atividades da disciplina.\n\n\n\n\n\n\nNotaPlataforma adotada\n\n\n\nAs etapas detalhadas desta página foram preparadas para Windows. Usuários de macOS ou Linux devem utilizar os instaladores disponíveis nas páginas oficiais indicadas nas seções de R, RStudio, Quarto e Git. Nesses sistemas, use o terminal padrão em vez do Git Bash. Se não conseguir concluir a verificação do ambiente, procure orientação antes da primeira aula.\n\n\n\n\n\n\n\n\nImportanteJá tem os programas instalados?\n\n\n\nSe você usa R 4.5.1 ou 4.5.2, instale o R 4.6.1 indicado nesta página. Atualize também RStudio, Quarto e Git para a versão estável mais recente disponível nas páginas oficiais. Faça isso com antecedência: a atualização pode exigir reiniciar o computador ou verificar novamente o terminal do RStudio.\nOs pacotes instalados no R 4.5 não estarão disponíveis automaticamente no R 4.6. Não é necessário reinstalá-los agora: a disciplina indicará os pacotes a instalar quando eles forem usados.\n\n\n\nCaso não tenha, crie uma conta gratuita no GitHub.\nInstale R 4.6.1 e atualize RStudio, Quarto e Git.\nVerifique a identidade configurada no Git e o Git Bash como terminal do RStudio. Ajuste apenas o que for necessário.\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina, começando por R e tidyverse.\nDepois de concluir o tutorial de Git e GitHub, retorne a esta página e faça a verificação final do ambiente.\n\n\n\n\n\n\n\nImportanteAntes da primeira aula\n\n\n\nApós concluir a instalação e a configuração, siga os tutoriais básicos da disciplina na ordem indicada: comece por R e tidyverse e, em seguida, conclua o tutorial prático de Git e GitHub. Git e GitHub serão usados desde a primeira aula; guarde a URL do seu repositório individual público.\n\n\n\n\n\n\n\n\nNotaRepositório público\n\n\n\nNão envie senhas, chaves de acesso, dados pessoais de terceiros ou dados restritos ao repositório. Use apenas materiais autorizados para a disciplina.\n\n\nPara revisar conceitos, consulte o tutorial de Git e GitHub do professor. O Happy Git and GitHub for the useR é um aprofundamento opcional.",
-    "crumbs": [
-      "Ambiente computacional"
-    ]
-  },
-  {
-    "objectID": "ambiente_computacional.html#instalação-dos-programas",
-    "href": "ambiente_computacional.html#instalação-dos-programas",
-    "title": "Preparação do ambiente computacional",
-    "section": "Instalação dos programas",
-    "text": "Instalação dos programas\n\nLinguagem R\n\n\n\n\n\n\nDicaInstalar R 4.6.1\n\n\n\n\nAcesse CRAN.\nClique em Download R for Windows e, na página seguinte, em base.\nClique em Download R-4.6.1 for Windows.\nApós o download, execute o instalador e aceite as opções padrão até a instalação ser concluída. Mesmo que você já use uma versão anterior de R, instale o R 4.6.1.\n\n\n\n\n\nRStudio\n\n\n\n\n\n\nDicaInstalar ou atualizar o RStudio Desktop\n\n\n\n\nAcesse a página de download do RStudio.\nNa seção 2: Install RStudio, clique em Download RStudio Desktop for Windows.\nApós o download, execute o instalador e avance até a instalação ser concluída. Se o RStudio já estiver instalado, esse procedimento o atualizará.\n\n\n\n\n\nSistema Quarto\n\n\n\n\n\n\nDicaInstalar ou atualizar o Quarto CLI\n\n\n\n\nAcesse a página de download do Quarto.\nBaixe o instalador de Quarto CLI para Windows.\nExecute o instalador e avance até a instalação ser concluída. Se o Quarto já estiver instalado, esse procedimento o atualizará.\n\n\n\n\n\nTinyTeX\n\n\n\n\n\n\nImportanteInstalar o TinyTeX quando uma atividade exigir PDF\n\n\n\nTinyTeX é a distribuição LaTeX recomendada para gerar PDF a partir de documentos Quarto. Ele só é necessário para gerar PDF localmente.\nA disciplina avisará antes da primeira atividade que exigir PDF. Instale-o depois de instalar o Quarto, com antecedência em relação a essa atividade.\nSe ainda não tiver o TinyTeX, abra a aba Terminal do RStudio e execute:\nquarto install tinytex\nSe já tiver o TinyTeX, atualize a distribuição com:\nquarto update tinytex\n\n\n\n\nGit\n\n\n\n\n\n\nDicaJá tem Git for Windows?\n\n\n\nAbra o Git Bash e execute:\ngit update-git-for-windows\nSiga as instruções exibidas. Ao terminar, abra um novo terminal e confirme a atualização com:\ngit --version\nSe o comando não funcionar, baixe e execute o instalador da seção seguinte. Isso pode ocorrer em instalações portáteis ou personalizadas.\n\n\n\n\n\n\n\n\nDicaInstalar o Git for Windows\n\n\n\n\nAcesse git-scm.com e clique em Download for Windows.\nApós o download, execute o instalador.\nMantenha as configurações padrão sugeridas. Na janela Adjusting the name of the initial branch, marque Override the default branch name for new repositories e informe main.\nClique em Next nas janelas restantes e conclua a instalação. Este instalador também pode ser usado para atualizar o Git quando o comando da seção anterior não funcionar.",
-    "crumbs": [
-      "Ambiente computacional"
-    ]
-  },
-  {
-    "objectID": "ambiente_computacional.html#sec-github",
-    "href": "ambiente_computacional.html#sec-github",
-    "title": "Preparação do ambiente computacional",
-    "section": "Conta GitHub",
-    "text": "Conta GitHub\nCaso ainda não tenha uma conta, acesse github.com, clique em Sign up, conclua o cadastro e confirme seu e-mail. Use uma conta individual que você possa manter durante toda a disciplina.",
-    "crumbs": [
-      "Ambiente computacional"
-    ]
-  },
-  {
-    "objectID": "ambiente_computacional.html#sec-configurar-git",
-    "href": "ambiente_computacional.html#sec-configurar-git",
-    "title": "Preparação do ambiente computacional",
-    "section": "Verificar e configurar o Git",
-    "text": "Verificar e configurar o Git\nAbra o Git Bash, disponível no menu Iniciar após a instalação do Git, e verifique o nome e o e-mail que o Git usará no histórico de seus commits:\ngit config --global --get user.name\ngit config --global --get user.email\n\n\n\n\n\n\nDicaJá há uma identidade configurada?\n\n\n\nSe os dois comandos exibirem seu nome e um e-mail associado à conta do GitHub que você usará na disciplina, não altere nada. Continue para a seção Git Bash como terminal do RStudio.\n\n\nSe algum comando não exibir um valor, ou se precisar usar outra identidade, configure o nome e o e-mail:\ngit config --global user.name \"Seu Nome\"\ngit config --global user.email \"seuemail@exemplo.com\"\nUse um e-mail associado à conta do GitHub que você utilizará na disciplina.",
-    "crumbs": [
-      "Ambiente computacional"
-    ]
-  },
-  {
-    "objectID": "ambiente_computacional.html#sec-git-bash",
-    "href": "ambiente_computacional.html#sec-git-bash",
-    "title": "Preparação do ambiente computacional",
-    "section": "Git Bash como terminal do RStudio",
-    "text": "Git Bash como terminal do RStudio\nOs comandos Git desta disciplina serão executados no Terminal do RStudio usando Git Bash. Depois de instalar o Git for Windows, o Git Bash pode já estar selecionado no RStudio, mas isso depende das configurações do seu computador. Verifique antes de alterar qualquer opção:\n\nAbra RStudio → Tools → Global Options → Terminal.\nEm New terminals open with, verifique a opção exibida.\nSe já estiver selecionado Git Bash, não altere nada. Caso esteja selecionado PowerShell ou outra opção, escolha Git Bash.\nConfirme a configuração e abra um novo terminal no RStudio.\n\nSe Git Bash não aparecer na lista, reinstale o Git for Windows mantendo as opções padrão e tente novamente. O Git Bash padroniza os comandos com macOS e Linux. Ele oferece comandos no estilo Unix, mas não transforma o Windows em outro sistema operacional.",
-    "crumbs": [
-      "Ambiente computacional"
-    ]
-  },
-  {
-    "objectID": "ambiente_computacional.html#sec-validacao",
-    "href": "ambiente_computacional.html#sec-validacao",
-    "title": "Preparação do ambiente computacional",
-    "section": "Verificação do ambiente",
-    "text": "Verificação do ambiente\nAntes da primeira aula, confirme que você consegue:\n\nAbrir R e RStudio.\nAbrir o terminal do RStudio e executar:\nquarto --version\ngit --version\nConfirmar que seu nome e e-mail do Git estão configurados conforme a seção anterior.\nApós concluir o tutorial de Git e GitHub, criar seu repositório individual público, abri-lo como Projeto RStudio, confirmar que o Terminal usa Git Bash, editar arquivos e usar git status, git add, git commit e git push para enviá-los ao GitHub.\nRegistrar a URL do seu repositório no cadastro da disciplina quando o formulário for publicado.",
-    "crumbs": [
-      "Ambiente computacional"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Econometria Aplicada à Finanças - 2026/2",
-    "section": "",
-    "text": "Esta disciplina objetiva preparar os mestrandos para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.\nAntes da primeira aula, acesse a página Ambiente computacional para criar as contas necessárias, instalar e configurar os programas necessários em seu computador.",
-    "crumbs": [
-      "Início"
-    ]
-  },
-  {
-    "objectID": "index.html#bem-vindo-à-disciplina",
-    "href": "index.html#bem-vindo-à-disciplina",
-    "title": "Econometria Aplicada à Finanças - 2026/2",
-    "section": "",
-    "text": "Esta disciplina objetiva preparar os mestrandos para formular, implementar, diagnosticar e interpretar análises de regressão aplicadas a Finanças, com dados em seção cruzada e de séries temporais, empregando R, RStudio, Git/GitHub e Quarto para produzir análises empíricas reprodutíveis.\nAntes da primeira aula, acesse a página Ambiente computacional para criar as contas necessárias, instalar e configurar os programas necessários em seu computador.",
-    "crumbs": [
-      "Início"
-    ]
-  },
-  {
-    "objectID": "index.html#informações-gerais",
-    "href": "index.html#informações-gerais",
-    "title": "Econometria Aplicada à Finanças - 2026/2",
-    "section": "Informações gerais",
-    "text": "Informações gerais\n\nProfessor: Prof. Dr. Washington Santos da Silva\nE-mail: washington.silva@ifmg.edu.br\nHorário de aula: Terça-Feira, 18:30-22:30\nLocal: aulas síncronas via Google Meet e aula presencial",
-    "crumbs": [
-      "Início"
-    ]
-  },
-  {
-    "objectID": "index.html#conteúdo",
-    "href": "index.html#conteúdo",
-    "title": "Econometria Aplicada à Finanças - 2026/2",
-    "section": "Conteúdo",
-    "text": "Conteúdo\nUse este site como guia da disciplina:\n\nAmbiente computacional: contas, programas e configurações necessárias antes da primeira aula.\nPrograma da Disciplina: objetivos, ementa, bibliografia e planejamento completo.\nTutoriais básicos e materiais de apoio: preparação em R/RStudio e primeiros passos com Git/GitHub, Quarto/RStudio e Markdown.\nCronograma: aulas, slides, dados e leituras.",
-    "crumbs": [
-      "Início"
     ]
   },
   {

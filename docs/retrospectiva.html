@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Uma retrospectiva de Econometria Aplicada a Finanças · 2026/2 – Econometria Aplicada à Finanças</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e88deb7e6c24584379bc85de5eea1e26.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Pular para o conteúdo principal</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Econometria Aplicada à Finanças</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Procurar"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Barra de ferramentas">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Caminho"><ol class="breadcrumb"><li class="breadcrumb-item">Uma retrospectiva de Econometria Aplicada a Finanças · 2026/2</li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Seção">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Procurar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Início</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./programa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programa da Disciplina</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cronograma.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cronograma</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ambiente_computacional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ambiente computacional</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutoriais básicos e apoio</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Uma retrospectiva de Econometria Aplicada a Finanças · 2026/2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+  #quarto-document-content:has(> #retrospectiva) { width: 100%; }
+  .journey {
+    --journey-green: #bce68c;
+    --journey-muted: #c4d8cf;
+    --journey-bg: #102a23;
+    color: #f7faf6;
+    margin-block: 1.4rem 2rem;
+  }
+  .journey-scene {
+    min-height: 25rem;
+    padding: clamp(1.25rem, 4vw, 3rem);
+    border: 1px solid #36554b;
+    border-radius: 1.1rem;
+    background: radial-gradient(ellipse at 95% 0, #214a3b, var(--journey-bg) 65%);
+    display: grid;
+    align-content: center;
+    gap: .75rem;
+  }
+  .journey-scene + .journey-scene { margin-top: 1rem; }
+  .journey h2, .journey h3, .journey pre, .journey p { margin: 0; }
+  .journey h2 {
+    color: var(--journey-green);
+    font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+    font-weight: 700;
+  }
+  .journey h3 {
+    color: inherit;
+    font-size: clamp(1.45rem, 3.6vw, 2.15rem);
+    line-height: 1.15;
+  }
+  #quarto-document-content .journey p,
+  #quarto-document-content .journey li { text-align: left; hyphens: none; }
+  .journey-scene > p { color: var(--journey-muted); }
+  .journey pre {
+    color: #f7faf6;
+    background: #0b201a;
+    border: 1px solid #36554b;
+    border-radius: .6rem;
+    padding: .7rem .9rem;
+  }
+  .journey .journey-plot {
+    display: block;
+    width: min(100%, 30rem);
+    height: auto;
+    margin-block: .15rem;
+    overflow: visible;
+  }
+  .journey-plot text { fill: var(--journey-muted); font: 12px system-ui, sans-serif; }
+  .journey-plot .grid { stroke: #42665a; stroke-width: 1; }
+  .journey-plot .axis { stroke: #91b0a2; stroke-width: 1.2; }
+  .journey-plot circle { fill: #f5c352; }
+  .journey-plot .fit { stroke: var(--journey-green); stroke-width: 3; stroke-linecap: round; }
+  .journey-quarto {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+    align-items: stretch;
+  }
+  .journey-quarto pre { overflow-x: auto; }
+  .journey-report {
+    color: #19392f;
+    background: #f4f8ee;
+    border-radius: .6rem;
+    padding: .9rem 1rem;
+  }
+  .journey-report strong { display: block; margin-bottom: .35rem; }
+  .journey-report .journey-plot text { fill: #39594d; }
+  .journey-report .journey-plot .grid { stroke: #cdd9ca; }
+  .journey-report .journey-plot .axis { stroke: #728a7d; }
+  .journey-report .journey-plot circle { fill: #9c5900; }
+  .journey-report .journey-plot .fit { stroke: #246045; }
+  .journey-commits {
+    list-style: none;
+    padding: 0 0 0 1.1rem;
+    margin: .35rem 0 .35rem .46rem;
+    border-left: 2px solid #729781;
+  }
+  .journey-commits li { position: relative; padding-block: .4rem; }
+  .journey-commits li::before {
+    content: "";
+    position: absolute;
+    left: -1.52rem;
+    top: .85rem;
+    width: .72rem;
+    height: .72rem;
+    border-radius: 50%;
+    background: var(--journey-green);
+    box-shadow: 0 0 0 3px var(--journey-bg);
+  }
+  .journey-release {
+    width: fit-content;
+    padding: .2rem .65rem;
+    border-radius: .35rem;
+    background: var(--journey-green);
+    color: #102a23;
+    font: 700 1rem ui-monospace, monospace;
+  }
+  .journey-publication {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .6rem 1rem;
+    width: fit-content;
+    padding: .55rem .75rem;
+    border: 1px solid #527869;
+    border-radius: .6rem;
+  }
+  .journey .journey-punchline {
+    --delay: .65s;
+    color: var(--journey-green);
+    font-weight: 700;
+  }
+  .journey-spark {
+    --delay: .8s;
+    width: 6.5rem;
+    height: 3.5rem;
+    color: #f5c352;
+  }
+  .journey-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    color: #19392f;
+    margin-top: .75rem;
+  }
+  .journey-controls .btn-success,
+  .journey-controls .btn-outline-success:hover {
+    color: #fff;
+    background: #215940;
+    border-color: #215940;
+  }
+  .journey-controls .btn-outline-success {
+    color: #215940;
+    border-color: #215940;
+  }
+  .journey-controls[hidden] { display: none; }
+  .journey-controls .journey-progress { margin-left: auto; }
+  .journey.is-interactive .journey-scene:not(.is-current) { display: none; }
+  .journey.is-interactive .journey-scene { margin-top: 0; }
+  .journey.is-playing .is-current > h2,
+  .journey.is-playing .is-current > h3 {
+    animation: journey-reveal .24s ease-out both;
+  }
+  .journey.is-playing .is-current .journey-plot circle,
+  .journey.is-playing .is-current .journey-report,
+  .journey.is-playing .is-current .journey-commits li,
+  .journey.is-playing .is-current .journey-punchline,
+  .journey.is-playing .is-current .journey-spark {
+    animation: journey-reveal .36s ease-out both;
+    animation-delay: var(--delay, .12s);
+  }
+  .journey.is-playing .is-current .journey-plot .fit {
+    stroke-dasharray: 1;
+    animation: journey-fit .55s .45s ease-out both;
+  }
+  .journey.is-paused .is-current * { animation-play-state: paused !important; }
+  @keyframes journey-reveal {
+    from { opacity: 0; transform: translateY(.35rem); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes journey-fit {
+    from { stroke-dashoffset: 1; }
+    to { stroke-dashoffset: 0; }
+  }
+  @media (max-height: 800px) and (min-width: 60rem) {
+    .journey { margin-top: .85rem; }
+    .journey-scene { padding-block: 1.25rem; }
+    .journey .journey-plot { width: min(100%, 25rem); }
+  }
+  @media (max-width: 38rem) {
+    .journey-scene { min-height: 0; }
+    .journey-quarto { grid-template-columns: 1fr; }
+    .journey-controls .journey-progress { margin-left: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .journey *, .journey-plot * { animation: none !important; }
+  }
+</style>
+
+<div class="journey" id="retrospectiva">
+<section class="journey-scene" aria-labelledby="jornada-r">
+<h2 id="jornada-r" class="anchored">R</h2>
+<h3 class="anchored">A reta saiu!</h3>
+<p>Aqui, os retornos são simulados. O <code>lm()</code> vocês já conhecem bem.</p>
+<svg class="journey-plot" viewbox="0 0 440 225" role="img" aria-label="Retornos simulados do ativo e do mercado, com reta de mínimos quadrados ascendente.">
+<line class="grid" x1="56" y1="152" x2="400" y2="152"></line> <line class="grid" x1="56" y1="126" x2="400" y2="126"></line> <line class="grid" x1="56" y1="100" x2="400" y2="100"></line> <line class="grid" x1="56" y1="74" x2="400" y2="74"></line> <line class="grid" x1="56" y1="48" x2="400" y2="48"></line> <path class="axis" fill="none" d="M56 18 V171 H400"></path> <text x="81" y="189" text-anchor="middle">-4</text> <text x="151" y="189" text-anchor="middle">-2</text> <text x="221" y="189" text-anchor="middle">0</text> <text x="291" y="189" text-anchor="middle">2</text> <text x="361" y="189" text-anchor="middle">4</text> <text x="46" y="156" text-anchor="end">-4</text> <text x="46" y="130" text-anchor="end">-2</text> <text x="46" y="104" text-anchor="end">0</text> <text x="46" y="78" text-anchor="end">2</text> <text x="46" y="52" text-anchor="end">4</text> <text x="220" y="210" text-anchor="middle">Retorno excedente do mercado (p.p.)</text> <text x="17" y="95" text-anchor="middle" transform="rotate(-90 17 95)">Retorno excedente do ativo (p.p.)</text> <circle cx="81" cy="165.0" r="4" style="--delay: 0.05s"></circle> <circle cx="116" cy="115.6" r="4" style="--delay: 0.10s"></circle> <circle cx="151" cy="123.4" r="4" style="--delay: 0.15s"></circle> <circle cx="186" cy="97.4" r="4" style="--delay: 0.20s"></circle> <circle cx="221" cy="100.0" r="4" style="--delay: 0.25s"></circle> <circle cx="256" cy="83.1" r="4" style="--delay: 0.30s"></circle> <circle cx="291" cy="71.4" r="4" style="--delay: 0.35s"></circle> <circle cx="326" cy="51.9" r="4" style="--delay: 0.40s"></circle> <circle cx="361" cy="51.9" r="4" style="--delay: 0.45s"></circle> <line class="fit" pathlength="1" x1="81" y1="146.31" x2="361" y2="44.74"></line>
+</svg>
+<pre><code>modelo &lt;- lm(ativo ~ mercado, data = dados)</code></pre>
+</section>
+
+<section class="journey-scene" aria-labelledby="jornada-quarto">
+<h2 id="jornada-quarto" class="anchored">Quarto</h2>
+<h3 class="anchored">Rodou. Agora explica.</h3>
+<div class="journey-quarto">
+<pre aria-label="Trecho do arquivo Quarto"><code>## Ativo e mercado
+
+```{r}
+#| echo: false
+plot(ativo ~ mercado, data = dados)
+abline(modelo)
+```
+
+No exemplo simulado, o retorno
+excedente estimado do ativo sobe
+junto com o do mercado.</code></pre>
+<div class="journey-report">
+<strong>Ativo e mercado</strong>
+<svg class="journey-plot" viewbox="0 0 440 225" role="img" aria-label="Retornos simulados do ativo e do mercado, com reta de mínimos quadrados ascendente.">
+<line class="grid" x1="56" y1="152" x2="400" y2="152"></line> <line class="grid" x1="56" y1="126" x2="400" y2="126"></line> <line class="grid" x1="56" y1="100" x2="400" y2="100"></line> <line class="grid" x1="56" y1="74" x2="400" y2="74"></line> <line class="grid" x1="56" y1="48" x2="400" y2="48"></line> <path class="axis" fill="none" d="M56 18 V171 H400"></path> <text x="81" y="189" text-anchor="middle">-4</text> <text x="151" y="189" text-anchor="middle">-2</text> <text x="221" y="189" text-anchor="middle">0</text> <text x="291" y="189" text-anchor="middle">2</text> <text x="361" y="189" text-anchor="middle">4</text> <text x="46" y="156" text-anchor="end">-4</text> <text x="46" y="130" text-anchor="end">-2</text> <text x="46" y="104" text-anchor="end">0</text> <text x="46" y="78" text-anchor="end">2</text> <text x="46" y="52" text-anchor="end">4</text> <text x="220" y="210" text-anchor="middle">Retorno excedente do mercado (p.p.)</text> <text x="17" y="95" text-anchor="middle" transform="rotate(-90 17 95)">Retorno excedente do ativo (p.p.)</text> <circle cx="81" cy="165.0" r="4" style="--delay: 0.05s"></circle> <circle cx="116" cy="115.6" r="4" style="--delay: 0.10s"></circle> <circle cx="151" cy="123.4" r="4" style="--delay: 0.15s"></circle> <circle cx="186" cy="97.4" r="4" style="--delay: 0.20s"></circle> <circle cx="221" cy="100.0" r="4" style="--delay: 0.25s"></circle> <circle cx="256" cy="83.1" r="4" style="--delay: 0.30s"></circle> <circle cx="291" cy="71.4" r="4" style="--delay: 0.35s"></circle> <circle cx="326" cy="51.9" r="4" style="--delay: 0.40s"></circle> <circle cx="361" cy="51.9" r="4" style="--delay: 0.45s"></circle> <line class="fit" pathlength="1" x1="81" y1="146.31" x2="361" y2="44.74"></line>
+</svg>
+<p>No exemplo simulado, o retorno excedente estimado do ativo sobe junto com o do mercado.</p>
+</div>
+</div>
+</section>
+
+<section class="journey-scene" aria-labelledby="jornada-git">
+<h2 id="jornada-git" class="anchored">Git</h2>
+<h3 class="anchored">Um commit de cada vez</h3>
+<ol class="journey-commits">
+<li style="--delay: .08s">Ajusta o CAPM</li>
+<li style="--delay: .22s">Revisa a endogeneidade</li>
+<li style="--delay: .36s">Roda o DiD</li>
+<li style="--delay: .50s">Só mais um ajuste. Agora vai.</li>
+</ol>
+</section>
+
+<section class="journey-scene" aria-labelledby="jornada-github">
+<h2 id="jornada-github" class="anchored">GitHub</h2>
+<div class="journey-publication">
+<span class="journey-release" aria-label="Tag 2026.2">2026.2</span>
+<strong>Ativo e mercado · Relatório publicado</strong>
+</div>
+<h3 class="anchored">Paulo e Jonathan, valeu!</h3>
+<p>Foi muito bom dar aula para vocês dois. Obrigado pela parceria neste semestre. Até a próxima!</p>
+<p class="journey-punchline">E cuidado com o viés de seleção!</p>
+<svg class="journey-spark" viewbox="0 0 105 54" aria-hidden="true">
+  <path d="M42 47l13-29m-6 29 26-27M31 44l-11-9m21 2-2-10m23 13 12-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+  <path d="M53 9l5-5m18 6 6-3m-2 27 9 1M25 20l-4-6" fill="none" stroke="#bce68c" stroke-width="3" stroke-linecap="round"></path>
+  <circle cx="35" cy="11" r="2" fill="#bce68c"></circle>
+  <circle cx="92" cy="20" r="2" fill="currentColor"></circle>
+</svg>
+</section>
+
+<div class="journey-controls" aria-label="Controles da retrospectiva" role="group" hidden="">
+<button type="button" class="btn btn-success" data-control="play">Iniciar animação</button>
+<button type="button" class="btn btn-outline-success" data-control="previous" disabled="">Anterior</button>
+<button type="button" class="btn btn-outline-success" data-control="next" disabled="">Próxima</button>
+<span class="journey-progress" role="status" aria-atomic="true"></span>
+</div>
+</div>
+
+<script>
+(() => {
+  const journey = document.querySelector("#retrospectiva");
+  const scenes = [...journey.querySelectorAll(".journey-scene")];
+  const controls = journey.querySelector(".journey-controls");
+  const play = controls.querySelector('[data-control="play"]');
+  const previous = controls.querySelector('[data-control="previous"]');
+  const next = controls.querySelector('[data-control="next"]');
+  const progress = controls.querySelector(".journey-progress");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const sceneDuration = 5000;
+  const lastScene = scenes.length - 1;
+
+  let current = 0;
+  let started = false;
+  let playing = false;
+  let animateScene = false;
+  let timer;
+  let deadline;
+  let remaining = sceneDuration;
+
+  function update() {
+    scenes.forEach((scene, index) => scene.classList.toggle("is-current", index === current));
+    journey.classList.toggle("is-playing", animateScene);
+    journey.classList.toggle("is-paused", started && !playing && current !== lastScene);
+    play.textContent = !started ? "Iniciar animação"
+      : current === lastScene ? "Rever animação"
+      : playing ? "Pausar" : "Continuar";
+    previous.disabled = !started || current === 0;
+    next.disabled = !started || current === lastScene;
+    const announcement = started
+      ? `${scenes[current].querySelector("h2").textContent} · ${current + 1} de ${scenes.length}`
+      : `${scenes.length} cenas`;
+    if (progress.textContent !== announcement) progress.textContent = announcement;
+  }
+
+  function schedule() {
+    deadline = performance.now() + remaining;
+    timer = window.setTimeout(() => show(current + 1), remaining);
+  }
+
+  function show(index) {
+    window.clearTimeout(timer);
+    current = index;
+    animateScene = playing;
+    remaining = sceneDuration;
+    const focusedControl = document.activeElement;
+    if (current === lastScene) playing = false;
+    update();
+    if ((focusedControl === previous && previous.disabled)
+      || (focusedControl === next && next.disabled)) play.focus();
+    if (playing) schedule();
+  }
+
+  function configureMotion() {
+    window.clearTimeout(timer);
+    started = false;
+    playing = false;
+    animateScene = false;
+    current = 0;
+    journey.classList.toggle("is-interactive", !reducedMotion.matches);
+    controls.hidden = reducedMotion.matches;
+    update();
+  }
+
+  play.addEventListener("click", () => {
+    if (!started || current === lastScene) {
+      started = true;
+      playing = true;
+      show(0);
+    } else if (playing) {
+      window.clearTimeout(timer);
+      remaining = Math.max(0, deadline - performance.now());
+      playing = false;
+      update();
+    } else {
+      playing = true;
+      update();
+      schedule();
+    }
+  });
+  previous.addEventListener("click", () => show(current - 1));
+  next.addEventListener("click", () => show(current + 1));
+  reducedMotion.addEventListener("change", configureMotion);
+  configureMotion();
+})();
+</script>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Código deslocável","output":"Saída deslocável"};
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026 Washington Santos da Silva</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/washingtonssilva/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://washingtonsilva.github.io">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
