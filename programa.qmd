@@ -79,6 +79,10 @@ HILL, R. C.; GRIFFITHS, W. E.; JUDGE, G. G. **Econometria**. 3. ed. São Paulo: 
 
 WOOLDRIDGE, Jeffrey M. **Econometric Analysis of Cross Section and Panel Data**. 2. ed. Cambridge, MA: MIT Press, 2010.
 
+ANGRIST, Joshua D.; PISCHKE, Jörn-Steffen. **Mastering 'Metrics: The Path from Cause to Effect**. Princeton: Princeton University Press, 2015. [opac.northsouth.edu](https://opac.northsouth.edu/cgi-bin/koha/opac-detail.pl?biblionumber=29549\&utm_source=chatgpt.com){target="_blank"}
+
+ANGRIST, Joshua D.; PISCHKE, Jörn-Steffen. **Mostly Harmless Econometrics: An Empiricist's Companion**. Princeton: Princeton University Press, 2009. [Princeton University Press](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics?utm_source=chatgpt.com){target="_blank"}
+
 HUNTINGTON-KLEIN, Nick. **The Effect: An Introduction to Research Design and Causality**. 2. ed. Boca Raton: Chapman & Hall/CRC, 2025.
 
 HANCK, Christoph; ARNOLD, Martin; GERBER, Alexander; SCHMELZER, Martin. **Introduction to Econometrics with R**. Disponível em: [https://www.econometrics-with-r.org/](https://www.econometrics-with-r.org/){target="_blank"}
