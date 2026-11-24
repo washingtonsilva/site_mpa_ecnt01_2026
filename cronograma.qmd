@@ -206,7 +206,10 @@ Os slides abrem em uma nova aba do navegador.
 
 
 
-# Aula 15 (24/11/26)
+# Aula 15 (24/11/26) 
 
-  - Avaliação final
-  - [Enviar o arquivo nome-exame-final.qmd](https://entregas-econometria.wssaleph.workers.dev/){target="_blank"}
+  - [Avaliação 3](avaliacoes/03-avaliacao.html){target="_blank"}
+  - [03-avaliacao-template.zip](avaliacoes/03-avaliacao-template.zip)
+  - [did-a3.csv](dados/did-a3.csv)
+
+

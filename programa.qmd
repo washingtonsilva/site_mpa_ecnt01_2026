@@ -203,10 +203,10 @@ conforme o andamento da disciplina.
 |    7 | 15/09/2026 | Diagnóstico do modelo linear                            |
 |    8 | 22/09/2026 | Regressão robusta. Regressão quantílica                 |
 |    9 | 29/09/2026 | Modelos para variáveis dependentes limitadas I          |
-|   10 | 06/10/2026 | Avaliação intermediária                                 |
+|   10 | 06/10/2026 | Avaliação 2                                 |
 |   11 | 20/10/2026 | Modelos para variáveis dependentes limitadas II         |
 |   12 | 03/11/2026 | Exogeneidade/Endogeneidade, Propriedades de Estimadores |
 |      |            | Fontes de Endogeneidade. Causalidade e Experimentos     |
 |   13 | 10/11/2026 | Variáveis instrumentais                                 |
 |   14 | 17/11/2026 | Diferenças-em-Diferenças com dados em corte transversal repetidos                       |
-|   15 | 24/11/2026 | Avaliação final                                         |
+|   15 | 24/11/2026 | Avaliação 3                                         |
